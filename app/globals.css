@@ -1,26 +1,88 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* Brand Colors */
+  --color-primary: #1b4b36; /* Deep rich green */
+  --color-primary-light: #2c6e52;
+  --color-accent: #d4af37; /* Gold */
+  --color-accent-hover: #ebd57b;
+  
+  /* Backgrounds */
+  --color-bg-primary: #f4f1ea; /* Main light page background */
+  --color-bg-secondary: #172d1f; /* Secondary dark green background */
+  --color-bg-tertiary: #0a140d; /* Tertiary deep dark/footer background */
+  
+  /* Buttons */
+  --color-btn-primary: #d4af37; /* Yellow gold for primary buttons */
+  --color-btn-primary-hover: #ebd57b; /* Lighter yellow for hover state */
+
+  /* Fonts */
+  --font-sans: var(--font-montserrat);
+  --font-serif: var(--font-playfair);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.animate-fade-in-up {
+  animation: fade-in-up 0.8s ease-out forwards;
+}
+
+.animate-fade-in-up-delay-1 {
+  animation: fade-in-up 0.8s ease-out 0.2s forwards;
+  opacity: 0;
+}
+
+.animate-fade-in-up-delay-2 {
+  animation: fade-in-up 0.8s ease-out 0.4s forwards;
+  opacity: 0;
+}
+
+.glass-nav {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.05);
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+@keyframes flowRight {
+  0% {
+    transform: translateX(-150%) skewX(-45deg);
+  }
+  100% {
+    transform: translateX(250%) skewX(-45deg);
+  }
+}
+
+@keyframes flowRight {
+  0% {
+    transform: translateX(-150%) skewX(-45deg);
+  }
+  100% {
+    transform: translateX(250%) skewX(-45deg);
+  }
+}
+
+.animate-flow-right {
+  animation: flowRight 2.5s infinite linear;
 }
