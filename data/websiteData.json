@@ -64,22 +64,22 @@
       },
       {
         "color": "Pink",
-        "diameter": "7.5mm & above",
+        "diameter": "7.5mm – 8mm",
         "description": "Large pods"
       },
       {
         "color": "Green",
-        "diameter": "7mm - 8mm",
+        "diameter": "7mm – 7.5mm",
         "description": "Medium-large pods"
       },
       {
         "color": "Orange",
-        "diameter": "6.5mm - 7.5mm",
+        "diameter": "6.5mm - 7mm",
         "description": "Medium pods"
       },
       {
         "color": "Red",
-        "diameter": "6mm - 7mm",
+        "diameter": "6mm – 6.5mm",
         "description": "Smaller pods"
       }
     ]
@@ -97,68 +97,229 @@
       "Date, old to new",
       "Best Selling"
     ],
-    "products": [
-      {
-        "id": "purple-grade",
-        "name": "Purple Grade (8 mm & above) Cardamom",
-        "grade": "Purple",
-        "size": "8 mm & above",
-        "price": 349,
-        "originalPrice": 750,
-        "currency": "INR",
-        "status": "sale",
-        "image": "/images/products/purple-grade.jpg",
-        "url": "/collections/cardamom-packs/products/aroma-lock-purple-grade-cardamom-packs"
-      },
-      {
-        "id": "pink-grade",
-        "name": "Pink Grade (7.5 mm & above) Cardamom",
-        "grade": "Pink",
-        "size": "7.5 mm & above",
-        "price": 329,
-        "originalPrice": 650,
-        "currency": "INR",
-        "status": "sold-out",
-        "image": "/images/products/pink-grade.jpg",
-        "url": "/collections/cardamom-packs/products/aroma-lock-pink-grade-cardamom-packs"
-      },
-      {
-        "id": "green-grade",
-        "name": "Green Grade (7-8mm) Cardamom",
-        "grade": "Green",
-        "size": "7-8 mm",
-        "price": 309,
-        "originalPrice": 600,
-        "currency": "INR",
-        "status": "sale",
-        "image": "/images/products/green-grade.jpg",
-        "url": "/collections/cardamom-packs/products/aroma-lock-green-grade-cardamom-packs"
-      },
-      {
-        "id": "orange-grade",
-        "name": "Orange Grade (6.5-7.5mm) Cardamom",
-        "grade": "Orange",
-        "size": "6.5-7.5 mm",
-        "price": 1899,
-        "originalPrice": 3000,
-        "currency": "INR",
-        "status": "sold-out",
-        "image": "/images/products/orange-grade.jpg",
-        "url": "/collections/cardamom-packs/products/aroma-lock-orange-grade-cardamom-packs"
-      },
-      {
-        "id": "red-grade",
-        "name": "Red Grade (6-7mm) Cardamom",
-        "grade": "Red",
-        "size": "6-7 mm",
-        "price": 999,
-        "originalPrice": 1500,
-        "currency": "INR",
-        "status": "sale",
-        "image": "/images/products/red-grade.jpg",
-        "url": "/collections/cardamom-packs/products/aroma-lock-red-grade-cardamom-packs"
+  
+  "products": [
+    {
+      "id": "purple-grade",
+      "name": "Purple Grade (8 mm & above) Cardamom",
+      "grade": "Purple",
+      "size": "Pods of diameter 8mm & above",
+      "price": 2299,
+      "originalPrice": 3800,
+      "currency": "INR",
+      "status": "sale",
+
+      "image": "/images/products/purple-grade.jpg",
+      "url": "/collections/cardamom-packs/products/aroma-lock-purple-grade-cardamom-packs",
+
+      "taxInfo": "Incl. of all taxes.",
+      "shippingInfo": "Shipping calculated at checkout.",
+
+      "brand": "Emperor Akbar Cardamom",
+      "vendor": "Emperor Akbar Cardamom",
+
+      "origin": "South India",
+      "speciality": "GI-tagged Alleppey Green Aroma Lock Cardamom",
+
+      "usage": "Versatile spice, chef recommended, ideal for the discerning home consumer",
+
+      "manufacturer": "Samex India Pvt. Ltd.",
+      "packedBy": "Samex India Pvt. Ltd. Dist. Theni, Tamil Nadu, India",
+
+      "weights": [
+        "100 gm",
+        "250 gm",
+        "500 gm",
+        "1 kg",
+        "5 kg"
+      ],
+
+      "quantityAvailable": true,
+
+      "bulkOrder": {
+        "available": true,
+        "phone": "+91 9699196991",
+        "email": "birbal@emperorakbar.com"
       }
-    ]
+    },
+
+    {
+      "id": "pink-grade",
+      "name": "Pink Grade (7.5 mm & above) Cardamom",
+      "grade": "Pink",
+      "size": "Pods of diameter 7.5mm & above",
+      "price": 329,
+      "originalPrice": 650,
+      "currency": "INR",
+      "status": "sold-out",
+
+      "image": "/images/products/pink-grade.jpg",
+      "url": "/collections/cardamom-packs/products/aroma-lock-pink-grade-cardamom-packs",
+
+      "taxInfo": "Incl. of all taxes.",
+      "shippingInfo": "Shipping calculated at checkout.",
+
+      "brand": "Emperor Akbar Cardamom",
+      "vendor": "Emperor Akbar Cardamom",
+
+      "origin": "South India",
+      "speciality": "GI-tagged Alleppey Green Aroma Lock Cardamom",
+
+      "usage": "Versatile spice, ideal for the discerning home consumer",
+
+      "manufacturer": "Samex India Pvt. Ltd.",
+      "packedBy": "Samex India Pvt. Ltd. Dist. Theni, Tamil Nadu, India",
+
+      "weights": [
+        "100 gm",
+        "250 gm",
+        "500 gm",
+        "1 kg",
+        "5 kg"
+      ],
+
+      "quantityAvailable": false,
+
+      "bulkOrder": {
+        "available": true,
+        "phone": "+91 9699196991",
+        "email": "birbal@emperorakbar.com"
+      }
+    },
+
+    {
+      "id": "green-grade",
+      "name": "Green Grade (7-8mm) Cardamom",
+      "grade": "Green",
+      "size": "Pods of diameter 7mm - 8mm",
+      "price": 2149,
+      "originalPrice": 3500,
+      "currency": "INR",
+      "status": "sale",
+
+      "image": "/images/products/green-grade.jpg",
+      "url": "/collections/cardamom-packs/products/aroma-lock-green-grade-cardamom-packs",
+
+      "taxInfo": "Incl. of all taxes.",
+      "shippingInfo": "Shipping calculated at checkout.",
+
+      "brand": "Emperor Akbar Cardamom",
+      "vendor": "Emperor Akbar Cardamom",
+
+      "origin": "South India",
+      "speciality": "GI-tagged Alleppey Green Aroma Lock Cardamom",
+
+      "usage": "Versatile spice, ideal for the discerning home consumer",
+
+      "manufacturer": "Samex India Pvt. Ltd.",
+      "packedBy": "Samex India Pvt. Ltd. Dist. Theni, Tamil Nadu, India",
+
+      "weights": [
+        "100 gm",
+        "250 gm",
+        "500 gm",
+        "1 kg",
+        "5 kg"
+      ],
+
+      "quantityAvailable": true,
+
+      "bulkOrder": {
+        "available": true,
+        "phone": "+91 9699196991",
+        "email": "birbal@emperorakbar.com"
+      }
+    },
+
+    {
+      "id": "orange-grade",
+      "name": "Orange Grade (6.5-7.5mm) Cardamom",
+      "grade": "Orange",
+      "size": "Pods of diameter 6.5mm - 7.5mm",
+      "price": 1899,
+      "originalPrice": 3000,
+      "currency": "INR",
+      "status": "sold-out",
+
+      "image": "/images/products/orange-grade.jpg",
+      "url": "/collections/cardamom-packs/products/aroma-lock-orange-grade-cardamom-packs",
+
+      "taxInfo": "Incl. of all taxes.",
+      "shippingInfo": "Shipping calculated at checkout.",
+
+      "brand": "Emperor Akbar Cardamom",
+      "vendor": "Emperor Akbar Cardamom",
+
+      "origin": "South India",
+      "speciality": "GI-tagged Alleppey Green Aroma Lock Cardamom",
+
+      "usage": "Ideal for industrial use",
+
+      "manufacturer": "Samex India Pvt. Ltd.",
+      "packedBy": "Samex India Pvt. Ltd. Dist. Theni, Tamil Nadu, India",
+
+      "weights": [
+        "100 gm",
+        "250 gm",
+        "500 gm",
+        "1 kg",
+        "5 kg"
+      ],
+
+      "quantityAvailable": false,
+
+      "bulkOrder": {
+        "available": true,
+        "phone": "+91 9699196991",
+        "email": "birbal@emperorakbar.com"
+      }
+    },
+
+    {
+      "id": "red-grade",
+      "name": "Red Grade (6-7mm) Cardamom",
+      "grade": "Red",
+      "size": "6mm - 7mm",
+      "price": 1849,
+      "originalPrice": 2600,
+      "currency": "INR",
+      "status": "sale",
+
+      "image": "/images/products/red-grade.jpg",
+      "url": "/collections/cardamom-packs/products/aroma-lock-red-grade-cardamom-packs",
+
+      "taxInfo": "Incl. of all taxes.",
+      "shippingInfo": "Shipping calculated at checkout.",
+
+      "brand": "Emperor Akbar Cardamom",
+      "vendor": "Emperor Akbar Cardamom",
+
+      "origin": "South India",
+      "speciality": "GGI-tagged Alleppey Green Aroma Lock Cardamom",
+
+      "usage": "Versatile spice, ideal for industrial use",
+
+      "manufacturer": "Samex India Pvt. Ltd.",
+      "packedBy": "Samex India Pvt. Ltd. Dist. Theni, Tamil Nadu, India",
+
+      "weights": [
+        "100 gm",
+        "250 gm",
+        "500 gm",
+        "1 kg",
+        "5 kg"
+      ],
+
+      "quantityAvailable": true,
+
+      "bulkOrder": {
+        "available": true,
+        "phone": "+91 9699196991",
+        "email": "birbal@emperorakbar.com"
+      }
+    }
+  ]
+
   },
 
   "recipes": {

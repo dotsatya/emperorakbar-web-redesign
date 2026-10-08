@@ -1,16 +1,13 @@
 import React from "react";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import websiteData from "@/data/websiteData.json";
+
+import { websiteData } from "@/data/websiteData";
 
 export default function OurStoryPage() {
   const { heroTitle, sections } = websiteData.about;
 
   return (
-    <div className="font-sans bg-bg-primary min-h-screen flex flex-col">
-      <Header />
-      
-      <main className="flex-1 py-24 px-6 max-w-4xl mx-auto w-full mt-10">
+       
+      <main className="flex-1  pb-20 px-6 max-w-4xl mx-auto w-full mt-10">
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-serif font-bold text-stone-800 uppercase tracking-wide mb-6 leading-tight">
             {heroTitle}
@@ -36,7 +33,5 @@ export default function OurStoryPage() {
         </div>
       </main>
 
-      <Footer />
-    </div>
   );
 }

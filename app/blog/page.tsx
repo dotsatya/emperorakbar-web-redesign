@@ -1,7 +1,6 @@
 import React from "react";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import websiteData from "@/data/websiteData.json";
+
+import { websiteData } from "@/data/websiteData";
 import { ArrowRight } from "lucide-react";
 
 export default function BlogPage() {
@@ -9,9 +8,8 @@ export default function BlogPage() {
 
   return (
     <div className="font-sans bg-bg-primary min-h-screen flex flex-col">
-      <Header />
-      
-      <main className="flex-1 py-24 px-6 max-w-7xl mx-auto w-full mt-10">
+     
+      <main className="flex-1 pb-20 px-6 max-w-7xl mx-auto w-full mt-10">
         <div className="mb-16">
           <h1 className="text-4xl md:text-5xl font-serif font-bold text-stone-800 uppercase tracking-wide mb-8 text-center">
             {title}
@@ -48,7 +46,6 @@ export default function BlogPage() {
         </div>
       </main>
 
-      <Footer />
     </div>
   );
 }

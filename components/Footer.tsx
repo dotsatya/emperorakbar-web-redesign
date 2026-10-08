@@ -1,4 +1,5 @@
-import { logo } from "@/lib/picture";
+
+import { Photos } from "@/data/websiteData";
 import Image from "next/image";
 
 export default function Footer() {
@@ -8,7 +9,7 @@ export default function Footer() {
       style={{ clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)" }}
     >
       <div className="fixed bottom-0 left-0 w-full h-[1200px] sm:h-[800px] md:h-[600px] lg:h-[400px] -z-10">
-        <div className="w-full h-full bg-[#0f1f15] text-stone-400 pt-16 pb-8 px-6 rounded-t-4xl flex flex-col justify-between">
+        <div className="w-full h-full bg-bg-tertiary text-stone-400 pt-16 pb-8 px-6 rounded-t-4xl flex flex-col justify-between">
           <div className="max-w-7xl mx-auto w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-12 flex-1">
             <div className=" absolute w-full flex items-center justify-center mt-16 mb-8 z-10 pointer-events-none">
               <h1 className="text-[13vw] font-serif font-black text-white/5 tracking-tighter leading-none whitespace-nowrap select-none uppercase">
@@ -23,7 +24,7 @@ export default function Footer() {
 
                 {/* The Image */}
                 <Image
-                  src={logo}
+                  src={Photos.logo}
                   alt="Emperor Akbar Logo"
                   width={64}
                   height={64}

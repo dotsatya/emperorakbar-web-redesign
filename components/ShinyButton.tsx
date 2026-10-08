@@ -12,7 +12,9 @@ export default function ShinyButton({
 }: ShinyButtonProps) {
   return (
     <button
-      className={`relative overflow-hidden text-black px-8 py-4 rounded-full font-bold text-sm tracking-wide hover:bg-[#ebd57b] transition-colors shadow-[0_4px_20px_rgba(212,175,55,0.3)] ${className}`}
+      className={`relative overflow-hidden px-8 py-4 rounded-full font-bold text-sm tracking-wide 
+        tracking-wide transition-all duration-300 shadow-md shadow-black/50 
+              active:scale-98 active:transition-all active:duration-300 cursor-pointer ${className}`}
       {...props}
     >
       {/* 45-Degree Light Sweep */}

@@ -10,7 +10,7 @@
   /* Backgrounds */
   --color-bg-primary: #f4f1ea; /* Main light page background */
   --color-bg-secondary: #172d1f; /* Secondary dark green background */
-  --color-bg-tertiary: #0a140d; /* Tertiary deep dark/footer background */
+  --color-bg-tertiary: #0f1f15; /* Tertiary deep dark/footer background */
   
   /* Buttons */
   --color-btn-primary: #d4af37; /* Yellow gold for primary buttons */
@@ -85,4 +85,28 @@ html, body {
 
 .animate-flow-right {
   animation: flowRight 2.5s infinite linear;
+}
+
+/* thin scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(130, 130, 130, 0.327);
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #8a5cff8c;
+}
+
+/* Hide scrollbar completely but allow scrolling */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
