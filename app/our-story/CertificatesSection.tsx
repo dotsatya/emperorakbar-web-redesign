@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Image, { StaticImageData } from "next/image";
-import { Search, X } from "lucide-react";
+import {  X } from "lucide-react";
 
 interface CertificateItem {
   id: string;
@@ -104,8 +104,7 @@ export default function CertificatesSection({ data }: { data: CertificatesData }
                   onClick={() => setSelectedItem(item)}
                   className="inline-flex items-center text-sm font-semibold text-[#1b4b36] hover:text-[#a48135] transition-colors mt-auto group w-max"
                 >
-                  <Search className="w-4 h-4 mr-2 text-[#a48135] group-hover:scale-110 transition-transform" />
-                  View details &rarr;
+                   View details &rarr;
                 </button>
               </div>
             </div>

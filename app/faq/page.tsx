@@ -5,12 +5,12 @@ export default function FAQPage() {
   const { faqs } = websiteData;
 
   return (
-    <div className="font-sans bg-[#f9f8f6] min-h-screen pt-32 pb-24">
-      <div className="max-w-4xl mx-auto px-6">
+    <div className="font-sans bg-[#f9f8f6] min-h-screen pt-10 pb-20">
+      <div className="max-w-5xl mx-auto px-6">
         <h1 className="text-4xl md:text-5xl font-serif font-bold text-stone-900 leading-tight mb-8 text-center">
           {faqs.title}
         </h1>
-        <p className="text-xl text-stone-600 leading-relaxed mb-16 text-center max-w-3xl mx-auto">
+        <p className="text-xl text-stone-600 leading-relaxed mb-16 text-center max-w-5xl mx-auto">
           {faqs.intro}
         </p>
 

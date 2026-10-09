@@ -4,6 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft, ArrowRight, ArrowUpRight, CheckCircle2, PlayCircle } from "lucide-react";
 import { websiteData } from "@/data/websiteData";
+import ShinyButton from "@/components/ShinyButton";
 
 export default async function BlogDetails({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
@@ -48,9 +49,11 @@ export default async function BlogDetails({ params }: { params: Promise<{ slug: 
               </div>
             )}
             {blog.youtubeUrl && (
-              <a href={blog.youtubeUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center px-6 py-3 bg-[#1b4b36] hover:bg-[#113123] text-white font-bold rounded-full transition-all shadow-md">
-                <PlayCircle className="w-5 h-5 mr-2" /> Watch Video
-              </a>
+              <ShinyButton className="bg-[#1b4b36] hover:bg-[#113123] text-white font-bold rounded-full ">
+                <a href={blog.youtubeUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center ">
+                  <PlayCircle className="w-5 h-5 mr-2" /> Watch Video
+                </a>
+              </ShinyButton>
             )}
           </div>
           <div className="lg:w-1/2 w-full">
@@ -128,9 +131,11 @@ export default async function BlogDetails({ params }: { params: Promise<{ slug: 
             <div className="relative z-10">
               <h3 className="text-2xl font-serif font-bold mb-4">{content.video.title}</h3>
               <p className="text-stone-300 text-lg mb-8 max-w-xl mx-auto leading-relaxed">{content.video.description}</p>
-              <a href={content.video.url} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center px-8 py-4 bg-[#d4af37] hover:bg-white text-stone-900 font-bold rounded-full transition-colors duration-300">
-                Watch Video <ArrowUpRight className="w-5 h-5 ml-2" />
-              </a>
+              <ShinyButton className="bg-white/10 hover:bg-white/20 text-white font-bold rounded-full">
+                <Link href={content.video.url} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center">
+                  Watch Video <ArrowUpRight className="w-5 h-5 ml-2" />
+                </Link>
+              </ShinyButton>
             </div>
           </div>
         )}

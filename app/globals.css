@@ -66,6 +66,8 @@ html, body {
   overflow-x: hidden;
 }
 
+
+/* Shiny Button */
 @keyframes flowRight {
   0% {
     transform: translateX(-150%) skewX(-45deg);
@@ -74,19 +76,10 @@ html, body {
     transform: translateX(250%) skewX(-45deg);
   }
 }
-
-@keyframes flowRight {
-  0% {
-    transform: translateX(-150%) skewX(-45deg);
-  }
-  100% {
-    transform: translateX(250%) skewX(-45deg);
-  }
-}
-
 .animate-flow-right {
   animation: flowRight 2.5s infinite linear;
 }
+
 
 /* thin scrollbar */
 ::-webkit-scrollbar {

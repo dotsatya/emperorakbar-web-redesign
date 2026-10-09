@@ -49,7 +49,7 @@ const VisualizerArea = memo(function VisualizerArea({
   const isFractional = currentSize % 1 !== 0;
 
   return (
-    <div className="bg-white rounded-[2rem] p-8 md:p-12 border border-stone-200/50 shadow-inner max-w-3xl w-full flex flex-col md:flex-row items-center justify-center gap-8 relative overflow-hidden flex-1">
+    <div className="bg-white rounded-[2rem] p-6 md:p-12 border border-stone-200/50 shadow-inner max-w-3xl w-full flex flex-row items-center justify-center gap-4 md:gap-8 relative overflow-hidden flex-1">
       {/* 4. Added aria-hidden to decorative elements for better screen reader accessibility */}
       <div
         className="absolute inset-0 bg-stone-50/50 mix-blend-multiply pointer-events-none"
@@ -104,7 +104,7 @@ const VisualizerArea = memo(function VisualizerArea({
 
       {/* Scale / Ruler */}
       <div
-        className="relative h-[120px] w-16 shrink-0 border-l-2 border-stone-200 pl-4 my-auto mr-12"
+        className="relative h-[120px] w-16 shrink-0 border-l-2 border-stone-200 pl-4 my-auto mr-4 md:mr-12"
         aria-hidden="true"
       >
         {/* Ruler Base Numbers */}

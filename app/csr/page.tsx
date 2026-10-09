@@ -23,7 +23,7 @@ export default function CSRPage() {
           return (
             <div key={section.id} className="bg-white p-8 md:p-12 rounded-[2rem] shadow-sm border border-stone-100">
               {/* Title appears first */}
-              <h2 className="text-3xl md:text-4xl font-serif font-bold text-[#1b4b36] mb-10 text-center lg:text-left border-b border-stone-100 pb-6">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-serif font-bold text-[#1b4b36] mb-10 text-center lg:text-left border-b border-stone-100 pb-6">
                 {section.title}
               </h2>
 

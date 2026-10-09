@@ -16,10 +16,10 @@ interface Product {
 
 export default function ProductGridSection({ shopData }: { shopData: any }) {
   return (
-    <section className="px-6 max-w-7xl mx-auto py-16 ">
+    <section className="px-6 max-w-7xl mx-auto py-12 md:py-16 ">
       <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
         <div>
-          <h2 className="text-3xl md:text-4xl font-serif font-bold text-stone-800 uppercase tracking-wide mb-2">
+          <h2 className="text-2xl md:text-4xl font-serif font-bold text-stone-800 uppercase tracking-wide mb-2">
             Choose Your Cardamom
           </h2>
           <p className="text-stone-500 font-serif italic">

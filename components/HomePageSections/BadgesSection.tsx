@@ -1,8 +1,8 @@
 export default function BadgesSection() {
   return (
-    <section className="bg-bg-tertiary py-16 w-full relative overflow-hidden border-t border-stone-800/50">
+    <section className="bg-bg-tertiary py-12 md:py-16 w-full relative overflow-hidden border-t border-stone-800/50">
       <div className="max-w-7xl mx-auto px-6 relative z-10">
-        <div className="flex flex-col sm:flex-row justify-center items-center gap-16 md:gap-24 lg:gap-32">
+        <div className="flex flex-col sm:flex-row justify-center items-center gap-10 md:gap-24 lg:gap-32">
           {/* Freshness Sealed */}
           <div className="flex flex-col items-center text-center">
             <div className="w-28 h-28 flex flex-col items-center justify-center mb-4 relative">

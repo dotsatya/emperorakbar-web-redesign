@@ -12,6 +12,7 @@ import {
   Info,
 } from "lucide-react";
 import { websiteData } from "@/data/websiteData";
+import ShinyButton from "@/components/ShinyButton";
 
 export default async function RecipeDetails({
   params,
@@ -70,14 +71,16 @@ export default async function RecipeDetails({
               </div>
             )}
             {content.video && (
-              <a
-                href={content.video.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-6 py-3 bg-[#1b4b36] hover:bg-[#113123] text-white font-bold rounded-full transition-all shadow-md"
-              >
-                <PlayCircle className="w-5 h-5 mr-2" /> Watch Recipe Video
-              </a>
+              <ShinyButton className="bg-[#1b4b36] hover:bg-[#113123] text-white font-bold rounded-full ">
+                <a
+                  href={content.video.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center"
+                >
+                  <PlayCircle className="w-5 h-5 mr-2" /> Watch Recipe Video
+                </a>
+              </ShinyButton>
             )}
           </div>
           <div className="lg:w-1/2 w-full">
@@ -241,14 +244,16 @@ export default async function RecipeDetails({
                 </a>
               )}
               {content.links.video && (
+                <ShinyButton className="bg-[#1b4b36] hover:bg-[#113123] text-white font-bold rounded-full ">
                 <a
                   href={content.links.video}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-8 py-4 bg-[#1b4b36] hover:bg-[#113123] text-white font-bold rounded-full transition-all shadow-md"
+                  className="inline-flex items-center justify-center"
                 >
                   Watch on YouTube
                 </a>
+                </ShinyButton>
               )}
             </div>
           )}

@@ -37,7 +37,7 @@ export default function GradeTabs({ grading, activeGrade, setActiveGrade }: Grad
   };
 
   return (
-    <div className="flex flex-wrap justify-center gap-4 mb-16">
+    <div className="flex flex-wrap justify-center gap-3 md:gap-4 mb-8 md:mb-16">
       {grading.map((grade) => {
         const isActive = activeGrade.color === grade.color;
         const styles = getTabStyles(grade.color, isActive);
@@ -45,12 +45,12 @@ export default function GradeTabs({ grading, activeGrade, setActiveGrade }: Grad
           <button
             key={grade.color}
             onClick={() => setActiveGrade(grade)}
-            className={`${styles.bg} ${styles.border} ${styles.shadow || ""} ${styles.hover || ""} px-6 py-4 rounded-full flex flex-col items-center justify-center w-40 transition-all duration-300 border cursor-pointer`}
+            className={`${styles.bg} ${styles.border} ${styles.shadow || ""} ${styles.hover || ""} px-2 md:px-6 py-2 md:py-3 rounded-full flex flex-col items-center justify-center w-24 sm:w-28 md:w-40 transition-all duration-300 border cursor-pointer`}
           >
-            <span className={`font-bold tracking-widest text-sm uppercase ${styles.text} mb-1 transition-colors duration-300`}>
+            <span className={`font-bold tracking-widest text-xs md:text-sm uppercase ${styles.text} mb-0.5 md:mb-1 transition-colors duration-300`}>
               {grade.color}
             </span>
-            <span className={`text-xs opacity-80 ${isActive ? "text-white/90" : "text-stone-500"} transition-colors duration-300`}>
+            <span className={`text-[10px] md:text-xs opacity-80 ${isActive ? "text-white/90" : "text-stone-500"} transition-colors duration-300`}>
               {grade.diameter}
             </span>
           </button>

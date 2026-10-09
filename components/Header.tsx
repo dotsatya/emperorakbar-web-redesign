@@ -3,142 +3,176 @@
 import { useState, useEffect, Suspense } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 import { Search, User, ShoppingCart, Menu, X } from "lucide-react";
 import { Photos } from "@/data/websiteData";
 import { useCart } from "@/components/CartProvider";
 
+const NAV_LINKS = [
+  { name: "Home", href: "/" },
+  { name: "Our Story", href: "/our-story" },
+  { name: "Cardamom Grades", href: "/cardamom-grades" },
+  { name: "Shop", href: "/shop" },
+  { name: "Recipes", href: "/recipes" },
+  { name: "Blog", href: "/blog" },
+  { name: "CSR", href: "/csr" },
+  { name: "FAQ", href: "/faq" },
+] as const;
+
 function HeaderContent() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
   const { cartCount } = useCart();
 
+  // Scroll listener with passive flag for better scroll performance
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
+      const scrolled = window.scrollY > 20;
+      setIsScrolled((prev) => (prev !== scrolled ? scrolled : prev));
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const pathname = usePathname();
-
-  const navLinks = [
-    { name: "Home", href: "/" },
-    { name: "Our Story", href: "/our-story" },
-    { name: "Cardamom Grades", href: "/cardamom-grades" },
-    { name: "Shop", href: "/shop" },
-    { name: "Recipes", href: "/recipes" },
-    { name: "Blog", href: "/blog" },
-    { name: "CSR", href: "/csr" },
-    { name: "FAQ", href: "/faq" },
-  ];
-
-  const router = useRouter();
+  // Automatically close mobile menu on route change
+  useEffect(() => {
+    setMobileMenuOpen(false);
+  }, [pathname]);
 
   return (
     <>
-      {/* Spacer div to prevent content from hiding under the fixed header */}
-      <div className="h-[89px] w-full shrink-0"></div>
+      {/* Spacer to prevent layout shift below fixed header */}
+      <div 
+        aria-hidden="true" 
+        className={`w-full shrink-0 transition-[height] duration-300 ${
+          isScrolled ? "h-16" : "h-[88px]"
+        }`} 
+      />
+
       <header
+        role="banner"
         className={`fixed top-0 left-0 right-0 w-full z-50 px-6 md:px-12 
-          border-b border-stone-200
-          flex items-center justify-between transition-all duration-300 ease-in-out text-stone-800 bg-white/80 ${
-            isScrolled
-              ? " shadow-md py-3 backdrop-blur-md" // Glassy white when scrolling
-              : " py-5" // Solid cream color at the very top
+          border-b border-stone-200/80 bg-white/80 backdrop-blur-md
+          flex items-center justify-between transition-all duration-300 ease-in-out text-stone-800 ${
+            isScrolled ? "h-16 shadow-md" : "h-[88px]"
           }`}
       >
-        {/* Logo */}
-        <div
-          className="flex items-center gap-2 cursor-pointer"
-          onClick={() => router.push("/")}
-        >
+        {/* Logo: replaced router.push with semantic Link */}
+        <Link href="/" aria-label="Go to Homepage" className="flex items-center shrink-0">
           <Image
             src={Photos.logo}
             alt="Emperor Akbar Logo"
-            width={isScrolled ? 140 : 160}
-            height={isScrolled ? 40 : 50}
-            className="transition-all duration-300 object-contain w-auto h-12"
+            width={160}
+            height={48}
+            priority
+            className={`transition-all duration-300 object-contain w-auto ${
+              isScrolled ? "h-9" : "h-11"
+            }`}
           />
-        </div>
+        </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden lg:flex items-center gap-8 text-[15px] font-medium text-stone-700">
-          {navLinks.map((link) => {
+        <nav 
+          aria-label="Main Navigation" 
+          className="hidden lg:flex items-center gap-7 text-[15px] font-medium text-stone-700"
+        >
+          {NAV_LINKS.map((link) => {
             const isActive = pathname === link.href;
             return (
               <Link
-                key={link.name}
+                key={link.href}
                 href={link.href}
-                className={`relative hover:text-black transition-colors duration-300 group py-1 ${isActive ? "text-black" : ""}`}
+                aria-current={isActive ? "page" : undefined}
+                className={`relative py-1 transition-colors duration-200 group ${
+                  isActive ? "text-stone-950 font-semibold" : "hover:text-stone-950"
+                }`}
               >
                 {link.name}
-                {/* Active underline */}
                 <span
                   className={`absolute bottom-0 left-0 h-[2px] bg-stone-800 transition-all duration-300 ${
                     isActive ? "w-full" : "w-0 group-hover:w-full"
                   }`}
-                ></span>
+                />
               </Link>
             );
           })}
         </nav>
 
-        {/* Icons & Mobile Toggle */}
-        <div className="flex items-center gap-6 text-stone-700">
-          <button className="hover:text-black transition-transform duration-300 hover:scale-110">
+        {/* Action Icons & Mobile Toggle */}
+        <div className="flex items-center gap-5 text-stone-700">
+          <button 
+            type="button" 
+            aria-label="Search site" 
+            className="hover:text-black transition-transform duration-200 hover:scale-105 p-1"
+          >
             <Search className="w-5 h-5" />
           </button>
-          <button className="hover:text-black transition-transform duration-300 hover:scale-110 hidden sm:block">
+
+          <Link 
+            href="/account"
+            aria-label="User Account" 
+            className="hover:text-black transition-transform duration-200 hover:scale-105 hidden sm:block p-1"
+          >
             <User className="w-5 h-5" />
-          </button>
-          <Link href="/cart" className="hover:text-black relative transition-transform duration-300 hover:scale-110 group">
+          </Link>
+
+          <Link
+            href="/cart"
+            aria-label={`Shopping Cart, ${cartCount} items`}
+            className="hover:text-black relative transition-transform duration-200 hover:scale-105 p-1"
+          >
             <ShoppingCart className="w-5 h-5" />
             {cartCount > 0 && (
-              <span className="absolute -top-2 -right-2 bg-[#172d1f] text-[10px] font-bold text-white w-4 h-4 rounded-full flex items-center justify-center transition-colors">
-                {cartCount}
+              <span className="absolute -top-1 -right-1 bg-[#172d1f] text-[10px] font-bold text-white w-4 h-4 rounded-full flex items-center justify-center">
+                {cartCount > 99 ? "99+" : cartCount}
               </span>
             )}
           </Link>
 
-          {/* Mobile Menu Toggle */}
+          {/* Mobile Menu Button */}
           <button
-            className="lg:hidden hover:text-black transition-transform duration-300 hover:scale-110"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            type="button"
+            aria-expanded={mobileMenuOpen}
+            aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
+            aria-controls="mobile-navigation"
+            className="lg:hidden hover:text-black transition-transform duration-200 hover:scale-105 p-1"
+            onClick={() => setMobileMenuOpen((prev) => !prev)}
           >
-            {mobileMenuOpen ? (
-              <X className="w-6 h-6" />
-            ) : (
-              <Menu className="w-6 h-6" />
-            )}
+            {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
 
-        {/* Mobile Nav Overlay */}
+        {/* Mobile Navigation Dropdown */}
         <div
-          className={`fixed inset-x-0 bg-[#f4f1ea] border-b border-stone-200 flex flex-col items-center justify-center z-40 transition-all duration-300 ease-in-out lg:hidden overflow-hidden ${
-            mobileMenuOpen ? "h-[350px] shadow-2xl" : "h-0"
-          }`}
-          style={{ top: isScrolled ? "70px" : "88px" }}
+          id="mobile-navigation"
+          aria-hidden={!mobileMenuOpen}
+          className={`absolute top-full inset-x-0 bg-white/95 backdrop-blur-lg border-b border-stone-200 
+            transition-all duration-300 ease-in-out lg:hidden overflow-hidden  rounded-b-xl ${
+              mobileMenuOpen 
+                ? "max-h-[80vh] py-4 shadow-xl opacity-100" 
+                : "max-h-0 py-0 opacity-0 pointer-events-none"
+            }`}
         >
-          <nav className="flex flex-col items-center gap-6 text-base font-medium text-stone-700 w-full py-8">
-            {navLinks.map((link, index) => {
+          <nav className="flex flex-col items-stretch px-6 gap-1 text-center font-medium text-stone-700">
+            {NAV_LINKS.map((link, index) => {
               const isActive = pathname === link.href;
               return (
                 <Link
-                  key={link.name}
+                  key={link.href}
                   href={link.href}
-                  className={`hover:text-black transition-all duration-300 ${
-                    mobileMenuOpen
-                      ? "opacity-100 translate-y-0"
-                      : "opacity-0 translate-y-4"
-                  } ${isActive ? "text-black font-bold" : ""}`}
+                  aria-current={isActive ? "page" : undefined}
                   style={{
-                    transitionDelay: mobileMenuOpen ? `${index * 50}ms` : "0ms",
+                    transitionDelay: mobileMenuOpen ? `${index * 35}ms` : "0ms",
                   }}
-                  onClick={() => setMobileMenuOpen(false)}
+                  className={`px-4 py-2.5 rounded-lg transition-all duration-200 ${
+                    mobileMenuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2"
+                  } ${
+                    isActive
+                      ? "bg-[#172d1f] text-white font-semibold"
+                      : "hover:bg-stone-100 hover:text-black"
+                  }`}
                 >
                   {link.name}
                 </Link>
@@ -153,7 +187,7 @@ function HeaderContent() {
 
 export default function Header() {
   return (
-    <Suspense fallback={<div className="h-[89px] w-full shrink-0"></div>}>
+    <Suspense fallback={<div className="h-[88px] w-full shrink-0" />}>
       <HeaderContent />
     </Suspense>
   );

@@ -6,7 +6,7 @@ import { Photos } from "@/data/websiteData";
 
 export default function FeaturedGradeSection() {
   return (
-    <section className="px-6 max-w-7xl mx-auto mt-24 ">
+    <section className="px-6 max-w-7xl mx-auto mt-12 md:mt-24 ">
       {/* Featured Grade Display */}
       <div
         className="bg-white rounded-[3rem] p-4 md:p-8 lg:p-12 

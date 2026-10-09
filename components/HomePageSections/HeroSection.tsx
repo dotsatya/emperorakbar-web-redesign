@@ -25,10 +25,10 @@ export default function HeroSection() {
           <span className="text-[#d4af37] font-medium tracking-[0.2em] text-xs md:text-sm uppercase mb-4 block">
             Premium Alleppey Green Cardamom
           </span>
-          <h1 className="text-5xl md:text-7xl font-serif font-bold leading-tight mb-6 text-white">
+          <h1 className="text-4xl md:text-5xl lg:text-7xl font-serif font-bold leading-tight mb-4 md:mb-6 text-white">
             THE GREEN <br /> GOLD OF INDIA
           </h1>
-          <p className="text-xl md:text-2xl font-light mb-4">
+          <p className="text-lg md:text-xl lg:text-2xl font-light mb-4">
             Pure. Aromatic. Naturally Extraordinary.
           </p>
           <p className="text-stone-300 max-w-md mb-10 leading-relaxed text-sm md:text-base">
@@ -89,7 +89,7 @@ export default function HeroSection() {
             {/* Cursive Text */}
             <div className="-rotate-[24deg] drop-shadow-2xl text-center mb-4">
               <span
-                className="text-5xl md:text-6xl text-[#f4f1ea] drop-shadow-[0_4px_10px_rgba(0,0,0,0.6)]"
+                className="text-4xl md:text-5xl lg:text-6xl text-[#f4f1ea] drop-shadow-[0_4px_10px_rgba(0,0,0,0.6)]"
                 style={{ fontFamily: "var(--font-cursive), cursive" }}
               >
                 Nature&apos;s

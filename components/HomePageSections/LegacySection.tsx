@@ -6,7 +6,7 @@ import ShinyButton from "../ShinyButton";
 export default function LegacySection() {
   return (
     <section 
-      className="py-24 px-6 relative bg-cover bg-center bg-no-repeat "
+      className="py-16 md:py-24 px-6 relative bg-cover bg-center bg-no-repeat "
       style={{ backgroundImage: `url(${Photos.akbarBg.src})` }}
     >
       <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-16 md:pl-32 lg:pl-48 relative z-10">
@@ -16,7 +16,7 @@ export default function LegacySection() {
           <span className="text-[#a48835] font-bold tracking-widest text-xs uppercase mb-2 block">
             OUR JOURNEY
           </span>
-          <h2 className="text-3xl md:text-4xl font-serif font-bold text-stone-900 uppercase tracking-wide mb-6">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-serif font-bold text-stone-900 uppercase tracking-wide mb-6">
             A Legacy of Aroma
           </h2>
           <p className="text-stone-700 text-sm leading-relaxed mb-8 pr-4">

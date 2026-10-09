@@ -5,17 +5,17 @@ export default function CardamomGradesPage() {
     <div className="font-sans bg-bg-primary min-h-screen flex flex-col">
       <main className="flex-1 pb-20 px-6 max-w-6xl mx-auto w-full mt-10">
         <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-serif font-bold text-stone-800 uppercase tracking-wide mb-4">
+          <h1 className="text-2xl md:text-4xl lg:text-5xl font-serif font-bold text-stone-800 uppercase tracking-wide mb-3 md:mb-4">
             Five Grades. One Standard of Quality.
           </h1>
-          <p className="text-stone-500 font-serif italic text-lg">
+          <p className="text-stone-500 font-serif italic text-base md:text-lg">
             Colour-coded for your perfect choice.
           </p>
         </div>
 
         <CardamomVisualizer />
 
-        <div className="bg-white rounded-3xl p-8 border border-stone-200/50 shadow-sm max-w-3xl mx-auto text-center mt-16">
+        <div className="bg-white rounded-3xl p-6 md:p-8 border border-stone-200/50 shadow-sm max-w-3xl mx-auto text-center mt-12 md:mt-16">
           <h3 className="text-2xl font-serif font-bold text-stone-800 mb-4">
             What makes the difference?
           </h3>

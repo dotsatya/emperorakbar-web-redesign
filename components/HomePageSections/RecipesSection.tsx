@@ -8,14 +8,14 @@ export default function RecipesSection({ recipeData }: { recipeData: any }) {
   const [selectedRecipe, setSelectedRecipe] = useState<any>(null);
 
   return (
-    <section className="bg-white py-24 px-6 border-t border-stone-200">
+    <section className="bg-white py-16 md:py-24 px-6 border-t border-stone-200">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
           <div>
             <span className="text-[#d4af37] font-bold tracking-widest text-xs uppercase mb-2 block">
               FLAVOURS THAT BRING PEOPLE TOGETHER
             </span>
-            <h2 className="text-3xl md:text-4xl font-serif font-bold text-stone-800 uppercase tracking-wide">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-serif font-bold text-stone-800 uppercase tracking-wide">
               What will you create with it?
             </h2>
           </div>
@@ -90,7 +90,7 @@ export default function RecipesSection({ recipeData }: { recipeData: any }) {
             
             <div className="w-full p-8 md:p-10 overflow-y-auto scrollbar-hide">
               <p className="text-xs text-[#d4af37] font-bold uppercase tracking-widest mb-2">By {selectedRecipe.author}</p>
-              <h2 className="text-3xl font-serif font-bold text-stone-800 mb-6">{selectedRecipe.title}</h2>
+              <h2 className="text-2xl md:text-3xl font-serif font-bold text-stone-800 mb-6">{selectedRecipe.title}</h2>
               <div className="prose prose-stone max-w-none">
                 <p className="text-stone-600 leading-relaxed whitespace-pre-wrap">
                   {selectedRecipe.description}

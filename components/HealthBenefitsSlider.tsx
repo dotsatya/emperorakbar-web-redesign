@@ -19,7 +19,7 @@ export default function HealthBenefitsSlider() {
   }, [images.length]);
 
   return (
-    <section className="px-6 max-w-7xl mx-auto my-20"> 
+    <section className="px-6 max-w-7xl mx-auto my-12 md:my-20"> 
     <div className="bg-white rounded-[3rem] overflow-hidden flex flex-col lg:flex-row items-stretch border border-stone-200/50 shadow-[0_20px_60px_rgba(0,0,0,0.15)] hover:shadow-[0_30px_70px_rgba(0,0,0,0.2)] w-full transform hover:-translate-y-2 transition-all duration-500 ease-out">
       {/* Left side: Image Slider */}
       <div className="w-full lg:w-1/2 relative h-64 sm:h-80 lg:h-auto min-h-[350px] lg:min-h-[450px]">

@@ -11,7 +11,12 @@ interface StoryBlockProps {
   reverse?: boolean;
 }
 
-export default function StoryBlock({ title, paragraphs, image, reverse }: StoryBlockProps) {
+export default function StoryBlock({
+  title,
+  paragraphs,
+  image,
+  reverse,
+}: StoryBlockProps) {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   // If there are more than 2 paragraphs, we truncate for the preview
@@ -25,10 +30,10 @@ export default function StoryBlock({ title, paragraphs, image, reverse }: StoryB
     <>
       {!image ? (
         <div className="bg-white p-6 md:p-10 rounded-[2rem] shadow-sm border border-stone-100 max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-serif font-bold text-center text-[#1b4b36] mb-6">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-serif font-bold text-center text-[#1b4b36] mb-6">
             {title}
           </h2>
-          <div className="space-y-4 text-stone-600 leading-relaxed text-lg max-w-5xl mx-auto">
+          <div className="space-y-4 text-stone-600 leading-relaxed text-base md:text-lg max-w-5xl mx-auto">
             {previewParagraphs.map((para, index) => (
               <p key={index}>{para}</p>
             ))}
@@ -45,7 +50,9 @@ export default function StoryBlock({ title, paragraphs, image, reverse }: StoryB
           )}
         </div>
       ) : (
-        <div className={`bg-white rounded-[2rem] shadow-sm border border-stone-100 flex flex-col ${reverse ? 'lg:flex-row-reverse' : 'lg:flex-row'} p-6 md:p-10 gap-8 lg:gap-12 items-center max-w-7xl mx-auto`}>
+        <div
+          className={`bg-white rounded-[2rem] shadow-sm border border-stone-100 flex flex-col ${reverse ? "lg:flex-row-reverse" : "lg:flex-row"} p-6 md:p-10 gap-8 lg:gap-12 items-center max-w-7xl mx-auto`}
+        >
           <div className="w-full lg:w-1/2">
             <div className="p-3 border border-[#d4af37]/40 bg-[#faf9f6] shadow-sm rounded-2xl relative w-full aspect-[4/3]">
               <Image
@@ -57,10 +64,10 @@ export default function StoryBlock({ title, paragraphs, image, reverse }: StoryB
             </div>
           </div>
           <div className="w-full lg:w-1/2 flex flex-col justify-center">
-            <h2 className="text-3xl md:text-4xl font-serif font-bold text-[#1b4b36] mb-6 leading-tight">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-serif font-bold text-[#1b4b36] mb-6 leading-tight">
               {title}
             </h2>
-            <div className="space-y-4 text-stone-600 leading-relaxed text-lg mb-6">
+            <div className="space-y-4 text-stone-600 leading-relaxed text-base md:text-lg mb-6">
               {previewParagraphs.map((para, index) => (
                 <p key={index}>{para}</p>
               ))}
@@ -81,39 +88,46 @@ export default function StoryBlock({ title, paragraphs, image, reverse }: StoryB
 
       {/* Modal / Popup for Full Story */}
       {isModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 opacity-100 transition-opacity duration-300">
-          <div 
-            className="absolute inset-0 bg-stone-900/60 backdrop-blur-sm cursor-pointer" 
+        <div
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="modal-title"
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6"
+        >
+          {/* Backdrop */}
+          <div
+            aria-hidden="true"
+            className="fixed inset-0 bg-stone-900/60 backdrop-blur-sm transition-opacity duration-300"
             onClick={handleClose}
-          ></div>
-          <div className={`relative bg-white rounded-3xl shadow-2xl overflow-hidden w-full max-w-5xl flex flex-col ${image ? 'md:flex-row' : ''} max-h-[90vh]`}>
-            <button 
-              onClick={handleClose} 
-              className="absolute top-4 right-4 z-10 p-2 bg-stone-100 hover:bg-stone-200 rounded-full transition-colors text-stone-500 hover:text-stone-800"
+          />
+
+          {/* Modal Box */}
+          <div className="relative bg-white rounded-3xl shadow-2xl overflow-hidden w-full max-w-5xl flex flex-col max-h-[90vh] z-10">
+            {/* Close Button */}
+            <button
+              type="button"
+              onClick={handleClose}
+              aria-label="Close modal"
+              className="absolute top-4 right-4 z-20 p-2 bg-stone-100 hover:bg-stone-200 rounded-full transition-colors text-stone-500 hover:text-stone-800 focus:outline-none focus:ring-2 focus:ring-stone-400"
             >
               <X className="w-5 h-5" />
             </button>
-            
-            {image && (
-              <div className="w-full md:w-1/2 bg-[#faf9f6] p-8 md:p-12 flex items-center justify-center border-b md:border-b-0 md:border-r border-stone-100">
-                <div className="relative w-full aspect-[4/3] md:aspect-auto md:h-full max-h-[40vh] md:max-h-[60vh]">
-                   <Image 
-                     src={image} 
-                     alt={title} 
-                     fill
-                     className="object-cover rounded-xl shadow-lg border border-stone-200/50" 
-                   />
-                </div>
-              </div>
-            )}
-            
-            <div className={`w-full p-8 md:p-12 overflow-y-auto ${image ? 'md:w-1/2' : 'max-w-4xl mx-auto'}`}>
-              <h3 className="text-3xl font-serif font-bold text-[#1b4b36] mb-8 leading-tight">
+
+            {/* Scrollable Content */}
+            <div className="w-full p-8 md:p-12 overflow-y-auto">
+              <h3
+                id="modal-title"
+                className="text-2xl md:text-3xl font-serif font-bold text-[#1b4b36] mb-6 leading-tight pr-10"
+              >
                 {title}
               </h3>
-              
-              <div className="space-y-5 text-stone-600 leading-relaxed text-lg">
-                {paragraphs.map((p, i) => <p key={i}>{p}</p>)}
+
+              <div className="space-y-5 text-stone-600 leading-relaxed text-base md:text-lg">
+                {paragraphs?.map((p, i) => (
+                  <p key={typeof p === "string" ? `${i}-${p.slice(0, 15)}` : i}>
+                    {p}
+                  </p>
+                ))}
               </div>
             </div>
           </div>

@@ -2,7 +2,7 @@ import { websiteData } from "@/data/websiteData";
 import ShopProductCard from "@/components/shop/ShopProductCard";
 
 export default function ShopPage() {
-  const { products, title, sortOptions } = websiteData.shop;
+  const { products, title } = websiteData.shop;
 
   return (
     <div className="font-sans bg-bg-primary min-h-screen flex flex-col">
@@ -16,11 +16,7 @@ export default function ShopPage() {
               Freshly sealed Alleppey Green Cardamom
             </p>
           </div>
-          <select className="border border-stone-300 rounded-full px-6 py-3 text-sm text-stone-600 bg-white outline-none focus:border-[#d4af37]">
-            {sortOptions.map((opt) => (
-              <option key={opt}>{opt}</option>
-            ))}
-          </select>
+   
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">

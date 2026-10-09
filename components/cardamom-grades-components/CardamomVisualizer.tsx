@@ -37,7 +37,7 @@ export default function CardamomVisualizer() {
       />
 
       <div 
-        className="w-full flex flex-col lg:flex-row items-center justify-center gap-12 rounded-[3rem] p-8 md:p-12 transition-colors duration-500 shadow-inner"
+        className="w-full flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12 rounded-[3rem] p-4 sm:p-8 md:p-12 transition-colors duration-500 shadow-inner"
         style={{ 
           backgroundColor: activeGrade.color === 'Purple' ? 'rgba(107, 44, 88, 0.05)' : 
                            activeGrade.color === 'Pink' ? 'rgba(213, 53, 130, 0.05)' :
