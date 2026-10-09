@@ -72,6 +72,10 @@ import blog3 from "../public/blogs/cardamom-in-baking-the-spice-your-cakes-and-c
 import blog4 from "../public/blogs/why-origin-matters-in-green-cardamom.webp";
 import blog5 from "../public/blogs/cardamom-rakhi-a-first-of-its-kind-rakhi-that-brings-aroma-tradition-and-blessings-together.webp";
 
+//csr images
+import heart from "../public/csr/heart.webp";
+import eye from "../public/csr/eye.webp";
+
 export const Photos = {
   logo,
   heroBG,
@@ -1289,15 +1293,11 @@ export const websiteData = {
 
         content: {
           introduction: [
-            "A Comprehensive Market Report on Alleppey Green Cardamom From India's Leading Export House.",
-
-            "The global cardamom market is experiencing significant shifts in August 2026. Quality metrics are improving, domestic demand is accelerating, and current price spreads between grades remain at historically exceptional levels.",
-
-            "This report examines weather recovery, harvest progress, demand dynamics, global supply considerations, and price forecasts.",
-
-            "Whether you are an importer, wholesale buyer, or supply chain professional, understanding the current market landscape is essential for making informed sourcing decisions.",
-
-            "This analysis comes from Samex India, a Three-Star Export House and supplier of Emperor Akbar premium GI-certified Alleppey Green Cardamom.",
+            "A market report on Alleppey Green Cardamom from India's leading export house.",
+            "In August 2026, the global cardamom market is seeing shifts in quality, demand, and grade-wise pricing.",
+            "This report covers weather recovery, harvest progress, global supply, demand trends, and price forecasts.",
+            "These insights help importers, wholesalers, and supply chain professionals make informed sourcing decisions.",
+            "Prepared by Samex India, a Three-Star Export House and supplier of premium GI-certified Emperor Akbar Alleppey Green Cardamom.",
           ],
 
           sections: [
@@ -1989,26 +1989,37 @@ export const websiteData = {
       },
     ],
   },
-
   csr: {
-    title: "Enriching Lives Through Goodness",
-    description:
-      "Our mission at Emperor Akbar Cardamom is to strive for enriching society, committing ourselves to utilizing our resources, skills and knowledge for activities to positively impact society socially, morally, ethically, and environmentally.",
-    paragraphs: [
-      "We are devoted to contributing to, supporting, and enriching the educational and health sectors, as well as helping underprivileged people.",
-      "Our business is focussed on earning SHUBH LAABH which goes beyond the realm of business, enriching lives through the goodness of Emperor Akbar Cardamoms.",
+    title: "Corporate Social Responsibility",
+
+    sections: [
+      {
+        id: "enriching-lives",
+        title: "Enriching Lives Through Goodness",
+        paragraphs: [
+          "Our mission at Emperor Akbar Cardamom is to strive for enriching society, committing ourselves to utilizing our resources, skills and knowledge for activities to positively impact society socially, morally, ethically, and environmentally.",
+
+          "We are devoted to contributing to, supporting, and enriching the educational and health sectors, as well as helping underprivileged people. Our business is focussed on earning SHUBH LAABH which goes beyond the realm of business, enriching lives through the goodness of Emperor Akbar Cardamoms.",
+        ],
+        policy: {
+          label: "CSR POLICY",
+          url: "https://cdn.shopify.com/s/files/1/0581/5926/8038/files/CSR_POLICY_of_Samex_India_Pvt_Ltd.pdf?v=1678787404",
+        },
+        image: heart,
+      },
+
+      {
+        id: "brighter-future",
+        title: "Envisioning a Brighter Future",
+        paragraphs: [
+          "At Emperor Akbar Cardamom, we are driven by our sincere commitment at making a positive difference in the lives of those who need it the most. Our humble initiative, the Free Eye Check-up and Treatment Camp at Palitana (Gujarat), embodies our conscious effort and responsibility in helping people and enriching their lives with goodness.",
+
+          "We understand the importance of good vision in everyday life and its impact on overall well-being and through this opportunity, we aimed at empowering individuals, improving their quality of life, and bring about a positive change in the communities we serve.",
+        ],
+
+        image: eye,
+      },
     ],
-    policy: {
-      label: "CSR POLICY",
-      url: "https://cdn.shopify.com/s/files/1/0581/5926/8038/files/CSR_POLICY_of_Samex_India_Pvt_Ltd.pdf?v=1678787404",
-    },
-    initiative: {
-      title: "Envisioning a Brighter Future",
-      paragraphs: [
-        "At Emperor Akbar Cardamom, we are driven by our sincere commitment at making a positive difference in the lives of those who need it the most. Our humble initiative, the Free Eye Check-up and Treatment Camp at Palitana (Gujarat), embodies our conscious effort and responsibility in helping people and enriching their lives with goodness.",
-        "We understand the importance of good vision in everyday life and its impact on overall well-being and through this opportunity, we aimed at empowering individuals, improving their quality of life, and bring about a positive change in the communities we serve.",
-      ],
-    },
   },
   faqs: {
     title: "FAQs",

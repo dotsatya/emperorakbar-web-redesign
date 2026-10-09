@@ -32,6 +32,7 @@ function HeaderContent() {
     { name: "Recipes", href: "/recipes" },
     { name: "Blog", href: "/blog" },
     { name: "CSR", href: "/csr" },
+    { name: "FAQ", href: "/faq" },
   ];
 
   const router = useRouter();

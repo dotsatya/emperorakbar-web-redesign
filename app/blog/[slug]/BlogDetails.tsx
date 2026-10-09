@@ -41,7 +41,7 @@ export default async function BlogDetails({ params }: { params: Promise<{ slug: 
         <div className="flex flex-col lg:flex-row gap-12 items-center">
           <div className="lg:w-1/2">
             {content.introduction && (
-              <div className="prose prose-stone text-lg text-stone-600 mb-8">
+              <div className="space-y-4 text-lg text-stone-600 mb-8 leading-relaxed">
                 {content.introduction.map((p: string, idx: number) => (
                   <p key={idx}>{p}</p>
                 ))}
@@ -76,8 +76,8 @@ export default async function BlogDetails({ params }: { params: Promise<{ slug: 
             )}
             
             {section.paragraphs && (
-              <div className="prose prose-stone prose-lg max-w-none mb-6">
-                {section.paragraphs.map((p: string, i: number) => <p key={i} className="mb-4">{p}</p>)}
+              <div className="space-y-4 text-lg text-stone-700 mb-6 leading-relaxed">
+                {section.paragraphs.map((p: string, i: number) => <p key={i}>{p}</p>)}
               </div>
             )}
             
@@ -98,8 +98,8 @@ export default async function BlogDetails({ params }: { params: Promise<{ slug: 
                   <h3 className="text-xl md:text-2xl font-serif font-bold text-stone-800 mb-4">{sub.heading}</h3>
                 )}
                 {sub.paragraphs && (
-                  <div className="prose prose-stone prose-lg max-w-none mb-4">
-                    {sub.paragraphs.map((p: string, i: number) => <p key={i} className="mb-4">{p}</p>)}
+                  <div className="space-y-4 text-lg text-stone-700 mb-4 leading-relaxed">
+                    {sub.paragraphs.map((p: string, i: number) => <p key={i}>{p}</p>)}
                   </div>
                 )}
                 {sub.bullets && (
