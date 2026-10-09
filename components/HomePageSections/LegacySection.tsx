@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Photos } from "@/data/websiteData";
+import ShinyButton from "../ShinyButton";
 
 export default function LegacySection() {
   return (
@@ -23,10 +24,10 @@ export default function LegacySection() {
             Emperor Akbar continues to bring the unmatched aroma of Alleppey
             Green Cardamom to kitchens around the world.
           </p>
-          <Link href="/about">
-            <button className="bg-[#0b1f14] text-white px-6 py-2.5 rounded-[2rem] font-bold text-xs tracking-widest hover:bg-black transition-colors flex items-center gap-2">
+          <Link href="/our-story">
+            <ShinyButton className="bg-[#0b1f14] text-white px-6 py-2.5 rounded-[2rem] font-bold text-xs tracking-widest hover:bg-black transition-colors flex items-center gap-2">
               OUR STORY <ArrowRight className="w-3.5 h-3.5" />
-            </button>
+            </ShinyButton>
           </Link>
         </div>
 

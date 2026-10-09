@@ -1,6 +1,7 @@
 
 import { Photos } from "@/data/websiteData";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -38,19 +39,19 @@ export default function Footer() {
               </h4>
               <ul className="space-y-4 text-sm">
                 <li>
-                  <a href="#" className="hover:text-white transition-colors">
+                  <Link href="/shop" className="hover:text-white transition-colors">
                     All Products
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-white transition-colors">
+                  <Link href="/cardamom-grades" className="hover:text-white transition-colors">
                     Cardamom Grades
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Gift Packs
-                  </a>
+                  <Link href="/recipes" className="hover:text-white transition-colors">
+                    Recipes
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -61,24 +62,24 @@ export default function Footer() {
               </h4>
               <ul className="space-y-4 text-sm">
                 <li>
-                  <a href="#" className="hover:text-white transition-colors">
+                  <Link href="/our-story" className="hover:text-white transition-colors">
                     Our Story
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-white transition-colors">
+                  <Link href="/about" className="hover:text-white transition-colors">
                     Quality & Sourcing
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-white transition-colors">
+                  <Link href="/blog" className="hover:text-white transition-colors">
                     Blog
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-white transition-colors">
+                  <Link href="/contact" className="hover:text-white transition-colors">
                     Contact
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>

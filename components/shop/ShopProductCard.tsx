@@ -116,38 +116,6 @@ export default function ShopProductCard({ product }: { product: Product }) {
           )}
         </div>
       </div>
-
-      <button
-        onClick={(e) => {
-          e.preventDefault();
-          e.stopPropagation();
-
-          // Extract image URL properly whether it's a string or StaticImageData
-          let imageUrl = "";
-          if (product.image) {
-            imageUrl = typeof product.image === "string" ? product.image : product.image.src;
-          } else if (images.length > 0) {
-            const firstImage = images[0].src;
-            imageUrl = typeof firstImage === "string" ? firstImage : (firstImage as StaticImageData).src;
-          }
-
-          addToCart({
-            id: product.id,
-            name: product.name,
-            price: product.price,
-            image: imageUrl,
-            weight: "100 gm", // Default weight for shop cards
-            quantity: 1,
-          });
-          setIsAdded(true);
-          setTimeout(() => setIsAdded(false), 2000);
-        }}
-        className={`absolute bottom-4 right-4 w-10 h-10 rounded-full flex items-center justify-center transition-colors shadow-md z-20 ${
-          isAdded ? "bg-[#172d1f] text-white" : "bg-[#d4af37] text-white hover:bg-[#b5952f]"
-        }`}
-      >
-        {isAdded ? <Check className="w-5 h-5" /> : "+"}
-      </button>
     </Link>
   );
 }

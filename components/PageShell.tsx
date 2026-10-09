@@ -1,11 +1,12 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
 
-export default function FooterRevealWrapper({
-  children,
-}: {
+interface PageShellProps {
   children: React.ReactNode;
-}) {
+  footer: React.ReactNode;
+}
+
+export default function PageShell({ children, footer }: PageShellProps) {
   const footerRef = useRef<HTMLDivElement>(null);
   const [footerHeight, setFooterHeight] = useState(0);
 
@@ -25,14 +26,16 @@ export default function FooterRevealWrapper({
 
   return (
     <>
-      <style suppressHydrationWarning>{`
-        :root {
-          --footer-height: ${footerHeight}px;
-        }
-      `}</style>
-      <div className="fixed bottom-0 left-0 w-full h-screen z-0 bg-bg-tertiary flex flex-col justify-end">
+      <div 
+        className="flex flex-col min-h-screen w-full"
+        style={{ paddingBottom: `${footerHeight}px` }}
+      >
+        {children}
+      </div>
+
+      <div className="fixed bottom-0 left-0 w-full h-screen -z-10 bg-bg-tertiary flex flex-col justify-end">
         <div ref={footerRef}>
-          {children}
+          {footer}
         </div>
       </div>
     </>
