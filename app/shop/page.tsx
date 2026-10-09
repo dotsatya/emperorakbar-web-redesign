@@ -1,6 +1,3 @@
-import React from "react";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import { websiteData } from "@/data/websiteData";
 import ShopProductCard from "@/components/shop/ShopProductCard";
 

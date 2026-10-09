@@ -59,7 +59,18 @@ import black_coffee from "../public/recipes/black_coffe.webp";
 import Elichi_Doodh from "../public/recipes/elichi_doodh.webp";
 import biriyani from "../public/recipes/biriyani.webp";
 
+// Certificate Images
+import best_brand from "../public/certificates/top_brand.webp";
+import emperor_akbar_story from "../public/certificates/emperor_akbar_story.jpg";
+import world_best_cardamom from "../public/certificates/world_best_cardamom.webp";
+import star_Export_Certificate from "../public/certificates/star_Export_Certificate.webp";
 
+// Blog Images
+import blog1 from "../public/blogs/market_analysis_august.webp";
+import blog2 from "../public/blogs/how-to-identify-fresh-high-quality-cardamom-3-simple-checks-before-you-buy.webp";
+import blog3 from "../public/blogs/cardamom-in-baking-the-spice-your-cakes-and-cookies-have-been-missing.webp";
+import blog4 from "../public/blogs/why-origin-matters-in-green-cardamom.webp";
+import blog5 from "../public/blogs/cardamom-rakhi-a-first-of-its-kind-rakhi-that-brings-aroma-tradition-and-blessings-together.webp";
 
 export const Photos = {
   logo,
@@ -122,7 +133,7 @@ export const Photos = {
 
 export const websiteData = {
   about: {
-    heroTitle: "The Origins of the World’s Best Cardamom",
+    heroTitle: "Our Story",
     sections: [
       {
         title: "The Origins of the World’s Best Cardamom",
@@ -135,16 +146,9 @@ export const websiteData = {
           "Like ants to honey, merchants from around the world sailed across the seas in search of this golden green. And they still do today, albeit via more convenient and regulatory trade channels.",
           "The rich legacy of Alleppey Green Cardamom continues even today, through the commitment and quality of Emperor Akbar Cardamom.",
         ],
+        image: null,
       },
-      {
-        title:
-          "The World’s Best Cardamom Brand is also India’s Topmost Cardamom Exporter",
-        paragraphs: [
-          "Emperor Akbar Cardamom has been recognised as the Largest Exporter of Green Cardamom for the year 2018-19 & 2019-20, by the Spices Board of India, Ministry of Commerce, Government of India.",
-          "Edging out competition from the traditionally exported unbranded Cardamoms or Cardamoms under private labels of foreign importers, an Indian brand of Green Cardamoms is now the Top Most exporter. This is a critical shift in the nature of exports of Indian Cardamoms and the team of Emperor Akbar Cardamom is grateful to the Spices Board for their encouragement.",
-          "Emperor Akbar is now exporting Green Cardamoms to 25 countries and growing in popularity around the world. A big thank you for all the love and support!",
-        ],
-      },
+
       {
         title: "The Emperor Akbar Story",
         paragraphs: [
@@ -153,32 +157,60 @@ export const websiteData = {
           "Samex knew the gamechanger lay in doing something that would lock in the aroma and flavour for years. That realisation led to the birth of the Emperor Akbar brand.",
           "The brand was launched in 2008 and initially sold in zip-lock pouches. This helped retain the aroma and flavour to a significant extent, although not entirely. After consultation with the packaging industry experts, they came up with a solution to lock in the volatile cardamom oil found in the cardamom seeds. Emperor Akbar Cardamom introduced the world’s first ever Aroma-Lock technology for cardamom packaging.",
         ],
-      },
-      {
-        title: "Emperor Akbar Pioneered the Grading of Cardamom",
-        paragraphs: [
-          "Emperor Akbar is an innovative brand. The first to introduce Aroma-Lock packaging, the brand has been the pioneer in the industry in terms of setting the grading standards, which has now become an industry standard.",
-          "Cardamoms are graded based on their pod diameter, not the pod length as is often misunderstood, and their seed density. The fatter the pod, the more bang for your buck!",
-          "Size wise, the pods are then sealed into colour-coded packaging for easy identification.",
-          "The quality remains world-class across all packs.",
-          "When you buy Emperor Akbar Cardamom, you are buying the world’s best Alleppey Green Cardamom from the people who know cardamom best.",
-        ],
-      },
-      {
-        title: "Certified as the World’s Best Cardamom",
-        paragraphs: [
-          "Emperor Akbar claim of being the world’s best Alleppey Green Cardamom isn’t just hollow, but one certified by a prestigious GI Tag. Geographical Indication or GI acts as certification that a product meets certain stringent qualities and standards by virtue of belonging to a specific geographical region.",
-          "Alleppey Green Cardamom is known for its unique qualities like fully matured pods, richer aroma, fruity flavour, greater oil content, uniform green colour and a three-cornered ribbed structure that give it a premium status the world over.",
-        ],
-      },
-      {
-        title: "Three Star Export House Certified by the Government of India",
-        paragraphs: [
-          "Emperor Akbar Cardamom is the proud recipient of the Three Star Export House certificate conferred on it by the Directorate General of Foreign Trade, under the aegis of the Ministry of Commerce & Industry, Government of India.",
-          "The certification is based on our consistent export performance and acknowledges us as a category leader (Green Cardamom) who has excelled in international trade and successfully contributed to the country’s foreign trade.",
-        ],
+        image: emperor_akbar_story,
       },
     ],
+    certificatesData: {
+      title: "Recognition, Quality & Global Excellence",
+      subtitle: "OUR RECOGNITION",
+      description:
+        "Discover the geographical recognition, export achievements, and industry credentials behind Emperor Akbar Cardamom.",
+      filters: [
+        "All Credentials",
+        "GI & Origin",
+        "Government Certification",
+        "Export Achievement",
+      ],
+      items: [
+        {
+          id: "gi-origin",
+          category: "GI & Origin",
+          title: "Certified as the World’s Best Cardamom Brand",
+          description:
+            "Discover the geographical recognition and distinctive qualities of Alleppey Green Cardamom.",
+          paragraphs: [
+            "Emperor Akbar claim of being the world’s best Alleppey Green Cardamom isn’t just hollow, but one certified by a prestigious GI Tag. Geographical Indication or GI acts as certification that a product meets certain stringent qualities and standards by virtue of belonging to a specific geographical region.",
+            "Alleppey Green Cardamom is known for its unique qualities like fully matured pods, richer aroma, fruity flavour, greater oil content, uniform green colour and a three-cornered ribbed structure that give it a premium status the world over.",
+          ],
+          image: world_best_cardamom,
+        },
+        {
+          id: "three-star",
+          category: "Government Certification",
+          title: "Three Star Export House Certified by Government of India",
+          description:
+            "Recognition conferred by the Directorate General of Foreign Trade for export performance.",
+          paragraphs: [
+            "Emperor Akbar Cardamom is the proud recipient of the Three Star Export House certificate conferred on it by the Directorate General of Foreign Trade, under the aegis of the Ministry of Commerce & Industry, Government of India.",
+            "The certification is based on our consistent export performance and acknowledges us as a category leader (Green Cardamom) who has excelled in international trade and successfully contributed to the country’s foreign trade.",
+          ],
+          image: star_Export_Certificate,
+        },
+        {
+          id: "export-excellence",
+          category: "Export Achievement",
+          title: "India’s Topmost Cardamom Exporter",
+          description:
+            "Recognition as the Largest Exporter of Green Cardamom for 2018–19 and 2019–20.",
+          paragraphs: [
+            "Emperor Akbar Cardamom has been recognised as the Largest Exporter of Green Cardamom for the year 2018-19 & 2019-20, by the Spices Board of India, Ministry of Commerce, Government of India.",
+            "Edging out competition from the traditionally exported unbranded Cardamoms or Cardamoms under private labels of foreign importers, an Indian brand of Green Cardamoms is now the Top Most exporter. This is a critical shift in the nature of exports of Indian Cardamoms and the team of Emperor Akbar Cardamom is grateful to the Spices Board for their encouragement.",
+            "Emperor Akbar is now exporting Green Cardamoms to 25 countries and growing in popularity around the world. A big thank you for all the love and support!",
+          ],
+          image: best_brand,
+        },
+      ],
+    },
     grading: [
       {
         color: "Purple",
@@ -368,8 +400,10 @@ export const websiteData = {
       },
     ],
   },
+
   recipes: {
     title: "Recipes",
+
     tags: [
       "All",
       "Arabic dessert",
@@ -388,82 +422,846 @@ export const websiteData = {
       "rice",
       "yoghurt",
     ],
+
     items: [
+      // RECIPE 1: CARDAMOM RASMALAI
       {
         id: "cardamom-rasmalai",
         title: "Cardamom Rasmalai",
         slug: "cardamom-rasmalai-by-shimi-s-kitchen",
         author: "Shimi’s Kitchen",
+
         description:
-          "We collaborated with Shimi’s Kitchen to create a soft and aromatic Cardamom Rasmalai that brings together the creaminess of whipped cream and the warm, lingering aroma of Emperor Akbar Cardamom. A moist eggless vanilla sponge, soaked in saffron-cardamom rasmalai milk, layered with lightly sweetened whipped cream and finished with pistachios, almonds, and saffron come together in a dessert that feels indulgent yet effortlessly simple. With the Emperor Akbar Cardamom added at the right moment, the rasmalai takes on an aromatic depth that lifts every bite and turns a regular festive sweet into a quiet moment of luxury. Whether enjoyed during Diwali celebrations...",
+          "We collaborated with Shimi’s Kitchen to create a soft and aromatic Cardamom Rasmalai that brings together the creaminess of whipped cream and the warm, lingering aroma of Emperor Akbar Cardamom. A moist eggless vanilla sponge, soaked in saffron-cardamom rasmalai milk, layered with lightly sweetened whipped cream and finished with pistachios, almonds, and saffron come together in a dessert that feels indulgent yet effortlessly simple. With the Emperor Akbar Cardamom added at the right moment, the rasmalai takes on an aromatic depth that lifts every bite and turns a regular festive sweet into a quiet moment of luxury.",
+
         url: "/blogs/recipes/cardamom-rasmalai-by-shimi-s-kitchen",
         image: rasmalai,
-      },
-      {
-        id: "cardamom-pistachio-latte",
-        title: "Cardamom Pistachio Latte ",
-        slug: "cardamom-pistachio-latte-by-shimi-s-kitchen",
-        author: "Shimi’s Kitchen",
-        description:
-          "We collaborated with Shimi’s Kitchen to create a smooth and aromatic Cardamom Pistachio Latte that brings together the creaminess of pistachio and the warm, lingering fragrance of cardamom. A chilled milk base, rich pistachio cream, and a shot of espresso infused with Emperor Akbar Cardamom come together in a drink that feels indulgent yet effortlessly simple.",
-        url: "/blogs/recipes/cardamom-pistachio-latte-by-shimi-s-kitchen",
-        image: Pistachio,
-      },
-      {
-        id: "elaichi-milk-tea",
-        title: "Elaichi Milk Tea ",
-        slug: "elaichi-milk-tea-by-shimi-s-kitchen",
-        author: "Shimi’s Kitchen",
-        description:
-          "We collaborated with Shimi’s Kitchen to bring you a comforting and fragrant Elaichi Milk Tea, a classic chai that blends the richness of milk with the warmth of tea and the unmistakable aroma of Emperor Akbar Cardamom. Simple, familiar, and deeply satisfying, this recipe turns an everyday cup into a more elevated ritual.",
-        url: "/blogs/recipes/elaichi-milk-tea-by-shimi-s-kitchen",
-        image: Milk_Tea,
-      },
-      {
-        id: "elaichi-payasam",
-        title: "Elaichi Payasam ",
-        slug: "elaichi-payasam-by-shimi-s-kitchen",
-        author: "Shimi’s Kitchen",
-        description:
-          "We collaborated with Shimi’s Kitchen to create a rich and elegant Elaichi Payasam that brings together festive tradition and the quiet luxury of cardamom. Slow-cooked milk, soft basmati rice, golden cashews, and plump raisins come together in a dessert that feels indulgent yet deeply rooted in home cooking.",
-        url: "/blogs/recipes/elaichi-payasam-by-shimi-s-kitchen",
-        image: simui,
-      },
-      {
-        id: "elaichi-wala-doodh",
-        title: "Elaichi Wala Doodh ",
-        slug: "elaichi-wala-doodh-by-shimi-s-kitchen",
-        author: "Shimi’s Kitchen",
-        description:
-          "We worked with Shimi’s Kitchen to bring you a comforting Elaichi Wala Doodh recipe that celebrates simplicity, warmth, and tradition in every cup. Made with full-fat milk and gently infused with Emperor Akbar Cardamom, this drink carries a soft fragrance and a creamy richness that feels both nourishing and familiar.",
-        url: "/blogs/recipes/elaichi-wala-doodh-by-shimi-s-kitchen",
-        image: Elichi_Doodh,
-      },
-      {
-        id: "cardamom-black-coffee",
-        title: "Cardamom Black Coffee ",
-        slug: "cardamom-black-coffee-by-shimi-s-kitchen",
-        author: "Shimi’s Kitchen",
-        description:
-          "We collaborated with Shimi’s Kitchen to create a simple yet refined Cardamom Black Coffee that brings together the boldness of coffee and the delicate warmth of cardamom. With Emperor Akbar Cardamom lightly infused into the water before brewing, this cup gains a fragrant depth that softens the intensity of black coffee without taking away its character.",
-        url: "/blogs/recipes/cardamom-black-coffee-by-shimi-s-kitchen",
-        image: black_coffee,
+
+        tags: ["cake", "dessert", "festive recipe", "indian dessert"],
+
+        content: {
+          introduction: [
+            "We collaborated with Shimi’s Kitchen to create a soft and aromatic Cardamom Rasmalai that brings together the creaminess of whipped cream and the warm, lingering aroma of Emperor Akbar Cardamom.",
+
+            "A moist eggless vanilla sponge, soaked in saffron-cardamom rasmalai milk, layered with lightly sweetened whipped cream and finished with pistachios, almonds, and saffron come together in a dessert that feels indulgent yet effortlessly simple.",
+
+            "Whether enjoyed during Diwali celebrations or as a special weekend treat, this recipe makes cardamom feel both familiar and elevated.",
+          ],
+
+          video: {
+            title: "Cardamom Rasmalai Recipe",
+            url: "https://www.youtube.com/embed/GUx-AXCXFPU",
+          },
+
+          recipeInfo: {
+            cuisine: "Indian fusion dessert",
+            category: "Dessert",
+            difficulty: "Intermediate",
+            servings: "Not specified",
+            preparationTime: "Not specified",
+            cookingTime: "Not specified",
+          },
+
+          ingredientGroups: [
+            {
+              id: "vanilla-sponge",
+              title: "Eggless Vanilla Sponge",
+              ingredients: [
+                { name: "Maida", quantity: "100 g" },
+                { name: "Powdered sugar", quantity: "90 g" },
+                { name: "Thick curd", quantity: "120 g" },
+                { name: "Neutral oil", quantity: "50 ml" },
+                { name: "Milk", quantity: "50–60 ml" },
+                { name: "Vanilla essence", quantity: "1 tsp" },
+                { name: "Baking powder", quantity: "1 tsp" },
+                { name: "Baking soda", quantity: "½ tsp" },
+                { name: "Salt", quantity: "1 pinch" },
+              ],
+            },
+
+            {
+              id: "rasmalai-milk",
+              title: "Rasmalai Milk / Soaking Syrup",
+              ingredients: [
+                { name: "Full-fat milk", quantity: "500 ml" },
+                {
+                  name: "Sugar",
+                  quantity: "3–4 tbsp, according to taste",
+                },
+                {
+                  name: "Emperor Akbar cardamom powder",
+                  quantity: "½ tsp",
+                },
+                { name: "Saffron", quantity: "8–10 strands" },
+                { name: "Warm milk", quantity: "1 tbsp" },
+                { name: "Chopped pistachios", quantity: "1 tbsp" },
+                { name: "Chopped almonds", quantity: "1 tbsp" },
+                {
+                  name: "Rose water",
+                  quantity: "½ tsp, optional",
+                },
+              ],
+            },
+
+            {
+              id: "whipped-cream",
+              title: "Whipped Cream",
+              ingredients: [
+                {
+                  name: "Chilled whipping cream",
+                  quantity: "250 ml",
+                },
+                {
+                  name: "Icing sugar",
+                  quantity: "1–2 tbsp, depending on sweetness",
+                },
+                { name: "Vanilla essence", quantity: "½ tsp" },
+                {
+                  name: "Emperor Akbar cardamom powder",
+                  quantity: "¼ tsp",
+                },
+              ],
+            },
+
+            {
+              id: "rasmalai-assembly",
+              title: "For Assembly",
+              ingredients: [
+                { name: "Eggless vanilla sponge", quantity: "Prepared" },
+                { name: "Cooled rasmalai milk", quantity: "As needed" },
+                { name: "Whipped cream", quantity: "As needed" },
+                { name: "Chopped pistachios", quantity: "For garnish" },
+                { name: "Chopped almonds", quantity: "For garnish" },
+                { name: "Saffron strands", quantity: "For garnish" },
+                {
+                  name: "Rasmalai pieces",
+                  quantity: "2–3 pieces, optional",
+                },
+              ],
+            },
+          ],
+
+          steps: [
+            {
+              id: "prepare-sponge",
+              title: "1. Prepare the Eggless Vanilla Sponge",
+              description:
+                "Whisk curd and powdered sugar until smooth, then add oil and vanilla essence. Sift together maida, baking powder, baking soda, and salt. Add the dry ingredients to the curd mixture in batches. Gradually add milk and fold gently until smooth and lump-free.",
+              instructions: [
+                "Pour the batter into a greased and lined 6-inch round cake tin.",
+                "Tap the tin once or twice.",
+                "Bake at 170°C for 25–30 minutes, or until a toothpick inserted in the centre comes out clean.",
+                "Allow the sponge to cool completely before slicing.",
+              ],
+            },
+
+            {
+              id: "prepare-rasmalai-milk",
+              title: "2. Prepare the Rasmalai Milk",
+              description:
+                "Heat full-fat milk in a heavy-bottomed saucepan. Bring it to a gentle boil, then reduce the flame and simmer until the milk reduces to approximately 350–400 ml, stirring occasionally.",
+              instructions: [
+                "Soak the saffron strands in 1 tbsp warm milk for a few minutes.",
+                "Add sugar, Emperor Akbar cardamom powder, and saffron milk to the reduced milk.",
+                "Simmer for another 2–3 minutes.",
+                "Add chopped pistachios and almonds.",
+                "Switch off the flame and add rose water, if using.",
+                "Allow the rasmalai milk to cool completely before using it on the cake.",
+              ],
+              tip: "The milk should be flavourful and slightly thick, but still pourable. Do not reduce it too much because it needs to soak into the sponge.",
+            },
+
+            {
+              id: "prepare-whipped-cream",
+              title: "3. Prepare the Whipped Cream",
+              description:
+                "Chill the whipping cream, mixing bowl, and beaters well. Pour the chilled cream into the bowl and whip until it starts forming soft peaks.",
+              instructions: [
+                "Add icing sugar, vanilla essence, and Emperor Akbar cardamom powder.",
+                "Continue whipping until stiff peaks form.",
+                "Avoid overwhipping, as the cream can become grainy.",
+              ],
+            },
+
+            {
+              id: "assemble-rasmalai",
+              title: "4. Assemble and Decorate",
+              description:
+                "Once the sponge has cooled completely, trim the top if needed and cut the cake horizontally into two equal layers.",
+              instructions: [
+                "Place the first layer on a cake board.",
+                "Spoon the rasmalai milk evenly over the sponge, including the edges.",
+                "Spread a generous layer of whipped cream.",
+                "Sprinkle chopped pistachios and almonds over the cream.",
+                "Add small pieces of rasmalai if desired.",
+                "Place the second sponge layer on top and soak it with rasmalai milk.",
+                "Cover the entire cake with whipped cream and smooth the sides and top.",
+                "Pipe whipped-cream rosettes or swirls on top.",
+                "Garnish with pistachios, almonds, and saffron strands.",
+                "Refrigerate for at least 4–6 hours before serving.",
+              ],
+            },
+          ],
+
+          closing:
+            "The result is a creamy, aromatic dessert where the richness of rasmalai meets the timeless aroma of Emperor Akbar Cardamom in every bite.",
+
+          links: {
+            author: "https://www.instagram.com/shimis.kitchen/",
+            video: "https://youtu.be/GUx-AXCXFPU?si=Tn8X_eOKIYD8kJCl",
+          },
+        },
       },
 
+      // RECIPE 2: CARDAMOM PISTACHIO LATTE
+      {
+        id: "cardamom-pistachio-latte",
+        title: "Cardamom Pistachio Latte",
+        slug: "cardamom-pistachio-latte-by-shimi-s-kitchen",
+        author: "Shimi’s Kitchen",
+
+        description:
+          "We collaborated with Shimi’s Kitchen to create a smooth and aromatic Cardamom Pistachio Latte that brings together the creaminess of pistachio and the warm, lingering fragrance of cardamom. A chilled milk base, rich pistachio cream, and a shot of espresso infused with Emperor Akbar Cardamom come together in a drink that feels indulgent yet effortlessly simple.",
+
+        url: "/blogs/recipes/cardamom-pistachio-latte-by-shimi-s-kitchen",
+        image: Pistachio,
+
+        tags: ["easy to cook", "milk", "recipe"],
+
+        content: {
+          introduction: [
+            "We collaborated with Shimi’s Kitchen to create a smooth and aromatic Cardamom Pistachio Latte that brings together the creaminess of pistachio and the warm, lingering fragrance of cardamom.",
+
+            "A chilled milk base, rich pistachio cream, and a shot of espresso infused with Emperor Akbar Cardamom come together in a drink that feels indulgent yet effortlessly simple.",
+
+            "Whether enjoyed in the morning or as an afternoon pause, this recipe makes cardamom feel both familiar and elevated.",
+          ],
+
+          video: {
+            title: "Cardamom Pistachio Latte Recipe",
+            url: "https://www.youtube.com/embed/KqPpxKaXbbs",
+          },
+
+          recipeInfo: {
+            cuisine: "Modern café-style drink",
+            category: "Coffee",
+            difficulty: "Easy",
+            servings: "1 serving",
+            preparationTime: "Not specified",
+            cookingTime: "Not specified",
+          },
+
+          ingredientGroups: [
+            {
+              id: "latte-ingredients",
+              title: "Ingredients",
+              ingredients: [
+                {
+                  name: "Store-bought pistachio cream",
+                  quantity: "2 tbsp",
+                },
+                { name: "Ice cubes", quantity: "As needed" },
+                {
+                  name: "Chilled milk",
+                  quantity: "¾–1 cup",
+                },
+                { name: "Espresso", quantity: "1 shot" },
+                {
+                  name: "Emperor Akbar Cardamom pods",
+                  quantity: "2–3 pods, lightly crushed",
+                },
+              ],
+            },
+          ],
+
+          steps: [
+            {
+              id: "brew-cardamom-espresso",
+              title: "1. Prepare the Cardamom-Infused Espresso",
+              description:
+                "Brew the espresso with lightly crushed Emperor Akbar Cardamom pods so the coffee infuses with their warm, aromatic character.",
+            },
+            {
+              id: "build-pistachio-latte",
+              title: "2. Assemble the Latte",
+              description:
+                "Add the pistachio cream to a serving glass, followed by a handful of ice cubes.",
+              instructions: [
+                "Pour in the chilled milk.",
+                "Add the cardamom-infused espresso, allowing it to layer gently over the milk.",
+                "Give the drink a gentle stir before drinking so the pistachio cream blends smoothly with the milk and coffee.",
+              ],
+            },
+          ],
+
+          closing:
+            "The result is a creamy, fragrant latte where the richness of pistachio meets the timeless aroma of cardamom in every sip.",
+
+          links: {
+            author: "https://www.instagram.com/shimis.kitchen/",
+            video: "https://youtu.be/KqPpxKaXbbs?si=KqLRqCiFKOFIrrgm",
+          },
+        },
+      },
+
+      // RECIPE 3: ELAICHI MILK TEA
+      {
+        id: "elaichi-milk-tea",
+        title: "Elaichi Milk Tea",
+        slug: "elaichi-milk-tea-by-shimi-s-kitchen",
+        author: "Shimi’s Kitchen",
+
+        description:
+          "We collaborated with Shimi’s Kitchen to bring you a comforting and fragrant Elaichi Milk Tea, a classic chai that blends the richness of milk with the warmth of tea and the unmistakable aroma of Emperor Akbar Cardamom. Simple, familiar, and deeply satisfying, this recipe turns an everyday cup into a more elevated ritual.",
+
+        url: "/blogs/recipes/elaichi-milk-tea-by-shimi-s-kitchen",
+        image: Milk_Tea,
+
+        tags: ["easy to cook", "milk", "healthy", "recipe"],
+
+        content: {
+          introduction: [
+            "We collaborated with Shimi’s Kitchen to bring you a comforting and fragrant Elaichi Milk Tea, a classic chai that blends the richness of milk with the warmth of tea and the unmistakable aroma of Emperor Akbar Cardamom.",
+
+            "The gentle sweetness, creamy texture, and aromatic depth make it ideal for slow mornings, evening pauses, or any moment that calls for something warm and grounding.",
+          ],
+
+          video: {
+            title: "Elaichi Milk Tea Recipe",
+            url: "https://www.youtube.com/embed/aytrGN7pwwU",
+          },
+
+          recipeInfo: {
+            cuisine: "Indian",
+            category: "Tea",
+            difficulty: "Easy",
+            servings: "Not specified",
+            preparationTime: "Not specified",
+            cookingTime: "3–5 minutes of simmering",
+          },
+
+          ingredientGroups: [
+            {
+              id: "milk-tea-ingredients",
+              title: "Ingredients",
+              ingredients: [
+                { name: "Full-fat milk", quantity: "1½ cups" },
+                { name: "Water", quantity: "½ cup" },
+                { name: "Black tea leaves", quantity: "2 tsp" },
+                {
+                  name: "Green cardamom pods",
+                  quantity: "2–3, lightly crushed",
+                },
+                {
+                  name: "Sugar",
+                  quantity: "2–3 tsp, adjust to taste",
+                },
+              ],
+            },
+          ],
+
+          steps: [
+            {
+              id: "prepare-elaichi-milk-tea",
+              title: "1. Prepare the Cardamom Milk",
+              description:
+                "Add the milk, water, and lightly crushed Emperor Akbar Cardamom pods to a saucepan and bring to a gentle boil.",
+            },
+            {
+              id: "brew-tea",
+              title: "2. Brew the Tea",
+              description:
+                "Add the tea leaves and sugar, then simmer over low to medium heat for 3–5 minutes so the tea develops a rich, creamy, and fragrant character.",
+              instructions: [
+                "For a stronger brew, allow the mixture to come to a gentle boil once or twice more.",
+                "Let the cardamom deepen the aroma of the chai.",
+                "Strain into cups and serve hot, preferably fresh from the stove.",
+              ],
+            },
+          ],
+
+          closing:
+            "For the best flavour, lightly crush the cardamom just before adding it so the fragrance stays vibrant and full.",
+
+          links: {
+            author: "https://www.instagram.com/shimis.kitchen/",
+            video: "https://youtu.be/aytrGN7pwwU?si=sw1K0u67WazZG5Aj",
+          },
+        },
+      },
+
+      // RECIPE 4: ELAICHI PAYASAM
+      {
+        id: "elaichi-payasam",
+        title: "Elaichi Payasam",
+        slug: "elaichi-payasam-by-shimi-s-kitchen",
+        author: "Shimi’s Kitchen",
+
+        description:
+          "We collaborated with Shimi’s Kitchen to create a rich and elegant Elaichi Payasam that brings together festive tradition and the quiet luxury of cardamom. Slow-cooked milk, soft basmati rice, golden cashews, and plump raisins come together in a dessert that feels indulgent yet deeply rooted in home cooking.",
+
+        url: "/blogs/recipes/elaichi-payasam-by-shimi-s-kitchen",
+        image: simui,
+
+        tags: ["indian dessert", "kheer", "rice", "milk", "festive recipe"],
+
+        content: {
+          introduction: [
+            "We collaborated with Shimi’s Kitchen to create a rich and elegant Elaichi Payasam that brings together festive tradition and the quiet luxury of cardamom.",
+
+            "Slow-cooked milk, soft basmati rice, golden cashews, and plump raisins come together in a dessert that feels indulgent yet deeply rooted in home cooking.",
+
+            "Whether served warm or chilled, this recipe turns a simple dessert into a comforting celebration.",
+          ],
+
+          video: {
+            title: "Elaichi Payasam Recipe",
+            url: "https://www.youtube.com/embed/Tbdl9R9Hbo4",
+          },
+
+          recipeInfo: {
+            cuisine: "Indian",
+            category: "Dessert",
+            difficulty: "Easy",
+            servings: "Not specified",
+            preparationTime: "20 minutes soaking time for rice",
+            cookingTime: "Approximately 35–47 minutes",
+          },
+
+          ingredientGroups: [
+            {
+              id: "payasam-ingredients",
+              title: "Ingredients",
+              ingredients: [
+                { name: "Full-fat milk", quantity: "1 litre" },
+                {
+                  name: "Basmati rice",
+                  quantity: "¼ cup, washed and soaked for 20 minutes",
+                },
+                {
+                  name: "Sugar",
+                  quantity: "½ cup, adjust to taste",
+                },
+                {
+                  name: "Emperor Akbar Cardamom pods",
+                  quantity: "4–5 pods, powdered",
+                },
+                { name: "Ghee", quantity: "2 tbsp" },
+                { name: "Cashews", quantity: "10–12" },
+                { name: "Raisins", quantity: "1 tbsp" },
+                {
+                  name: "Saffron strands",
+                  quantity: "A few, optional",
+                },
+              ],
+            },
+          ],
+
+          steps: [
+            {
+              id: "fry-cashews-raisins",
+              title: "1. Fry the Cashews and Raisins",
+              description:
+                "Heat the ghee in a pan and fry the cashews until golden. Add the raisins and fry until they puff up. Remove and keep aside.",
+            },
+            {
+              id: "cook-rice-in-milk",
+              title: "2. Cook the Rice in Milk",
+              description:
+                "Bring the milk to a boil in a heavy-bottomed pan. Add the soaked rice and cook over low heat for 30–40 minutes, stirring frequently until the rice becomes soft and the milk begins to thicken.",
+            },
+            {
+              id: "flavour-payasam",
+              title: "3. Add Sugar and Cardamom",
+              description:
+                "Add the sugar and cook for another 5–7 minutes. Stir in the powdered Emperor Akbar Cardamom and saffron, if using.",
+            },
+            {
+              id: "finish-payasam",
+              title: "4. Garnish and Serve",
+              description:
+                "Finish with the fried cashews and raisins. Serve warm or chilled.",
+              tip: "For a richer texture, let the milk reduce a little more before serving so the cardamom aroma becomes more pronounced.",
+            },
+          ],
+
+          links: {
+            author: "https://www.instagram.com/shimis.kitchen/",
+            video: "https://youtu.be/Tbdl9R9Hbo4?si=zWOigR0oFvFUpkM",
+          },
+        },
+      },
+
+      // RECIPE 5: ELAICHI WALA DOODH
+      {
+        id: "elaichi-wala-doodh",
+        title: "Elaichi Wala Doodh",
+        slug: "elaichi-wala-doodh-by-shimi-s-kitchen",
+        author: "Shimi’s Kitchen",
+
+        description:
+          "We worked with Shimi’s Kitchen to bring you a comforting Elaichi Wala Doodh recipe that celebrates simplicity, warmth, and tradition in every cup. Made with full-fat milk and gently infused with Emperor Akbar Cardamom, this drink carries a soft fragrance and a creamy richness that feels both nourishing and familiar.",
+
+        url: "/blogs/recipes/elaichi-wala-doodh-by-shimi-s-kitchen",
+        image: Elichi_Doodh,
+
+        tags: ["milk", "healthy", "easy to cook", "recipe"],
+
+        content: {
+          introduction: [
+            "We worked with Shimi’s Kitchen to bring you a comforting Elaichi Wala Doodh recipe that celebrates simplicity, warmth, and tradition in every cup.",
+
+            "Made with full-fat milk and gently infused with Emperor Akbar Cardamom, this drink carries a soft fragrance and a creamy richness that feels both nourishing and familiar.",
+
+            "Perfect for quiet evenings or a soothing bedtime ritual, this cardamom milk is a timeless classic served with grace.",
+          ],
+
+          video: {
+            title: "Elaichi Wala Doodh Recipe",
+            url: "https://www.youtube.com/embed/x_D2v6ljkmA",
+          },
+
+          recipeInfo: {
+            cuisine: "Indian",
+            category: "Milk drink",
+            difficulty: "Easy",
+            servings: "Not specified",
+            preparationTime: "Not specified",
+            cookingTime: "5–7 minutes of simmering",
+          },
+
+          ingredientGroups: [
+            {
+              id: "elaichi-doodh-ingredients",
+              title: "Ingredients",
+              ingredients: [
+                { name: "Full-fat milk", quantity: "2 cups" },
+                {
+                  name: "Emperor Akbar Cardamom pods",
+                  quantity: "3–4, lightly crushed",
+                },
+                {
+                  name: "Cardamom powder alternative",
+                  quantity: "¼ tsp",
+                },
+                {
+                  name: "Sugar or honey",
+                  quantity: "2–3 tsp, adjust to taste",
+                },
+                {
+                  name: "Saffron strands",
+                  quantity: "A few, optional",
+                },
+                {
+                  name: "Chopped almonds or pistachios",
+                  quantity: "For garnish, optional",
+                },
+              ],
+            },
+          ],
+
+          steps: [
+            {
+              id: "heat-cardamom-milk",
+              title: "1. Heat the Milk",
+              description:
+                "Pour the milk into a saucepan and add the lightly crushed Emperor Akbar Cardamom pods.",
+              instructions: [
+                "Bring the milk to a gentle boil.",
+                "Lower the heat and simmer for 5–7 minutes, stirring occasionally so the milk takes on the cardamom aroma.",
+              ],
+            },
+            {
+              id: "sweeten-cardamom-milk",
+              title: "2. Add Sweetener",
+              description:
+                "Add sugar and saffron, if using, and stir until the sweetener has fully dissolved.",
+            },
+            {
+              id: "serve-elaichi-doodh",
+              title: "3. Strain and Serve",
+              description:
+                "Strain the milk into serving glasses or mugs. Garnish with chopped almonds or pistachios if desired, and serve hot.",
+            },
+          ],
+
+          closing:
+            "The result is a smooth, fragrant milk drink with a comforting finish.",
+
+          links: {
+            author: "https://www.instagram.com/shimis.kitchen/",
+            video: "https://youtu.be/x_D2v6ljkmA?si=b4QRVwbw2zm3NHQm",
+          },
+        },
+      },
+
+      // RECIPE 6: CARDAMOM BLACK COFFEE
+      {
+        id: "cardamom-black-coffee",
+        title: "Cardamom Black Coffee",
+        slug: "cardamom-black-coffee-by-shimi-s-kitchen",
+        author: "Shimi’s Kitchen",
+
+        description:
+          "We collaborated with Shimi’s Kitchen to create a simple yet refined Cardamom Black Coffee that brings together the boldness of coffee and the delicate warmth of cardamom. With Emperor Akbar Cardamom lightly infused into the water before brewing, this cup gains a fragrant depth that softens the intensity of black coffee without taking away its character.",
+
+        url: "/blogs/recipes/cardamom-black-coffee-by-shimi-s-kitchen",
+        image: black_coffee,
+
+        tags: ["easy to cook", "healthy", "recipe"],
+
+        content: {
+          introduction: [
+            "We collaborated with Shimi’s Kitchen to create a simple yet refined Cardamom Black Coffee that brings together the boldness of coffee and the delicate warmth of cardamom.",
+
+            "With Emperor Akbar Cardamom lightly infused into the water before brewing, this cup gains a fragrant depth that softens the intensity of black coffee without taking away its character.",
+
+            "Ideal for slow mornings or a focused midday pause, this recipe shows how a small touch of cardamom can transform a familiar cup into something more memorable.",
+          ],
+
+          video: {
+            title: "Cardamom Black Coffee Recipe",
+            url: "https://www.youtube.com/embed/olTsbJ_04J8",
+          },
+
+          recipeInfo: {
+            cuisine: "Modern beverage",
+            category: "Coffee",
+            difficulty: "Easy",
+            servings: "1 serving",
+            preparationTime: "Not specified",
+            cookingTime: "2–3 minutes of simmering",
+          },
+
+          ingredientGroups: [
+            {
+              id: "black-coffee-ingredients",
+              title: "Ingredients",
+              ingredients: [
+                { name: "Water", quantity: "1 cup" },
+                {
+                  name: "Instant coffee",
+                  quantity: "1–2 tsp",
+                },
+                {
+                  name: "Freshly brewed black coffee alternative",
+                  quantity: "1 shot",
+                },
+                {
+                  name: "Emperor Akbar Cardamom pods",
+                  quantity: "2 pods, lightly crushed",
+                },
+                {
+                  name: "Cardamom powder alternative",
+                  quantity: "⅛ tsp",
+                },
+                {
+                  name: "Sugar or honey",
+                  quantity: "1–2 tsp, optional",
+                },
+              ],
+            },
+          ],
+
+          steps: [
+            {
+              id: "infuse-cardamom-water",
+              title: "1. Infuse the Water with Cardamom",
+              description:
+                "Bring the water and lightly crushed Emperor Akbar Cardamom pods to a boil. Let it simmer for 2–3 minutes so the flavour has time to infuse.",
+            },
+            {
+              id: "prepare-black-coffee",
+              title: "2. Prepare the Coffee",
+              description:
+                "Strain the cardamom water into a cup. Stir in the instant coffee until fully dissolved, or add freshly brewed black coffee directly.",
+            },
+            {
+              id: "serve-black-coffee",
+              title: "3. Sweeten and Serve",
+              description: "Add sugar or honey if desired, then serve hot.",
+            },
+          ],
+
+          closing:
+            "The cardamom adds a fragrant lift that makes the coffee feel smoother, warmer, and more inviting.",
+
+          links: {
+            author: "https://www.instagram.com/shimis.kitchen/",
+            video: "https://youtu.be/olTsbJ_04J8?si=aWKOe0U6oCQotJme",
+          },
+        },
+      },
+
+      // RECIPE 7: HYDERABADI CHICKEN DUM BIRYANI
       {
         id: "hyderabadi-chicken-dum-biryani",
-        title: "Hyderabadi Chicken Dum Biryani ",
+        title: "Hyderabadi Chicken Dum Biryani",
         slug: "hyderabadi-chicken-dum-biryani-by-shimi-s-kitchen",
         author: "Shimi’s Kitchen",
+
         description:
-          "We collaborated with the talented Shumaila, the creator behind Shimi’s Kitchen, to bring you a rich and aromatic Hyderabadi Chicken Dum Biryani recipe that celebrates tradition in every layer. Fragrant, flavorful, and deeply satisfying, this biryani comes alive with the warmth of spices, the richness of marinated chicken, and the unmistakable character of Emperor Akbar Cardamom. From the first simmer to the final dum, every step builds toward a dish that feels festive, soulful, and beautifully indulgent. Perfect for family gatherings, special occasions, or any meal that calls for something memorable, this recipe shows how a few well-chosen ingredients can transform...",
+          "We collaborated with the talented Shumaila, the creator behind Shimi’s Kitchen, to bring you a rich and aromatic Hyderabadi Chicken Dum Biryani recipe that celebrates tradition in every layer. Fragrant, flavorful, and deeply satisfying, this biryani comes alive with the warmth of spices, the richness of marinated chicken, and the unmistakable character of Emperor Akbar Cardamom. Perfect for family gatherings, special occasions, or any meal that calls for something memorable.",
+
         url: "/blogs/recipes/hyderabadi-chicken-dum-biryani-by-shimi-s-kitchen",
         image: biriyani,
+
+        tags: ["recipe", "festive recipe"],
+
+        content: {
+          introduction: [
+            "We collaborated with the talented Shumaila, the creator behind Shimi’s Kitchen, to bring you a rich and aromatic Hyderabadi Chicken Dum Biryani recipe that celebrates tradition in every layer.",
+
+            "Fragrant, flavorful, and deeply satisfying, this biryani comes alive with the warmth of spices, the richness of marinated chicken, and the unmistakable character of Emperor Akbar Cardamom.",
+
+            "Perfect for family gatherings, special occasions, or any meal that calls for something memorable, this recipe shows how a few well-chosen ingredients can transform a classic into something truly exceptional.",
+          ],
+
+          video: {
+            title: "Hyderabadi Chicken Dum Biryani Recipe",
+            url: "https://www.youtube.com/embed/O-ctiP_pqh8",
+          },
+
+          recipeInfo: {
+            cuisine: "Hyderabadi / Indian",
+            category: "Main course",
+            difficulty: "Intermediate",
+            servings: "Not specified",
+            preparationTime:
+              "At least 4 hours for marination, plus 30 minutes soaking time",
+            cookingTime: "Approximately 53–65 minutes, plus resting",
+          },
+
+          ingredientGroups: [
+            {
+              id: "chicken-marinade",
+              title: "For the Chicken Marinade",
+              ingredients: [
+                { name: "Chicken, with bone", quantity: "1 kg" },
+                { name: "Thick yogurt (curd)", quantity: "1 cup" },
+                { name: "Ginger-garlic paste", quantity: "2 tbsp" },
+                { name: "Red chilli powder", quantity: "2 tsp" },
+                { name: "Turmeric powder", quantity: "1 tsp" },
+                { name: "Coriander powder", quantity: "2 tsp" },
+                { name: "Cumin powder", quantity: "1 tsp" },
+                { name: "Garam masala", quantity: "1 tsp" },
+                { name: "Green chillies, slit", quantity: "2–3" },
+                { name: "Chopped mint leaves", quantity: "½ cup" },
+                { name: "Chopped coriander leaves", quantity: "½ cup" },
+                { name: "Lemon juice", quantity: "From 1 lemon" },
+                { name: "Salt", quantity: "To taste" },
+                { name: "Fried onions (birista)", quantity: "½ cup" },
+                { name: "Oil or melted ghee", quantity: "4 tbsp" },
+              ],
+            },
+
+            {
+              id: "biryani-rice",
+              title: "For the Rice",
+              ingredients: [
+                { name: "Basmati rice", quantity: "500 g" },
+                { name: "Water", quantity: "For boiling" },
+                { name: "Salt", quantity: "2 tbsp" },
+                { name: "Bay leaves", quantity: "2" },
+                { name: "Emperor Akbar Cardamom pods", quantity: "5" },
+                { name: "Cloves", quantity: "5" },
+                { name: "Cinnamon stick", quantity: "1-inch piece" },
+                { name: "Star anise", quantity: "1, optional" },
+                { name: "Shahi jeera", quantity: "1 tsp" },
+              ],
+            },
+
+            {
+              id: "biryani-layering",
+              title: "For Layering",
+              ingredients: [
+                { name: "Fried onions", quantity: "½ cup" },
+                { name: "Mint and coriander leaves", quantity: "As needed" },
+                { name: "Ghee", quantity: "3 tbsp" },
+                {
+                  name: "Saffron",
+                  quantity: "A pinch, soaked in ¼ cup warm milk",
+                },
+                {
+                  name: "Yellow/orange food colour",
+                  quantity: "Alternative to saffron, mixed with milk",
+                },
+                { name: "Rose water", quantity: "1 tbsp, optional" },
+                { name: "Kewra water", quantity: "1 tbsp, optional" },
+              ],
+            },
+          ],
+
+          steps: [
+            {
+              id: "marinate-chicken",
+              title: "1. Marinate the Chicken",
+              description:
+                "Combine all the marinade ingredients with the chicken and mix well so every piece is coated evenly.",
+              instructions: [
+                "Cover and refrigerate for at least 4 hours, or preferably overnight.",
+                "Allow the chicken to absorb the flavours of the spices, yogurt, herbs, and seasonings.",
+              ],
+            },
+
+            {
+              id: "cook-biryani-rice",
+              title: "2. Cook the Rice",
+              description:
+                "Wash and soak the basmati rice for 30 minutes. In a large pot, bring plenty of water to a boil with salt, bay leaves, cloves, cinnamon, shahi jeera, star anise if using, and Emperor Akbar Cardamom.",
+              instructions: [
+                "Add the soaked rice to the boiling water.",
+                "Cook until the rice is about 70% done, with a slight bite remaining.",
+                "Drain immediately so the grains remain long and separate.",
+              ],
+            },
+
+            {
+              id: "layer-biryani",
+              title: "3. Layer the Biryani",
+              description:
+                "Grease a heavy-bottomed pot with a little ghee. Spread the marinated chicken evenly at the bottom, then layer the partially cooked rice over it.",
+              instructions: [
+                "Top with fried onions, mint, and coriander leaves.",
+                "Add saffron milk, ghee, rose water, and kewra water for a fragrant finish.",
+              ],
+            },
+
+            {
+              id: "dum-cook-biryani",
+              title: "4. Dum Cook",
+              description:
+                "Seal the pot with dough or a tight-fitting lid to trap the steam and aroma.",
+              instructions: [
+                "Cook over medium heat for 8–10 minutes.",
+                "Place a tawa underneath and continue cooking over low heat for 35–40 minutes.",
+                "Switch off the heat and let the biryani rest for 15 minutes before opening the lid.",
+              ],
+            },
+
+            {
+              id: "serve-biryani",
+              title: "5. Serve",
+              description:
+                "Gently mix from the bottom so each serving gets both chicken and rice. Serve hot and enjoy the layers of spice, aroma, and richness in every spoonful.",
+            },
+          ],
+
+          closing:
+            "The fragrance of Emperor Akbar Cardamom gives this biryani its elegant, unmistakable finish.",
+
+          links: {
+            author: "https://www.instagram.com/shimis.kitchen/",
+            video: "https://youtu.be/O-ctiP_pqh8?si=rdCbzBxPgsTEOvQ-",
+          },
+        },
       },
     ],
   },
+
   blogs: {
     title: "Blogs",
+
     tags: [
       "All",
       "alleppey green cardamom",
@@ -474,61 +1272,724 @@ export const websiteData = {
       "spice",
       "wholesale",
     ],
+
     items: [
+      // BLOG 1
       {
         id: "cardamom-market-analysis-august-2026",
         title:
           "Cardamom Market Analysis August 2026: Quality Trends, Demand Growth, and Price Forecast for Indian Green Cardamom",
         slug: "cardamom-market-analysis-august-2026-quality-trends-demand-growth-and-price-forecast-for-indian-green-cardamom",
         description:
-          "A Comprehensive Market Report on Alleppey Green Cardamom From India's Leading Export House. The global cardamom market is experiencing significant shifts in August 2026. Quality metrics are improving, domestic demand is accelerating, and current price spreads between grades remain at historically exceptional levels.",
+          "A comprehensive market report on Alleppey Green Cardamom from India's leading export house. Explore crop outlook, harvest quality, demand trends, grade-wise pricing, and sourcing opportunities.",
         url: "/blogs/p/cardamom-market-analysis-august-2026-quality-trends-demand-growth-and-price-forecast-for-indian-green-cardamom",
+        image: blog1,
+        youtubeUrl: "https://www.youtube.com/watch?v=KQpJzbeQ5yg",
+        tags: ["cardamom", "wholesale", "spice", "alleppey green cardamom"],
+
+        content: {
+          introduction: [
+            "A Comprehensive Market Report on Alleppey Green Cardamom From India's Leading Export House.",
+
+            "The global cardamom market is experiencing significant shifts in August 2026. Quality metrics are improving, domestic demand is accelerating, and current price spreads between grades remain at historically exceptional levels.",
+
+            "This report examines weather recovery, harvest progress, demand dynamics, global supply considerations, and price forecasts.",
+
+            "Whether you are an importer, wholesale buyer, or supply chain professional, understanding the current market landscape is essential for making informed sourcing decisions.",
+
+            "This analysis comes from Samex India, a Three-Star Export House and supplier of Emperor Akbar premium GI-certified Alleppey Green Cardamom.",
+          ],
+
+          sections: [
+            {
+              id: "weather-crop-outlook",
+              heading: "1. Weather Patterns and Crop Outlook",
+              subsections: [
+                {
+                  heading: "Weather Challenges Earlier in the Season",
+                  paragraphs: [
+                    "The 2026 cardamom growing season began with unusually high temperatures associated with El Niño effects. June experienced a reported 40% rainfall deficit across major growing zones, raising concerns about crop health and soil moisture.",
+                  ],
+                },
+                {
+                  heading: "The Monsoon Recovery: Mid-July Turning Point",
+                  paragraphs: [
+                    "Robust monsoon rains arrived from mid-July, helping reverse the rainfall deficit and restore soil moisture essential for late-stage pod development.",
+                  ],
+                },
+                {
+                  heading: "National Crop Volume and Late-Season Development",
+                  paragraphs: [
+                    "National crop volume remained below the previous year's output. However, improved late-season rainfall supported continued crop development and maturation.",
+                  ],
+                },
+              ],
+              takeaway:
+                "Weather conditions improved substantially after an uncertain start, although total output remained below the previous year.",
+            },
+
+            {
+              id: "harvest-quality-metrics",
+              heading: "2. Harvest Progress and Quality Metrics",
+              subsections: [
+                {
+                  heading: "Harvest Activity and Timeline",
+                  paragraphs: [
+                    "The first and second picking rounds were underway across India's primary growing zones, providing a clearer picture of crop quality and availability.",
+                  ],
+                },
+                {
+                  heading: "Encouraging News on Quality",
+                  paragraphs: [
+                    "Pod analysis indicated improving seed density as picking progressed.",
+                  ],
+                },
+                {
+                  heading: "Limited Availability of Bold-Size Pods",
+                  paragraphs: [
+                    "Bold-size pods measuring 8 mm or more remained relatively scarce, with large-pod varieties accounting for a lower-than-historical share of early arrivals.",
+                  ],
+                },
+                {
+                  heading: "Grade Spreads at Historically Wide Levels",
+                  paragraphs: [
+                    "Limited bold-size availability contributed to wide price differences between premium grades and smaller varieties.",
+                  ],
+                },
+              ],
+              takeaway:
+                "Quality was improving, but premium-sized pods remained constrained, keeping grade-wise price spreads unusually wide.",
+            },
+
+            {
+              id: "demand-market-dynamics",
+              heading: "3. Demand Landscape and Market Dynamics",
+              subsections: [
+                {
+                  heading: "Domestic Demand Surge During Festival Season",
+                  paragraphs: [
+                    "Festival buying was increasing domestic demand, drawing down already-thin pipeline stocks and helping maintain firm market prices.",
+                  ],
+                },
+                {
+                  heading: "Export Demand: Constrained by Logistics",
+                  paragraphs: [
+                    "Export movement remained subdued due to several logistical challenges.",
+                  ],
+                  bullets: [
+                    "Shipping disruptions in the Middle East.",
+                    "Elevated ocean freight rates.",
+                    "Extended transit times.",
+                  ],
+                },
+                {
+                  heading: "Domestic Strength vs. Export Weakness",
+                  paragraphs: [
+                    "Domestic demand was strengthening while international shipments faced logistical and cost constraints.",
+                  ],
+                },
+              ],
+              takeaway:
+                "Strong domestic demand and constrained export movement created a distinctive sourcing environment.",
+            },
+
+            {
+              id: "global-supply-guatemala",
+              heading:
+                "4. Global Supply Considerations and the Guatemala Factor",
+              subsections: [
+                {
+                  heading: "Guatemala's Supply Timeline",
+                  paragraphs: [
+                    "Shipments from Guatemala's new crop were expected to enter the global market in approximately two to three months.",
+                  ],
+                },
+                {
+                  heading: "The Immediate Supply Window for Indian Cardamom",
+                  paragraphs: [
+                    "This timing created a potential short-term opportunity for buyers seeking Indian-origin cardamom.",
+                  ],
+                },
+                {
+                  heading: "Strategic Advantage for Indian Exporters",
+                  paragraphs: [
+                    "Indian-origin supplies could help meet near-term requirements before additional Guatemalan shipments reached the market.",
+                  ],
+                },
+              ],
+              takeaway:
+                "The anticipated supply gap created a time-sensitive opportunity for buyers with immediate requirements.",
+            },
+
+            {
+              id: "price-analysis-grade-spread",
+              heading: "5. Price Analysis and Grade Spread Forecast",
+              subsections: [
+                {
+                  heading: "Current Grade Pricing Structure",
+                  paragraphs: [
+                    "The August 2026 report described the following discounts relative to the premium Purple Grade benchmark.",
+                  ],
+                  bullets: [
+                    "Purple Grade (8 mm+): benchmark premium grade, priced at a 0% discount.",
+                    "Green Grade (7–8 mm): trading at a 15.0% discount.",
+                    "Red Grade (6–7 mm): trading at a 33.8% discount.",
+                  ],
+                },
+                {
+                  heading: "Projected Spread Narrowing",
+                  paragraphs: [
+                    "The report projected that discount spreads could narrow by approximately 10% as new harvest arrivals increased.",
+                  ],
+                },
+                {
+                  heading: "Potential Value Appreciation",
+                  paragraphs: [
+                    "The report outlined potential relative value appreciation based on projected changes in grade discounts.",
+                  ],
+                  bullets: [
+                    "Green Grade: discount projected to narrow from 15.0% to 13.5%, representing approximately 1.76% relative value appreciation.",
+                    "Red Grade: discount projected to narrow from 33.8% to 30.4%, representing approximately 5.09% relative value appreciation.",
+                  ],
+                },
+              ],
+              takeaway:
+                "Wide grade spreads created potential value opportunities, subject to market developments.",
+            },
+
+            {
+              id: "buyer-recommendations",
+              heading: "6. Strategic Recommendations for Buyers",
+              paragraphs: [
+                "The report recommended evaluating near-term sourcing requirements rather than waiting indefinitely for lower prices.",
+
+                "Buyers were encouraged to consider their product specifications, inventory needs, and exposure to changing prices before making sourcing decisions.",
+              ],
+              bullets: [
+                "Rising domestic festival demand.",
+                "Limited availability of bold-size pods.",
+                "The anticipated two-to-three-month gap before Guatemala's new-crop shipments.",
+                "Historically wide grade discounts.",
+              ],
+            },
+          ],
+
+          video: {
+            title: "Watch the Full Market Analysis Video",
+            description:
+              "For a more detailed analysis with data visualisation and charts, watch the complete market report.",
+            url: "https://www.youtube.com/watch?v=KQpJzbeQ5yg",
+          },
+
+          faqs: [
+            {
+              question:
+                "Why is the current cardamom market different from previous years?",
+              answer:
+                "The report identified improving quality despite earlier weather challenges, strong domestic festival demand, limited premium-size pods, and an anticipated gap before Guatemala's new-crop shipments.",
+            },
+            {
+              question:
+                "Should I buy cardamom now or wait for prices to drop further?",
+              answer:
+                "Future prices cannot be predicted with certainty. Buyers should weigh current grade discounts against their near-term sourcing requirements.",
+            },
+            {
+              question: "How long will this market opportunity last?",
+              answer:
+                "The report estimated a two-to-three-month supply window before Guatemala's new-crop shipments were expected to arrive. Actual timing and market conditions may differ.",
+            },
+            {
+              question: "What is the quality like in the current harvest?",
+              answer:
+                "Seed density was improving as picking progressed, although bold-size pod availability remained constrained.",
+            },
+            {
+              question:
+                "What impact do Middle East shipping disruptions have on cardamom prices?",
+              answer:
+                "Shipping disruptions, elevated freight rates, and extended transit times were constraining export trade, while domestic demand remained strong.",
+            },
+            {
+              question: "Which grade offers the best value right now?",
+              answer:
+                "The report highlighted discounts of 15% for Green Grade and 33.8% for Red Grade. The appropriate choice depends on buyer specifications and requirements.",
+            },
+          ],
+
+          cta: {
+            title: "Ready to Source Cardamom?",
+            description:
+              "Explore Emperor Akbar Cardamom or contact the company for bulk-order enquiries.",
+            links: [
+              {
+                label: "Shop Emperor Akbar Cardamom",
+                url: "/collections/cardamom-packs",
+              },
+            ],
+          },
+        },
+
+        relatedLinks: [
+          {
+            label: "Shop Emperor Akbar Cardamom",
+            url: "/collections/cardamom-packs",
+          },
+        ],
       },
+
+      // BLOG 2
       {
         id: "identify-fresh-cardamom",
         title:
           "How to Identify Fresh, High-Quality Cardamom: 3 Simple Checks Before You Buy",
         slug: "how-to-identify-fresh-high-quality-cardamom-3-simple-checks-before-you-buy",
         description:
-          "Buying cardamom may seem simple, but choosing the right one can make a real difference to the aroma and flavour of your tea, coffee, desserts and everyday cooking. Many people assume that the greenest or the longest pods are the best. In reality, these are just a small part of the story.",
+          "Learn how aroma, pod fullness, and natural green colour can help you identify fresh, high-quality cardamom before buying.",
         url: "/blogs/p/how-to-identify-fresh-high-quality-cardamom-3-simple-checks-before-you-buy",
+        image: blog2,
+        tags: ["cardamom", "buying cardamom", "healthy", "spice"],
+
+        content: {
+          introduction: [
+            "Buying cardamom may seem simple, but choosing the right one can make a real difference to the aroma and flavour of your tea, coffee, desserts and everyday cooking.",
+
+            "Many people assume that the greenest or longest pods are the best. In reality, these are just a small part of the story.",
+
+            "If you know what to look for, identifying fresh, high-quality cardamom is easier than you think. Here are three simple checks that will help you buy better cardamom every time.",
+          ],
+
+          sections: [
+            {
+              id: "start-with-aroma",
+              heading: "1. Start with the Aroma",
+              paragraphs: [
+                "The easiest way to judge freshness is by aroma. Fresh cardamom has a rich, sweet and naturally intense aroma with floral and citrus notes. Even before opening the pod, you should be able to notice its distinctive aroma.",
+
+                "If the pods have very little aroma or seem stale, they have likely lost much of their natural essential oils — the compounds responsible for cardamom's flavour.",
+              ],
+              takeaway:
+                "Gently crush one pod between your fingers. A fresh pod should instantly release a strong, pleasant aroma.",
+            },
+
+            {
+              id: "choose-plump-pods",
+              heading: "2. Choose Plump Pods, Not Just Long Ones",
+              paragraphs: [
+                "One of the biggest misconceptions about cardamom is that longer pods are better. The truth is that plump, well-filled pods are usually a better indicator of quality.",
+
+                "A fuller pod holds more of the aromatic, oil-rich core where cardamom's flavour is concentrated. A pod that is long but thin may deliver less flavour than a shorter, plumper one.",
+              ],
+              bullets: [
+                "Well-filled and rounded.",
+                "Firm to the touch.",
+                "Free from shrivelling.",
+              ],
+              takeaway: "Fullness matters more than length.",
+            },
+
+            {
+              id: "natural-green-colour",
+              heading: "3. Look for a Natural Green Colour",
+              paragraphs: [
+                "Colour is often the first thing shoppers notice, but it should not be the only factor guiding your decision.",
+
+                "Some natural variation in colour is normal because cardamom is an agricultural product. An unnaturally bright colour does not necessarily indicate better quality.",
+              ],
+              bullets: ["Naturally green pods.", "Evenly coloured pods."],
+              takeaway:
+                "Pay attention to aroma, pod fullness and natural colour instead of judging quality by colour alone.",
+            },
+          ],
+
+          closing: "Alleppey Green Cardamom. Best in the World.",
+
+          faqs: [
+            {
+              question: "How can I tell if cardamom is fresh?",
+              answer:
+                "Crush a pod between your fingers. Fresh cardamom releases a strong, sweet aroma with floral and citrus notes immediately. If the aroma is faint, the pod may have lost some of its natural oils.",
+            },
+            {
+              question: "Are longer cardamom pods better quality?",
+              answer:
+                "No. Fullness matters more than length. Plump, well-filled pods usually carry more flavour than long, thin ones.",
+            },
+            {
+              question: "Does the colour of cardamom indicate its quality?",
+              answer:
+                "Natural, even green colouring is a useful sign, but colour alone is not reliable. Some variation is normal, and an unnaturally bright green does not guarantee better quality.",
+            },
+            {
+              question:
+                "What's the fastest way to check cardamom quality while shopping?",
+              answer:
+                "Crush a single pod. A fresh, high-quality pod releases a noticeable aroma immediately.",
+            },
+          ],
+
+          cta: {
+            title: "Shop Emperor Akbar Purple Grade Cardamom",
+            description:
+              "Explore Emperor Akbar Purple Grade Cardamom for your kitchen.",
+            links: [
+              {
+                label: "Shop Purple Grade Cardamom",
+                url: "https://www.emperorakbar.com/collections/cardamom-packs/products/aroma-lock-purple-grade-cardamom-packs?variant=40192476512454",
+              },
+            ],
+          },
+        },
+
+        relatedLinks: [
+          {
+            label: "Why Origin Matters in Green Cardamom",
+            url: "/blogs/p/why-origin-matters-in-green-cardamom",
+          },
+        ],
       },
+
+      // BLOG 3
       {
         id: "cardamom-in-baking",
         title:
           "Cardamom in Baking: The Spice Your Cakes and Cookies Have Been Missing",
         slug: "cardamom-in-baking-the-spice-your-cakes-and-cookies-have-been-missing",
         description:
-          "Think of your favourite cake, cookie or bun. Now add the warm, rich aroma of freshly crushed cardamom. Suddenly, something familiar feels a little more special. Cardamom has always had a place in Indian chai, traditional sweets and savoury dishes.",
+          "Discover how cardamom adds warm, floral, and citrus notes to cakes, cookies, breads, custards, and other baked treats.",
         url: "/blogs/p/cardamom-in-baking-the-spice-your-cakes-and-cookies-have-been-missing",
+        image: blog3,
+        tags: ["cardamom", "spice", "healthy"],
+
+        content: {
+          introduction: [
+            "Think of your favourite cake, cookie or bun. Now add the warm, rich aroma of freshly crushed cardamom. Suddenly, something familiar feels a little more special.",
+
+            "Cardamom has always had a place in Indian chai, traditional sweets and savoury dishes. But today, more bakers are bringing it into cakes, cookies, breads and pastries. And once you try it, you understand why.",
+          ],
+
+          sections: [
+            {
+              id: "bakers-spice",
+              heading: "Cardamom Has Always Been a Baker's Spice",
+              paragraphs: [
+                "Cardamom in baking is not a new idea. It has been used in Scandinavian buns, Middle Eastern sweets and Indian desserts for generations.",
+
+                "Bakers are looking beyond the usual vanilla and cinnamon and discovering flavours that add more character without taking over the recipe. That is where cardamom shines.",
+
+                "A little cardamom can bring warmth, freshness and depth to a simple bake. It works beautifully with butter, sugar, vanilla, chocolate and citrus.",
+              ],
+            },
+
+            {
+              id: "why-cardamom-works",
+              heading: "Why Does Cardamom Work So Well in Baking?",
+              paragraphs: [
+                "Crush a fresh cardamom pod and you will know. Its warm, fresh and naturally rich aroma, with delicate floral and citrus notes, adds depth without making a cake or cookie feel heavily spiced.",
+
+                "You do not need to change the recipe completely. Just add cardamom.",
+              ],
+              bullets: [
+                "Add crushed cardamom to a simple butter cookie.",
+                "Mix it into a loaf cake with citrus zest.",
+                "Add it to a cinnamon bun.",
+                "Steep whole pods in warm cream before using it in a custard or dessert.",
+              ],
+            },
+
+            {
+              id: "start-with-the-pod",
+              heading: "Start With the Pod",
+              paragraphs: [
+                "When you bake with cardamom, the quality of the pod matters. A good pod brings a rich aroma that you can notice even after it goes into the oven. A weak pod can easily get lost among butter, sugar and other ingredients.",
+
+                "Emperor Akbar Alleppey Green Cardamom is handpicked from estates in the cardamom hills of South India and is prized for its concentrated oil content.",
+
+                "Aroma-Lock packaging helps protect freshness from the estate to your kitchen.",
+              ],
+            },
+
+            {
+              id: "try-cardamom-at-home",
+              heading: "Try Cardamom in Your Own Kitchen",
+              paragraphs: [
+                "You do not need to be a professional baker to start. Crush a few cardamom pods and add them to your favourite cookie dough. Add a pinch to your next cake with some orange or lemon zest. Or steep whole pods in warm cream before using it in a custard or dessert.",
+
+                "Start small and taste as you go. Let the cardamom do the rest. You may find that a recipe you have made many times suddenly feels new.",
+              ],
+            },
+
+            {
+              id: "spice-worth-rediscovering",
+              heading: "A Spice Worth Rediscovering",
+              paragraphs: [
+                "Cardamom has never really gone out of style. It has simply found its way into more kitchens and more recipes.",
+
+                "The next time you bake a cake, make cookies or prepare a dessert, reach for a cardamom pod. Crush it, add it and taste the difference.",
+
+                "Because when the cardamom is truly special, even a simple bake can become something extraordinary.",
+              ],
+              takeaway: "Alleppey Green Cardamom. Best in the World.",
+            },
+          ],
+
+          faqs: [
+            {
+              question:
+                "Can cardamom really be used in baking, not just savoury cooking?",
+              answer:
+                "Yes. Cardamom has a long history in baking across Scandinavian, Middle Eastern, and South Asian traditions, from spiced buns to shortbread.",
+            },
+            {
+              question: "What does cardamom add to a baked recipe?",
+              answer:
+                "It adds a warm, slightly citrusy, floral aroma that rounds out butter and sugar. It works well in cookies, loaf cakes, custards, and enriched breads.",
+            },
+            {
+              question: "Does the quality of cardamom matter for baking?",
+              answer:
+                "Yes. Heat can mute a weak aroma, so a higher-quality pod is more likely to carry its aroma through the full bake.",
+            },
+            {
+              question: "How do I use whole cardamom pods in baking?",
+              answer:
+                "Crush the pods to release their contents, then grind or fold them into dough or batter. Whole pods can also be steeped in warm milk or cream before it is added to a recipe.",
+            },
+          ],
+
+          cta: {
+            title: "Bring Cardamom Into Your Baking",
+            description:
+              "Discover the aroma of Emperor Akbar Alleppey Green Cardamom.",
+            links: [
+              {
+                label: "Shop Cardamom",
+                url: "/collections/cardamom-packs",
+              },
+            ],
+          },
+        },
+
+        relatedLinks: [
+          {
+            label: "Why the World's Best Chefs Trust Only One Cardamom",
+            url: "/blogs/p/why-the-worlds-best-chefs-trust-only-one-cardamom",
+          },
+        ],
       },
+
+      // BLOG 4
       {
         id: "why-origin-matters",
         title: "Why Origin Matters in Green Cardamom",
         slug: "why-origin-matters-in-green-cardamom",
         description:
-          "Ask most people what makes one spice better than another, and they will talk about brand, or price, or how the pack looks on a shelf. Ask a cardamom grower the same question, and they will talk about hills, rainfall, and soil. With cardamom, more than almost any other spice, where it grows decides what it becomes.",
+          "Explore how growing conditions, rainfall, altitude, estate cultivation, handpicking, and grading influence green cardamom quality.",
         url: "/blogs/p/why-origin-matters-in-green-cardamom",
+        image: blog4,
+        tags: ["cardamom", "alleppey green cardamom", "buying cardamom"],
+
+        content: {
+          introduction: [
+            "Ask most people what makes one spice better than another, and they will talk about brand, price or packaging. Ask a cardamom grower, and they will talk about hills, rainfall and soil.",
+
+            "With cardamom, more than almost any other spice, where it grows plays an important role in what it becomes.",
+          ],
+
+          sections: [
+            {
+              id: "where-cardamom-grows",
+              heading: "A Spice That Remembers Where It Grew",
+              paragraphs: [
+                "Cardamom needs altitude, shade, consistent rainfall and soil that holds just the right amount of moisture without drowning the roots.",
+
+                "The cardamom hills of South India, spanning estates across Kerala, Karnataka and Tamil Nadu, have grown this spice for generations.",
+
+                "Growing conditions influence the oil content inside the pod. That oil is where the aroma lives. Similar-looking pods can differ in fragrance and performance depending on where they grow.",
+              ],
+            },
+
+            {
+              id: "estates-not-farms",
+              heading: "Estates, Not Farms",
+              paragraphs: [
+                "A cardamom estate is built around a plant cultivated across generations, with knowledge about when to pick, how to dry and how to handle each pod.",
+
+                "Cardamom does not ripen all at once. Estates return to the same plants multiple times through the season, picking only what is ready.",
+
+                "Origin is not just a location on a map. It is the accumulated care of people who have done this work for a long time.",
+              ],
+            },
+
+            {
+              id: "origin-vs-grading",
+              heading: "Why Origin Shapes Quality More Than Grading Alone",
+              paragraphs: [
+                "Grading tells you how a pod was sorted after harvest. Origin tells you about the conditions in which it grew.",
+
+                "A pod graded and packed well but grown in unsuitable conditions may still fall short of one grown in the cardamom hills of South India.",
+
+                "At Emperor Akbar, Purple Grade pods are described as handpicked from estates in the cardamom hills of South India. The grade and origin work together; neither one alone tells the full story.",
+              ],
+            },
+
+            {
+              id: "buying-cardamom-origin",
+              heading: "What This Means When You Are Buying",
+              paragraphs: [
+                "Two boxes labelled green cardamom may come from entirely different growing conditions.",
+
+                "Look for a brand that clearly explains where its cardamom is grown rather than relying only on general descriptions such as natural or pure.",
+
+                "Aroma remains a useful check at home. Crack a pod and notice its fragrance.",
+              ],
+            },
+
+            {
+              id: "standard-worth-protecting",
+              heading: "A Standard Worth Protecting",
+              paragraphs: [
+                "Emperor Akbar describes itself as one of India's largest exporters of GI-certified Alleppey Green Cardamom and emphasises the relationship between origin, estate selection and quality.",
+
+                "Origin is not simply a detail on a package. It is part of the story behind the aroma and character of the spice.",
+              ],
+            },
+          ],
+
+          faqs: [
+            {
+              question: "Which Indian state produces the finest cardamom?",
+              answer:
+                "The cardamom hills span Kerala, Karnataka and Tamil Nadu. Kerala's estates are particularly associated with cardamom cultivation expertise.",
+            },
+            {
+              question:
+                "What makes estate-grown cardamom different from ordinary cardamom?",
+              answer:
+                "Estate cultivation can involve multiple rounds of handpicking, selecting pods as they ripen and applying cultivation knowledge passed down through generations.",
+            },
+            {
+              question:
+                "How can I tell if the cardamom I am buying is genuinely from the right origin?",
+              answer:
+                "Look for clear information about the growing region and verify the brand's origin claims. Aroma can offer a useful indication of freshness and character.",
+            },
+            {
+              question:
+                "Does origin matter more than grading when choosing cardamom?",
+              answer:
+                "Both matter. Origin influences a pod's potential quality, while grading helps determine how consistently that quality is delivered.",
+            },
+          ],
+
+          cta: {
+            title: "Shop Emperor Akbar Alleppey Green Cardamom",
+            links: [
+              {
+                label: "Shop Purple Grade Cardamom",
+                url: "https://www.emperorakbar.com/collections/cardamom-packs/products/aroma-lock-purple-grade-cardamom-packs?variant=40192476512454",
+              },
+            ],
+          },
+        },
+
+        relatedLinks: [
+          {
+            label: "What Is Alleppey Green Cardamom and Why Is It So Special?",
+            url: "/blogs/p/the-colour-grading-guide-to-buying-cardamom",
+          },
+        ],
+
+        socialLinks: {
+          facebook:
+            "https://www.facebook.com/sharer.php?u=https://www.emperorakbar.com/blogs/p/why-origin-matters-in-green-cardamom",
+          twitter:
+            "https://twitter.com/share?text=Why%20Origin%20Matters%20in%20Green%20Cardamom&url=https://www.emperorakbar.com/blogs/p/why-origin-matters-in-green-cardamom",
+          pinterest:
+            "https://pinterest.com/pin/create/button/?url=https://www.emperorakbar.com/blogs/p/why-origin-matters-in-green-cardamom",
+        },
       },
+
+      // BLOG 5
       {
         id: "cardamom-rakhi",
         title:
           "Cardamom Rakhi: A First-of-Its-Kind Rakhi That Brings Aroma, Tradition and Blessings Together",
         slug: "cardamom-rakhi-a-first-of-its-kind-rakhi-that-brings-aroma-tradition-and-blessings-together",
         description:
-          "Cardamom has never been an ordinary ingredient in Indian homes. Long before it found its way into everyday cooking, it held a place in ceremony and ritual, offered at the moments families consider most sacred.",
+          "Discover a handcrafted Raksha Bandhan rakhi made with natural cardamom pods, bringing together Indian traditions, aroma, craftsmanship, and meaningful blessings.",
         url: "/blogs/p/cardamom-rakhi-a-first-of-its-kind-rakhi-that-brings-aroma-tradition-and-blessings-together",
-      },
-      {
-        id: "spice-that-says-welcome",
-        title: "The Spice That Never Forgets to Say Welcome",
-        slug: "the-spice-that-never-forgets-to-say-welcome",
-        description:
-          "Long before cardamom became a kitchen staple, it held a place of honour in the tradition of welcome. From a cup of cardamom scented gahwa poured for a guest in the Gulf to cardamom infused chai offered after a meal in an Indian home, welcoming someone with cardamom has never been a small gesture.",
-        url: "/blogs/p/the-spice-that-never-forgets-to-say-welcome",
+        image: blog5,
+        tags: ["cardamom", "spice", "healthy"],
+
+        content: {
+          introduction: [
+            "Cardamom has never been an ordinary ingredient in Indian homes. Long before it found its way into everyday cooking, it held a place in ceremony and ritual, offered at the moments families consider most sacred.",
+
+            "It is strung into garlands used in worship, placed before the gods alongside flowers and sacred leaves as part of puja and prasad. It appears through wedding rituals, offered as shagun, tucked into sweets shared with guests, and included in paan and mukhwas.",
+
+            "Cardamom carries associations with prosperity, wellbeing and good fortune, which is why it has earned a place in many Indian ceremonies.",
+          ],
+
+          sections: [
+            {
+              id: "meaning-behind-cardamom-rakhi",
+              heading: "The Meaning Behind Cardamom Rakhi",
+              paragraphs: [
+                "Raksha Bandhan is built around a simple idea: a bond worth protecting, marked each year with something meaningful enough to carry that intention.",
+
+                "This year, that meaning is wrapped around real cardamom, a rakhi handcrafted using natural cardamom pods handpicked from estates in the cardamom hills of South India.",
+
+                "A rakhi is tied with intention, carrying a wish for protection, wellbeing and a bond strong enough to hold through the year ahead.",
+
+                "Bringing cardamom onto a rakhi connects the occasion with a spice that has long been part of Indian rituals and expressions of blessing, gratitude and protection.",
+              ],
+            },
+
+            {
+              id: "natural-cardamom-pods",
+              heading: "Made From Real Cardamom",
+              paragraphs: [
+                "The cardamom used in this rakhi is described as handpicked from estates for its oil content and natural aroma.",
+
+                "This is not a rakhi finished with the idea of cardamom. It is made from cardamom itself, the same pods used for cooking, given a different purpose for one day of the year.",
+              ],
+            },
+
+            {
+              id: "heritage-innovation-craftsmanship",
+              heading: "A Fusion of Heritage, Innovation and Craftsmanship",
+              paragraphs: [
+                "The Cardamom Rakhi brings together traditional symbolism and an unusual natural material.",
+
+                "Imagine receiving a rakhi that looks elegant, carries a distinctive aroma and reflects India's rich traditions.",
+              ],
+            },
+          ],
+
+          cta: {
+            title: "Discover the Handcrafted Cardamom Rakhi",
+            description:
+              "Explore a distinctive Raksha Bandhan gift inspired by Indian heritage and crafted using cardamom pods.",
+            links: [
+              {
+                label: "Shop the Cardamom Rakhi",
+                url: "https://www.emperorakbar.com/collections/cardamom-packs/products/emperor-akbar-rakhi-exclusive-handcrafted-cardamom-rakhi-purple-grade-alleppey-green-cardamom-100g-pack",
+              },
+            ],
+          },
+        },
+
+        relatedLinks: [
+          {
+            label: "Shop the Handcrafted Cardamom Rakhi",
+            url: "https://www.emperorakbar.com/collections/cardamom-packs/products/emperor-akbar-rakhi-exclusive-handcrafted-cardamom-rakhi-purple-grade-alleppey-green-cardamom-100g-pack",
+          },
+        ],
       },
     ],
   },
+
   csr: {
     title: "Enriching Lives Through Goodness",
     description:

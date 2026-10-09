@@ -1,4 +1,6 @@
 import React from "react";
+import Link from "next/link";
+import Image from "next/image";
 
 import { websiteData } from "@/data/websiteData";
 import { ArrowRight } from "lucide-react";
@@ -26,20 +28,31 @@ export default function BlogPage() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {items.map((blog) => (
-            <div key={blog.id} className="bg-white rounded-[2rem] overflow-hidden border border-stone-200/50 shadow-sm flex flex-col group">
-              <div className="aspect-video bg-stone-100 relative overflow-hidden">
-                 <div className="absolute inset-0 flex items-center justify-center text-stone-300 text-sm italic font-serif group-hover:scale-105 transition-transform duration-700">
-                   [Blog Image]
-                 </div>
-              </div>
+            <div key={blog.id} className="bg-white rounded-[2rem] overflow-hidden border border-stone-200/50 shadow-sm flex flex-col group hover:shadow-lg transition-all duration-300">
+              <Link href={`/blog/${blog.slug}`} className="aspect-video bg-stone-100 relative overflow-hidden block">
+                {blog.image ? (
+                  <Image 
+                    src={blog.image} 
+                    alt={blog.title} 
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-700" 
+                  />
+                ) : (
+                  <div className="absolute inset-0 flex items-center justify-center text-stone-300 text-sm italic font-serif">
+                    No Image
+                  </div>
+                )}
+              </Link>
               <div className="p-8 flex flex-col flex-1">
-                <h3 className="text-xl font-serif font-bold text-stone-800 mb-4 leading-tight group-hover:text-[#1b4b36] transition-colors line-clamp-3">{blog.title}</h3>
+                <Link href={`/blog/${blog.slug}`}>
+                  <h3 className="text-xl font-serif font-bold text-stone-800 mb-4 leading-tight group-hover:text-[#1b4b36] transition-colors line-clamp-3">{blog.title}</h3>
+                </Link>
                 <p className="text-stone-500 text-sm leading-relaxed mb-6 flex-1 line-clamp-3">
                   {blog.description}
                 </p>
-                <button className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#d4af37] hover:text-black transition-colors">
+                <Link href={`/blog/${blog.slug}`} className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#d4af37] hover:text-black transition-colors w-max mt-auto">
                   Read Article <ArrowRight className="w-4 h-4" />
-                </button>
+                </Link>
               </div>
             </div>
           ))}

@@ -3,8 +3,7 @@
 import { useState } from "react";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
-import { ChevronLeft, ChevronRight, Check } from "lucide-react";
-import { useCart } from "@/components/CartProvider";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 interface Product {
   id: string;
@@ -22,8 +21,6 @@ interface Product {
 
 export default function ShopProductCard({ product }: { product: Product }) {
   const [currentIdx, setCurrentIdx] = useState(0);
-  const { addToCart } = useCart();
-  const [isAdded, setIsAdded] = useState(false);
 
   const images = product.images || [];
 
@@ -40,7 +37,7 @@ export default function ShopProductCard({ product }: { product: Product }) {
   };
 
   return (
-    <Link 
+    <Link
       href={`/product/${product.id}`}
       className="bg-white rounded-3xl overflow-hidden border border-stone-200/50 shadow-sm hover:shadow-xl transition-shadow group flex flex-col cursor-pointer"
     >
