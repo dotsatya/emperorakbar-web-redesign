@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 
 export default function FooterRevealWrapper({
   children,
@@ -7,12 +7,13 @@ export default function FooterRevealWrapper({
   children: React.ReactNode;
 }) {
   const footerRef = useRef<HTMLDivElement>(null);
-  const [footerHeight, setFooterHeight] = useState(0);
-
   useEffect(() => {
     const observer = new ResizeObserver((entries) => {
       if (entries[0]) {
-        setFooterHeight(entries[0].contentRect.height);
+        document.documentElement.style.setProperty(
+          "--footer-height",
+          `${entries[0].contentRect.height}px`
+        );
       }
     });
 
@@ -24,17 +25,10 @@ export default function FooterRevealWrapper({
   }, []);
 
   return (
-    <>
-      <style suppressHydrationWarning>{`
-        :root {
-          --footer-height: ${footerHeight}px;
-        }
-      `}</style>
-      <div className="fixed bottom-0 left-0 w-full h-screen z-0 bg-bg-tertiary flex flex-col justify-end">
-        <div ref={footerRef}>
-          {children}
-        </div>
+    <div className="fixed bottom-0 left-0 w-full h-screen z-0 bg-bg-tertiary flex flex-col justify-end">
+      <div ref={footerRef}>
+        {children}
       </div>
-    </>
+    </div>
   );
 }

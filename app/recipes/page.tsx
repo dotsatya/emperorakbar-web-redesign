@@ -11,13 +11,13 @@ export default function RecipesPage() {
 
   return (
     <div className="font-sans bg-bg-primary min-h-screen flex flex-col">
-      <main className="flex-1  pb-20 px-6 max-w-7xl mx-auto w-full mt-10">
-        <div className="mb-16">
-          <h1 className="text-4xl md:text-5xl font-serif font-bold text-stone-800 uppercase tracking-wide mb-8 text-center">
+      <main className="flex-1 pt-10 md:pt-16 pb-20 px-6 max-w-7xl mx-auto w-full">
+        <div className="w-full text-right md:text-center mb-12">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-stone-800 uppercase tracking-wide mb-4">
             {title}
           </h1>
-
-          <div className="flex flex-wrap justify-center gap-3">
+          <div className="w-24 h-1 bg-[#d4af37] ml-auto mr-0 md:mx-auto  mb-6"></div>
+          <div className="hidden md:flex flex-wrap justify-center gap-3">
             {tags.map((tag) => (
               <button
                 key={tag}
@@ -57,7 +57,7 @@ export default function RecipesPage() {
                 <h3 className="text-xl font-serif font-bold text-stone-800 mb-4 leading-tight group-hover:text-[#6b2c58] transition-colors">
                   {recipe.title}
                 </h3>
-                <p className="text-stone-500 text-sm leading-relaxed mb-6 flex-1 line-clamp-3">
+                <p className="text-stone-500 text-sm leading-snug md:leading-relaxed mb-6 flex-1 line-clamp-3">
                   {recipe.description}
                 </p>
                 <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#1b4b36] hover:text-[#d4af37] transition-colors mt-auto w-max">

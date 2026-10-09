@@ -11,13 +11,13 @@ export default function BlogPage() {
   return (
     <div className="font-sans bg-bg-primary min-h-screen flex flex-col">
      
-      <main className="flex-1 pb-20 px-6 max-w-7xl mx-auto w-full mt-10">
-        <div className="mb-16">
-          <h1 className="text-4xl md:text-5xl font-serif font-bold text-stone-800 uppercase tracking-wide mb-8 text-center">
+      <main className="flex-1 pt-10 md:pt-16 pb-20 px-6 max-w-7xl mx-auto w-full">
+        <div className="w-full text-right md:text-center mb-12">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-stone-800 uppercase tracking-wide mb-4">
             {title}
           </h1>
-          
-          <div className="flex flex-wrap justify-center gap-3">
+          <div className="w-24 h-1 bg-[#d4af37] ml-auto mr-0 md:mx-auto  mb-6"></div>
+          <div className="hidden md:flex flex-wrap justify-center gap-3">
             {tags.map((tag) => (
               <button key={tag} className="px-4 py-2 rounded-full border border-stone-200 bg-white text-stone-600 text-[10px] font-bold uppercase tracking-widest hover:bg-[#1b4b36] hover:text-white hover:border-[#1b4b36] transition-colors">
                 {tag}
@@ -43,11 +43,11 @@ export default function BlogPage() {
                   </div>
                 )}
               </Link>
-              <div className="p-8 flex flex-col flex-1">
+              <div className="p-5 md:p-8 flex flex-col flex-1">
                 <Link href={`/blog/${blog.slug}`}>
-                  <h3 className="text-xl font-serif font-bold text-stone-800 mb-4 leading-tight group-hover:text-[#1b4b36] transition-colors line-clamp-3">{blog.title}</h3>
+                  <h3 className="text-lg md:text-xl font-serif font-bold text-stone-800 mb-2 md:mb-4 leading-tight group-hover:text-[#1b4b36] transition-colors line-clamp-3">{blog.title}</h3>
                 </Link>
-                <p className="text-stone-500 text-sm leading-relaxed mb-6 flex-1 line-clamp-3">
+                <p className="text-stone-500 text-xs md:text-sm leading-snug md:leading-relaxed mb-4 md:mb-6 flex-1 line-clamp-3">
                   {blog.description}
                 </p>
                 <Link href={`/blog/${blog.slug}`} className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#d4af37] hover:text-black transition-colors w-max mt-auto">

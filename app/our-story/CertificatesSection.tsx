@@ -51,7 +51,7 @@ export default function CertificatesSection({ data }: { data: CertificatesData }
           <h2 className="text-3xl md:text-5xl font-serif font-bold text-stone-900 mb-6">
             {data.title}
           </h2>
-          <p className="text-stone-600 text-lg max-w-2xl mx-auto">
+          <p className="text-stone-600 text-base md:text-lg leading-snug md:leading-relaxed max-w-2xl mx-auto">
             {data.description}
           </p>
         </div>
@@ -97,7 +97,7 @@ export default function CertificatesSection({ data }: { data: CertificatesData }
                 <h3 className="text-xl md:text-2xl font-serif font-bold text-stone-900 mb-4 leading-snug">
                   {item.title}
                 </h3>
-                <p className="text-stone-600 text-sm md:text-base leading-relaxed mb-6">
+                <p className="text-stone-600 text-sm md:text-base leading-snug md:leading-relaxed mb-6">
                   {item.description}
                 </p>
                 <button
@@ -148,7 +148,7 @@ export default function CertificatesSection({ data }: { data: CertificatesData }
                 {selectedItem.title}
               </h3>
               
-              <div className="space-y-5 text-stone-600 leading-relaxed text-lg">
+              <div className="space-y-5 text-stone-600 leading-snug md:leading-relaxed text-base md:text-lg">
                 {selectedItem.paragraphs ? (
                   selectedItem.paragraphs.map((p, i) => <p key={i}>{p}</p>)
                 ) : (

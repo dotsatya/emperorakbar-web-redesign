@@ -7,13 +7,13 @@ export default function OurStoryPage() {
   const { heroTitle, sections, certificatesData } = websiteData.about;
 
   return (
-    <main className="flex-1 w-full mt-10">
-      <div className="pb-4 px-6 max-w-7xl mx-auto">
-        <div className="text-center mb-10 ">
-          <h1 className="text-4xl md:text-6xl font-serif font-bold text-stone-800 uppercase tracking-wide mb-6 leading-tight">
+    <div className="font-sans bg-bg-primary min-h-screen flex flex-col">
+      <main className="flex-1 pt-10 md:pt-16 pb-20 px-6 max-w-7xl mx-auto w-full">
+        <div className="w-full text-right md:text-center mb-12">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-stone-800 uppercase tracking-wide mb-4">
             {heroTitle}
           </h1>
-          <div className="w-24 h-1 bg-[#d4af37] mx-auto"></div>
+          <div className="w-24 h-1 bg-[#d4af37] ml-auto mr-0 md:mx-auto "></div>
         </div>
 
         <div className="space-y-12">
@@ -27,9 +27,11 @@ export default function OurStoryPage() {
             />
           ))}
         </div>
-      </div>
+      </main>
 
-      <CertificatesSection data={certificatesData} />
-    </main>
+      <div className="w-full">
+        <CertificatesSection data={certificatesData} />
+      </div>
+    </div>
   );
 }

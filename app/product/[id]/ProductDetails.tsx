@@ -59,9 +59,9 @@ export default function ProductDetails({
 
   return (
     <div className="font-sans bg-bg-primary min-h-screen flex flex-col">
-      <main className="flex-1 py-16 px-6 max-w-7xl mx-auto w-full">
+      <main className="flex-1 pt-10 md:pt-16 pb-20 px-6 max-w-7xl mx-auto w-full">
         {/* Breadcrumb */}
-        <div className="flex items-center gap-2 text-[10px] md:text-xs text-stone-500 font-bold uppercase tracking-widest mb-8 md:mb-12">
+        <div className="flex items-center gap-2 text-[10px] md:text-xs text-stone-500 font-bold uppercase tracking-widest mb-6 md:mb-12">
           <Link href="/" className="hover:text-stone-900 transition-colors">
             Home
           </Link>
@@ -73,7 +73,7 @@ export default function ProductDetails({
           <span className="text-stone-900 truncate">{product.name}</span>
         </div>
 
-        <div className="flex flex-col lg:flex-row gap-12 lg:gap-20">
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-20">
           {/* Left: Images Gallery */}
           <ProductGallery
             images={images}
@@ -82,23 +82,23 @@ export default function ProductDetails({
           />
 
           {/* Right: Product Details */}
-          <div className="w-full lg:w-1/2 flex flex-col font-sans pt-4 lg:pl-4">
-            <h1 className="text-4xl md:text-[3rem] font-extrabold tracking-tight mb-4 leading-[1.1] max-w-lg text-transparent bg-clip-text bg-gradient-to-r from-[#172d1f] to-[#5c7444] drop-shadow-sm">
+          <div className="w-full lg:w-1/2 flex flex-col font-sans pt-0 md:pt-4 lg:pl-4">
+            <h1 className="text-2xl sm:text-3xl md:text-[3rem] font-extrabold tracking-tight mb-3 md:mb-4 leading-[1.1] max-w-lg text-transparent bg-clip-text bg-gradient-to-r from-[#172d1f] to-[#5c7444] drop-shadow-sm">
               {product.name.replace(" Cardamom", "\nCardamom")}
             </h1>
 
-            <div className="flex items-center gap-4 mb-3">
-              <span className="text-3xl font-bold text-stone-800 drop-shadow-sm">
+            <div className="flex items-center gap-3 md:gap-4 mb-2 md:mb-3">
+              <span className="text-2xl md:text-3xl font-bold text-stone-800 drop-shadow-sm">
                 Rs. {product.price.toFixed(2)}
               </span>
               {product.originalPrice > product.price && (
-                <span className="text-xl text-red-400/80 font-medium line-through">
+                <span className="text-lg md:text-xl text-red-400/80 font-medium line-through">
                   Rs. {product.originalPrice.toFixed(2)}
                 </span>
               )}
             </div>
 
-            <p className="text-[15px] text-stone-600 mb-8 font-medium">
+            <p className="text-[13px] md:text-[15px] text-stone-600 mb-6 md:mb-8 font-medium">
               {product.taxInfo}{" "}
               <Link
                 href="/shipping"
@@ -110,10 +110,10 @@ export default function ProductDetails({
             </p>
 
             {/* Specifications Glass Card */}
-            <div className="bg-white/40 backdrop-blur-xl border border-white/60 shadow-[0_8px_32px_rgba(0,0,0,0.04)] rounded-3xl p-6 md:p-8 mb-10 flex flex-col gap-4 text-[15px] text-stone-700 relative overflow-hidden">
+            <div className="bg-white/40 backdrop-blur-xl border border-white/60 shadow-[0_8px_32px_rgba(0,0,0,0.04)] rounded-2xl md:rounded-3xl p-5 md:p-8 mb-8 md:mb-10 flex flex-col gap-3 md:gap-4 text-[13px] md:text-[15px] text-stone-700 relative overflow-hidden">
               <div className="absolute top-0 right-0 w-32 h-32 bg-[#c59d5f]/10 rounded-full blur-3xl -mr-10 -mt-10 pointer-events-none"></div>
 
-              <div className="flex flex-col gap-4 relative z-10">
+              <div className="flex flex-col gap-3 md:gap-4 relative z-10">
                 <p>
                   By{" "}
                   <Link
@@ -124,39 +124,39 @@ export default function ProductDetails({
                   </Link>
                 </p>
                 <div className="h-px w-full bg-gradient-to-r from-stone-200 to-transparent"></div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-8">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-3 md:gap-y-4 gap-x-8">
                   <p>
-                    <strong className="font-bold text-stone-900 block text-[11px] uppercase tracking-widest mb-1 opacity-70">
+                    <strong className="font-bold text-stone-900 block text-[10px] md:text-[11px] uppercase tracking-widest mb-1 opacity-70">
                       Origin
                     </strong>
                     {product.origin}
                   </p>
                   <p>
-                    <strong className="font-bold text-stone-900 block text-[11px] uppercase tracking-widest mb-1 opacity-70">
+                    <strong className="font-bold text-stone-900 block text-[10px] md:text-[11px] uppercase tracking-widest mb-1 opacity-70">
                       Grade
                     </strong>
                     {product.grade}
                   </p>
                   <p className="sm:col-span-2">
-                    <strong className="font-bold text-stone-900 block text-[11px] uppercase tracking-widest mb-1 opacity-70">
+                    <strong className="font-bold text-stone-900 block text-[10px] md:text-[11px] uppercase tracking-widest mb-1 opacity-70">
                       Speciality
                     </strong>
                     {product.speciality}
                   </p>
                   <p>
-                    <strong className="font-bold text-stone-900 block text-[11px] uppercase tracking-widest mb-1 opacity-70">
+                    <strong className="font-bold text-stone-900 block text-[10px] md:text-[11px] uppercase tracking-widest mb-1 opacity-70">
                       Size
                     </strong>
                     {product.size}
                   </p>
                   <p className="sm:col-span-2">
-                    <strong className="font-bold text-stone-900 block text-[11px] uppercase tracking-widest mb-1 opacity-70">
+                    <strong className="font-bold text-stone-900 block text-[10px] md:text-[11px] uppercase tracking-widest mb-1 opacity-70">
                       Usage
                     </strong>
                     {product.usage}
                   </p>
                   <p className="sm:col-span-2">
-                    <strong className="font-bold text-stone-900 block text-[11px] uppercase tracking-widest mb-1 opacity-70">
+                    <strong className="font-bold text-stone-900 block text-[10px] md:text-[11px] uppercase tracking-widest mb-1 opacity-70">
                       Manufactured / Packed by
                     </strong>
                     {product.packedBy}
@@ -166,16 +166,16 @@ export default function ProductDetails({
             </div>
 
             {/* Selectors */}
-            <div className="flex flex-col sm:flex-row gap-6 mb-10">
-              <div className="flex flex-col gap-3 flex-1">
-                <label className="text-[11px] font-bold uppercase tracking-widest text-stone-500">
+            <div className="flex flex-col sm:flex-row gap-4 md:gap-6 mb-8 md:mb-10">
+              <div className="flex flex-col gap-2 md:gap-3 flex-1">
+                <label className="text-[10px] md:text-[11px] font-bold uppercase tracking-widest text-stone-500">
                   WEIGHT
                 </label>
                 <div className="relative">
                   <select
                     value={selectedWeight}
                     onChange={(e) => setSelectedWeight(e.target.value)}
-                    className="w-full bg-white/50 backdrop-blur-md border border-white/60 shadow-sm rounded-xl px-5 py-4 text-stone-800 font-medium outline-none focus:bg-white focus:border-[#c59d5f] focus:ring-2 focus:ring-[#c59d5f]/20 appearance-none cursor-pointer transition-all duration-300"
+                    className="w-full bg-white/50 backdrop-blur-md border border-white/60 shadow-sm rounded-xl px-4 py-3 md:px-5 md:py-4 text-sm md:text-base text-stone-800 font-medium outline-none focus:bg-white focus:border-[#c59d5f] focus:ring-2 focus:ring-[#c59d5f]/20 appearance-none cursor-pointer transition-all duration-300"
                   >
                     {product.weights?.map((w: string) => (
                       <option key={w} value={w}>
@@ -187,8 +187,8 @@ export default function ProductDetails({
                 </div>
               </div>
 
-              <div className="flex flex-col gap-3 w-full sm:w-[120px]">
-                <label className="text-[11px] font-bold uppercase tracking-widest text-stone-500">
+              <div className="flex flex-col gap-2 md:gap-3 w-full sm:w-[120px]">
+                <label className="text-[10px] md:text-[11px] font-bold uppercase tracking-widest text-stone-500">
                   QTY
                 </label>
                 <input
@@ -198,17 +198,17 @@ export default function ProductDetails({
                   onChange={(e) =>
                     setQuantity(Math.max(1, parseInt(e.target.value) || 1))
                   }
-                  className="w-full bg-white/50 backdrop-blur-md border border-white/60 shadow-sm rounded-xl px-5 py-4 text-stone-800 font-medium outline-none focus:bg-white focus:border-[#c59d5f] focus:ring-2 focus:ring-[#c59d5f]/20 text-center transition-all duration-300"
+                  className="w-full bg-white/50 backdrop-blur-md border border-white/60 shadow-sm rounded-xl px-4 py-3 md:px-5 md:py-4 text-sm md:text-base text-stone-800 font-medium outline-none focus:bg-white focus:border-[#c59d5f] focus:ring-2 focus:ring-[#c59d5f]/20 text-center transition-all duration-300"
                 />
               </div>
             </div>
 
             {/* Action Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 max-w-lg mb-12">
+            <div className="flex flex-col sm:flex-row gap-3 md:gap-4 max-w-lg mb-8 md:mb-12">
               <button
                 disabled={!product.quantityAvailable}
                 onClick={handleAddToCart}
-                className={`flex-1 backdrop-blur-md border-2 py-4 rounded-xl font-bold tracking-widest uppercase transition-all duration-300 flex justify-center items-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed shadow-sm ${
+                className={`flex-1 backdrop-blur-md border-2 py-3 md:py-4 rounded-xl text-sm md:text-base font-bold tracking-widest uppercase transition-all duration-300 flex justify-center items-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed shadow-sm ${
                   isAdded
                     ? "bg-[#172d1f] text-white border-[#172d1f] shadow-lg"
                     : "bg-white/50 border-[#172d1f] text-[#172d1f] hover:bg-[#172d1f] hover:text-white hover:shadow-lg"
@@ -225,8 +225,8 @@ export default function ProductDetails({
               <ShinyButton
                 disabled={!product.quantityAvailable}
                 onClick={handleBuyNow}
-                className="relative flex-1 text-white py-4 font-bold tracking-widest uppercase
-             flex justify-center items-center gap-3 disabled:opacity-50 disabled:cursor-not-allowed 
+                className="relative flex-1 text-white py-3 md:py-4 rounded-xl text-sm md:text-base font-bold tracking-widest uppercase
+             flex justify-center items-center gap-2 md:gap-3 disabled:opacity-50 disabled:cursor-not-allowed 
              border border-[#172d1f]/50 bg-gradient-to-r from-[#172d1f] to-[#2a4d36]
              before:absolute before:inset-0 before:bg-gradient-to-r before:from-black before:to-[#172d1f] 
              before:opacity-0 hover:before:opacity-100 before:transition-opacity before:duration-500 before:z-0"

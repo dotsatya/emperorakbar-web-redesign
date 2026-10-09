@@ -55,7 +55,7 @@ export default async function RecipeDetails({
               </span>
             ))}
         </div>
-        <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-stone-900 leading-tight mb-6">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-stone-900 leading-tight mb-4 md:mb-6">
           {recipe.title}
         </h1>
         <div className="flex flex-col lg:flex-row gap-12 items-center">
@@ -64,7 +64,7 @@ export default async function RecipeDetails({
               By {recipe.author}
             </p>
             {content.introduction && (
-              <div className="prose prose-stone text-lg text-stone-600 mb-8">
+              <div className="prose prose-stone text-base md:text-lg text-stone-600 mb-6 md:mb-8 leading-snug md:leading-relaxed">
                 {content.introduction.map((p: string, idx: number) => (
                   <p key={idx}>{p}</p>
                 ))}
@@ -100,8 +100,8 @@ export default async function RecipeDetails({
 
       {/* Recipe Info Banner */}
       {recipeInfo && (
-        <div className="max-w-5xl mx-auto px-6 mb-16">
-          <div className="bg-white rounded-[2rem] p-8 shadow-sm border border-stone-100 flex flex-wrap justify-between gap-6 md:gap-12 items-center">
+        <div className="max-w-5xl mx-auto px-6 mb-12 md:mb-16">
+          <div className="bg-white rounded-[1.5rem] md:rounded-[2rem] p-5 md:p-8 shadow-sm border border-stone-100 flex flex-wrap justify-between gap-4 md:gap-12 items-center">
             <div className="flex flex-col items-center flex-1 text-center min-w-[100px]">
               <Clock className="w-6 h-6 text-[#d4af37] mb-2" />
               <span className="text-[10px] font-bold uppercase tracking-widest text-stone-400">
@@ -153,7 +153,7 @@ export default async function RecipeDetails({
             <h2 className="text-2xl md:text-3xl font-serif font-bold text-stone-900 mb-8 border-b border-stone-200 pb-4">
               Ingredients
             </h2>
-            <div className="space-y-10 sticky top-12">
+            <div className="space-y-6 md:space-y-10 sticky top-12">
               {ingredientGroups &&
                 ingredientGroups.map((group: any, idx: number) => (
                   <div key={idx}>
@@ -166,10 +166,10 @@ export default async function RecipeDetails({
                       {group.ingredients.map((ing: any, i: number) => (
                         <li
                           key={i}
-                          className="flex justify-between items-center py-2 border-b border-stone-200/50"
+                          className="flex justify-between items-center py-1.5 md:py-2 border-b border-stone-200/50"
                         >
-                          <span className="text-stone-700">{ing.name}</span>
-                          <span className="font-semibold text-stone-900 text-right ml-4 shrink-0">
+                          <span className="text-stone-700 text-sm md:text-base">{ing.name}</span>
+                          <span className="font-semibold text-stone-900 text-right ml-4 shrink-0 text-sm md:text-base">
                             {ing.quantity}
                           </span>
                         </li>
@@ -185,25 +185,25 @@ export default async function RecipeDetails({
             <h2 className="text-2xl md:text-3xl font-serif font-bold text-stone-900 mb-8 border-b border-stone-200 pb-4">
               Instructions
             </h2>
-            <div className="space-y-12">
+            <div className="space-y-8 md:space-y-12">
               {steps &&
                 steps.map((step: any, idx: number) => (
                   <div key={idx} className="relative">
-                    <h3 className="text-xl md:text-2xl font-serif font-bold text-[#1b4b36] mb-4 flex items-start">
-                      <span className="text-[#d4af37] mr-4">{idx + 1}.</span>{" "}
+                    <h3 className="text-lg md:text-2xl font-serif font-bold text-[#1b4b36] mb-3 md:mb-4 flex items-start">
+                      <span className="text-[#d4af37] mr-3 md:mr-4">{idx + 1}.</span>{" "}
                       {step.title.replace(/^\d+\.\s*/, "")}
                     </h3>
-                    <div className="pl-10">
-                      <p className="text-lg text-stone-600 leading-relaxed mb-4">
+                    <div className="pl-8 md:pl-10">
+                      <p className="text-base md:text-lg text-stone-600 leading-snug md:leading-relaxed mb-3 md:mb-4">
                         {step.description}
                       </p>
 
                       {step.instructions && (
-                        <ul className="space-y-3 mb-6 bg-white p-6 rounded-2xl border border-stone-100 shadow-sm">
+                        <ul className="space-y-2 md:space-y-3 mb-4 md:mb-6 bg-white p-4 md:p-6 rounded-xl md:rounded-2xl border border-stone-100 shadow-sm">
                           {step.instructions.map((inst: string, i: number) => (
                             <li key={i} className="flex items-start">
-                              <CheckCircle2 className="w-5 h-5 text-[#d4af37] mr-3 shrink-0 mt-0.5" />
-                              <span className="text-stone-700">{inst}</span>
+                              <CheckCircle2 className="w-4 h-4 md:w-5 md:h-5 text-[#d4af37] mr-2 md:mr-3 shrink-0 mt-0.5" />
+                              <span className="text-stone-700 text-sm md:text-base">{inst}</span>
                             </li>
                           ))}
                         </ul>
@@ -227,18 +227,18 @@ export default async function RecipeDetails({
         {/* Closing & Author Links */}
         <div className="mt-20 pt-16 border-t border-stone-200 max-w-4xl mx-auto text-center">
           {content.closing && (
-            <p className="text-2xl font-serif font-bold text-stone-800 italic mb-10 leading-relaxed">
+            <p className="text-2xl font-serif font-bold text-stone-800 italic mb-10 leading-snug md:leading-relaxed">
               &quot;{content.closing}&quot;
             </p>
           )}
           {content.links && (
             <div className="flex flex-wrap justify-center gap-6">
               {content.links.author && (
-                <a
+                  <a
                   href={content.links.author}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-8 py-4 bg-white border-2 border-stone-200 hover:border-[#1b4b36] text-stone-800 font-bold rounded-full transition-all shadow-sm"
+                  className="px-6 py-3 md:px-8 md:py-4 bg-white border-2 border-stone-200 hover:border-[#1b4b36] text-stone-800 font-bold rounded-full transition-all shadow-sm text-sm md:text-base"
                 >
                   Follow {recipe.author}
                 </a>

@@ -36,13 +36,13 @@ export default async function BlogDetails({ params }: { params: Promise<{ slug: 
             </span>
           ))}
         </div>
-        <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-stone-900 leading-tight mb-6">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-stone-900 leading-tight mb-4 md:mb-6">
           {blog.title}
         </h1>
         <div className="flex flex-col lg:flex-row gap-12 items-center">
           <div className="lg:w-1/2">
             {content.introduction && (
-              <div className="space-y-4 text-lg text-stone-600 mb-8 leading-relaxed">
+              <div className="space-y-4 text-base md:text-lg text-stone-600 mb-6 md:mb-8 leading-snug md:leading-relaxed">
                 {content.introduction.map((p: string, idx: number) => (
                   <p key={idx}>{p}</p>
                 ))}
@@ -73,42 +73,42 @@ export default async function BlogDetails({ params }: { params: Promise<{ slug: 
         {content.sections && content.sections.map((section: any, idx: number) => (
           <section key={idx} id={section.id} className="mb-16">
             {section.heading && (
-              <h2 className="text-2xl md:text-3xl font-serif font-bold text-[#1b4b36] mb-8 border-b border-stone-200 pb-4">
+              <h2 className="text-xl md:text-3xl font-serif font-bold text-[#1b4b36] mb-6 md:mb-8 border-b border-stone-200 pb-3 md:pb-4">
                 {section.heading}
               </h2>
             )}
             
             {section.paragraphs && (
-              <div className="space-y-4 text-lg text-stone-700 mb-6 leading-relaxed">
+              <div className="space-y-4 text-base md:text-lg text-stone-700 mb-4 md:mb-6 leading-snug md:leading-relaxed">
                 {section.paragraphs.map((p: string, i: number) => <p key={i}>{p}</p>)}
               </div>
             )}
             
             {section.bullets && (
-              <ul className="space-y-4 mb-8 bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-stone-100">
+              <ul className="space-y-4 mb-6 md:mb-8 bg-white p-5 md:p-8 rounded-[1.5rem] md:rounded-2xl shadow-sm border border-stone-100">
                 {section.bullets.map((bullet: string, i: number) => (
                   <li key={i} className="flex items-start">
-                    <CheckCircle2 className="w-6 h-6 text-[#d4af37] mr-4 shrink-0 mt-0.5" />
-                    <span className="text-stone-700 text-lg leading-relaxed">{bullet}</span>
+                    <CheckCircle2 className="w-5 h-5 md:w-6 md:h-6 text-[#d4af37] mr-3 md:mr-4 shrink-0 mt-0.5" />
+                    <span className="text-stone-700 text-base md:text-lg leading-snug md:leading-relaxed">{bullet}</span>
                   </li>
                 ))}
               </ul>
             )}
 
             {section.subsections && section.subsections.map((sub: any, subIdx: number) => (
-              <div key={subIdx} className="mb-10 pl-6 border-l-4 border-[#d4af37]/30">
+              <div key={subIdx} className="mb-8 md:mb-10 pl-4 md:pl-6 border-l-4 border-[#d4af37]/30">
                 {sub.heading && (
-                  <h3 className="text-xl md:text-2xl font-serif font-bold text-stone-800 mb-4">{sub.heading}</h3>
+                  <h3 className="text-lg md:text-2xl font-serif font-bold text-stone-800 mb-3 md:mb-4">{sub.heading}</h3>
                 )}
                 {sub.paragraphs && (
-                  <div className="space-y-4 text-lg text-stone-700 mb-4 leading-relaxed">
+                  <div className="space-y-3 md:space-y-4 text-base md:text-lg text-stone-700 mb-4 leading-snug md:leading-relaxed">
                     {sub.paragraphs.map((p: string, i: number) => <p key={i}>{p}</p>)}
                   </div>
                 )}
                 {sub.bullets && (
-                  <ul className="space-y-2 mb-4 list-disc list-inside text-stone-700 text-lg">
+                  <ul className="space-y-2 mb-4 list-disc list-inside text-stone-700 text-base md:text-lg">
                     {sub.bullets.map((bullet: string, i: number) => (
-                      <li key={i} className="leading-relaxed">{bullet}</li>
+                      <li key={i} className="leading-snug md:leading-relaxed">{bullet}</li>
                     ))}
                   </ul>
                 )}
@@ -116,9 +116,9 @@ export default async function BlogDetails({ params }: { params: Promise<{ slug: 
             ))}
 
             {section.takeaway && (
-              <div className="bg-[#1b4b36] text-white p-6 md:p-8 rounded-2xl flex flex-col sm:flex-row gap-6 mt-10 shadow-lg">
-                <div className="font-bold text-[#d4af37] uppercase tracking-widest text-sm shrink-0 pt-1">Key Takeaway</div>
-                <div className="italic font-serif text-xl md:text-2xl leading-relaxed">{section.takeaway}</div>
+              <div className="bg-[#1b4b36] text-white p-5 md:p-8 rounded-[1.5rem] md:rounded-2xl flex flex-col sm:flex-row gap-4 md:gap-6 mt-8 md:mt-10 shadow-lg">
+                <div className="font-bold text-[#d4af37] uppercase tracking-widest text-[10px] md:text-sm shrink-0 pt-1">Key Takeaway</div>
+                <div className="italic font-serif text-lg md:text-2xl leading-snug md:leading-relaxed">{section.takeaway}</div>
               </div>
             )}
           </section>
@@ -126,11 +126,11 @@ export default async function BlogDetails({ params }: { params: Promise<{ slug: 
 
         {/* Video CTA */}
         {content.video && (
-          <div className="bg-stone-900 rounded-3xl p-8 md:p-12 text-white mb-20 text-center shadow-xl relative overflow-hidden">
+          <div className="bg-stone-900 rounded-[2rem] md:rounded-3xl p-6 md:p-12 text-white mb-16 md:mb-20 text-center shadow-xl relative overflow-hidden">
             <div className="absolute top-0 left-0 w-full h-full bg-[#1b4b36]/20 mix-blend-overlay"></div>
             <div className="relative z-10">
-              <h3 className="text-2xl font-serif font-bold mb-4">{content.video.title}</h3>
-              <p className="text-stone-300 text-lg mb-8 max-w-xl mx-auto leading-relaxed">{content.video.description}</p>
+              <h3 className="text-xl md:text-2xl font-serif font-bold mb-3 md:mb-4">{content.video.title}</h3>
+              <p className="text-stone-300 text-base md:text-lg mb-6 md:mb-8 max-w-xl mx-auto leading-snug md:leading-relaxed">{content.video.description}</p>
               <ShinyButton className="bg-white/10 hover:bg-white/20 text-white font-bold rounded-full">
                 <Link href={content.video.url} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center">
                   Watch Video <ArrowUpRight className="w-5 h-5 ml-2" />
@@ -142,13 +142,13 @@ export default async function BlogDetails({ params }: { params: Promise<{ slug: 
 
         {/* FAQs */}
         {content.faqs && (
-          <div className="mb-20">
-            <h2 className="text-2xl md:text-3xl font-serif font-bold text-[#1b4b36] mb-10 text-center">Frequently Asked Questions</h2>
-            <div className="space-y-6">
+          <div className="mb-16 md:mb-20">
+            <h2 className="text-xl md:text-3xl font-serif font-bold text-[#1b4b36] mb-8 md:mb-10 text-center">Frequently Asked Questions</h2>
+            <div className="space-y-4 md:space-y-6">
               {content.faqs.map((faq: any, idx: number) => (
-                <div key={idx} className="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-stone-100 transition-all hover:shadow-md">
-                  <h4 className="text-xl font-bold text-stone-900 mb-4">{faq.question}</h4>
-                  <p className="text-stone-600 text-lg leading-relaxed">{faq.answer}</p>
+                <div key={idx} className="bg-white p-5 md:p-8 rounded-[1.5rem] md:rounded-2xl shadow-sm border border-stone-100 transition-all hover:shadow-md">
+                  <h4 className="text-lg md:text-xl font-bold text-stone-900 mb-3 md:mb-4">{faq.question}</h4>
+                  <p className="text-stone-600 text-base md:text-lg leading-snug md:leading-relaxed">{faq.answer}</p>
                 </div>
               ))}
             </div>
@@ -166,7 +166,7 @@ export default async function BlogDetails({ params }: { params: Promise<{ slug: 
         {content.cta && (
           <div className="bg-gradient-to-br from-[#fcfaf5] to-white border border-[#d4af37]/30 rounded-[2.5rem] p-8 md:p-16 text-center mb-16 shadow-sm">
             <h2 className="text-2xl md:text-3xl font-serif font-bold text-stone-900 mb-6">{content.cta.title}</h2>
-            <p className="text-stone-600 text-xl mb-10 max-w-2xl mx-auto leading-relaxed">{content.cta.description}</p>
+            <p className="text-stone-600 text-xl mb-10 max-w-2xl mx-auto leading-snug md:leading-relaxed">{content.cta.description}</p>
             {content.cta.links && content.cta.links.map((link: any, idx: number) => (
               <Link key={idx} href={link.url} className="inline-flex items-center justify-center px-10 py-4 bg-[#1b4b36] hover:bg-[#113123] text-white font-bold rounded-full transition-colors duration-300 shadow-md hover:shadow-lg">
                 {link.label}

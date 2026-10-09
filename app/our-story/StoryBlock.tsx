@@ -33,7 +33,7 @@ export default function StoryBlock({
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-serif font-bold text-center text-[#1b4b36] mb-6">
             {title}
           </h2>
-          <div className="space-y-4 text-stone-600 leading-relaxed text-base md:text-lg max-w-5xl mx-auto">
+          <div className="space-y-4 text-stone-600 leading-snug md:leading-relaxed text-base md:text-lg max-w-5xl mx-auto">
             {previewParagraphs.map((para, index) => (
               <p key={index}>{para}</p>
             ))}
@@ -67,7 +67,7 @@ export default function StoryBlock({
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-serif font-bold text-[#1b4b36] mb-6 leading-tight">
               {title}
             </h2>
-            <div className="space-y-4 text-stone-600 leading-relaxed text-base md:text-lg mb-6">
+            <div className="space-y-4 text-stone-600 leading-snug md:leading-relaxed text-base md:text-lg mb-6">
               {previewParagraphs.map((para, index) => (
                 <p key={index}>{para}</p>
               ))}
@@ -122,7 +122,7 @@ export default function StoryBlock({
                 {title}
               </h3>
 
-              <div className="space-y-5 text-stone-600 leading-relaxed text-base md:text-lg">
+              <div className="space-y-5 text-stone-600 leading-snug md:leading-relaxed text-base md:text-lg">
                 {paragraphs?.map((p, i) => (
                   <p key={typeof p === "string" ? `${i}-${p.slice(0, 15)}` : i}>
                     {p}

@@ -38,7 +38,11 @@ function HeaderContent() {
 
   // Automatically close mobile menu on route change
   useEffect(() => {
-    setMobileMenuOpen(false);
+    if (mobileMenuOpen) {
+      // eslint-disable-next-line
+      setMobileMenuOpen(false);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pathname]);
 
   return (

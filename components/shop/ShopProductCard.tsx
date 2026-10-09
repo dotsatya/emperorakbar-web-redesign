@@ -39,9 +39,9 @@ export default function ShopProductCard({ product }: { product: Product }) {
   return (
     <Link
       href={`/product/${product.id}`}
-      className="bg-white rounded-3xl overflow-hidden border border-stone-200/50 shadow-sm hover:shadow-xl transition-shadow group flex flex-col cursor-pointer"
+      className="bg-white rounded-2xl sm:rounded-3xl overflow-hidden border border-stone-200/50 shadow-sm hover:shadow-xl transition-shadow group flex flex-row sm:flex-col cursor-pointer"
     >
-      <div className="aspect-square bg-stone-100 relative group-hover:scale-105 transition-transform duration-500 overflow-hidden">
+      <div className="w-2/5 sm:w-full aspect-square bg-stone-100 relative group-hover:scale-105 transition-transform duration-500 overflow-hidden shrink-0">
         {images.length > 0 ? (
           <>
             <Image
@@ -85,25 +85,25 @@ export default function ShopProductCard({ product }: { product: Product }) {
         )}
 
         {product.status === "sold-out" && (
-          <div className="absolute top-4 right-4 bg-red-500 text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full z-10">
+          <div className="absolute top-2 left-2 sm:top-4 sm:right-4 sm:left-auto bg-red-500 text-white text-[8px] sm:text-[10px] font-bold uppercase tracking-widest px-2 sm:px-3 py-1 rounded-full z-10">
             Sold Out
           </div>
         )}
         {product.status === "sale" && (
-          <div className="absolute top-4 right-4 bg-[#d4af37] text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full z-10">
+          <div className="absolute top-2 left-2 sm:top-4 sm:right-4 sm:left-auto bg-[#d4af37] text-white text-[8px] sm:text-[10px] font-bold uppercase tracking-widest px-2 sm:px-3 py-1 rounded-full z-10">
             Sale
           </div>
         )}
       </div>
-      <div className="p-6 flex flex-col flex-1 relative z-10 bg-white">
-        <p className="text-[10px] text-stone-500 font-bold uppercase tracking-widest mb-2">
+      <div className="p-4 sm:p-6 flex flex-col justify-center sm:justify-start flex-1 relative z-10 bg-white">
+        <p className="text-[9px] sm:text-[10px] text-stone-500 font-bold uppercase tracking-widest mb-1 sm:mb-2">
           {product.grade} Grade
         </p>
-        <h3 className="font-bold text-stone-800 mb-2 leading-tight h-10">
+        <h3 className="font-bold text-stone-800 text-sm sm:text-base mb-2 leading-tight h-auto sm:h-10 line-clamp-2 sm:line-clamp-none">
           {product.name}
         </h3>
-        <div className="flex items-center gap-3 mt-auto">
-          <span className="text-lg font-serif font-bold text-stone-900">
+        <div className="flex items-center gap-2 sm:gap-3 mt-auto">
+          <span className="text-base sm:text-lg font-serif font-bold text-stone-900">
             {product.currency} {product.price}
           </span>
           {product.originalPrice > product.price && (

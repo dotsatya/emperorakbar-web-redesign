@@ -3,11 +3,12 @@ import CardamomVisualizer from "@/components/cardamom-grades-components/Cardamom
 export default function CardamomGradesPage() {
   return (
     <div className="font-sans bg-bg-primary min-h-screen flex flex-col">
-      <main className="flex-1 pb-20 px-6 max-w-6xl mx-auto w-full mt-10">
-        <div className="text-center mb-12">
-          <h1 className="text-2xl md:text-4xl lg:text-5xl font-serif font-bold text-stone-800 uppercase tracking-wide mb-3 md:mb-4">
-            Five Grades. One Standard of Quality.
+      <main className="flex-1 pt-10 md:pt-16 pb-20 px-6 max-w-7xl mx-auto w-full">
+        <div className="w-full text-right md:text-center mb-12">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-stone-800 uppercase tracking-wide mb-4">
+            Every Grade,  Standard of Quality
           </h1>
+          <div className="w-24 h-1 bg-[#d4af37] ml-auto mr-0 md:mx-auto  mb-6"></div>
           <p className="text-stone-500 font-serif italic text-base md:text-lg">
             Colour-coded for your perfect choice.
           </p>

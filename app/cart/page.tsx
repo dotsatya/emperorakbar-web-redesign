@@ -9,9 +9,9 @@ export default function CartPage() {
   const { items, updateQuantity, removeFromCart, cartTotal } = useCart();
 
   return (
-    <div className="min-h-screen bg-bg-primary pt-12  pb-20 px-6">
-      <div className="max-w-6xl mx-auto w-full">
-        <div className="flex items-center gap-2 text-[10px] md:text-xs text-stone-500 font-bold uppercase tracking-widest mb-8">
+    <div className="font-sans bg-bg-primary min-h-screen flex flex-col">
+      <main className="flex-1 pt-10 md:pt-16 pb-20 px-6 max-w-7xl mx-auto w-full">
+        <div className="flex justify-center items-center gap-2 text-[10px] md:text-xs text-stone-500 font-bold uppercase tracking-widest mb-8">
           <Link href="/" className="hover:text-stone-900 transition-colors">
             Home
           </Link>
@@ -19,9 +19,12 @@ export default function CartPage() {
           <span className="text-stone-900">Your Cart</span>
         </div>
 
-        <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-12 text-transparent bg-clip-text bg-gradient-to-r from-[#172d1f] to-[#5c7444]">
-          Your Cart
-        </h1>
+        <div className="w-full text-right md:text-center mb-12">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-stone-800 uppercase tracking-wide mb-4">
+            Your Cart
+          </h1>
+          <div className="w-24 h-1 bg-[#d4af37] ml-auto mr-0 md:mx-auto "></div>
+        </div>
 
         {items.length === 0 ? (
           <div className="bg-white/40 backdrop-blur-xl border border-white/60 shadow-[0_8px_32px_rgba(0,0,0,0.04)] rounded-3xl p-12 text-center flex flex-col items-center justify-center">
@@ -46,50 +49,53 @@ export default function CartPage() {
               {items.map((item) => (
                 <div
                   key={`${item.id}-${item.weight}`}
-                  className="bg-white/40 backdrop-blur-xl border border-white/60 shadow-[0_8px_32px_rgba(0,0,0,0.04)] rounded-3xl p-4 md:p-6 flex flex-col sm:flex-row gap-6 items-center"
+                  className="bg-white/40 backdrop-blur-xl border border-white/60 shadow-[0_8px_32px_rgba(0,0,0,0.04)] rounded-3xl p-4 md:p-6 flex flex-col sm:flex-row gap-4 sm:gap-6"
                 >
-                  {/* Product Image */}
-                  <div className="w-24 h-24 sm:w-32 sm:h-32 rounded-2xl bg-white/60 border border-white/80 p-2 shrink-0 relative overflow-hidden">
-                    <Image
-                      src={item.image}
-                      alt={item.name}
-                      fill
-                      className="object-contain mix-blend-multiply p-2"
-                    />
-                  </div>
+                  {/* Top section on mobile: Image + Details */}
+                  <div className="flex flex-row items-center sm:items-center gap-4 sm:gap-6 flex-1">
+                    {/* Product Image */}
+                    <div className="w-24 h-24 sm:w-32 sm:h-32 rounded-2xl bg-white/60 border border-white/80 p-2 shrink-0 relative overflow-hidden">
+                      <Image
+                        src={item.image}
+                        alt={item.name}
+                        fill
+                        className="object-contain mix-blend-multiply p-2"
+                      />
+                    </div>
 
-                  {/* Details */}
-                  <div className="flex-1 flex flex-col items-center sm:items-start text-center sm:text-left">
-                    <h3 className="text-lg font-bold text-stone-900 mb-1">
-                      {item.name}
-                    </h3>
-                    <p className="text-sm font-medium text-stone-500 mb-4 uppercase tracking-wider">
-                      {item.weight}
-                    </p>
-                    <span className="text-xl font-bold text-[#c59d5f]">
-                      Rs. {item.price.toFixed(2)}
-                    </span>
+                    {/* Details */}
+                    <div className="flex-1 flex flex-col text-left">
+                      <h3 className="text-base sm:text-lg font-bold text-stone-900 mb-1 leading-tight">
+                        {item.name}
+                      </h3>
+                      <p className="text-xs sm:text-sm font-medium text-stone-500 mb-2 sm:mb-4 uppercase tracking-wider">
+                        {item.weight}
+                      </p>
+                      <span className="text-lg sm:text-xl font-bold text-[#c59d5f]">
+                        Rs. {item.price.toFixed(2)}
+                      </span>
+                    </div>
                   </div>
 
                   {/* Quantity & Actions */}
-                  <div className="flex items-center gap-6">
-                    <div className="flex items-center bg-white/50 border border-white/80 rounded-xl overflow-hidden shadow-sm">
+                  <div className="flex items-center justify-between sm:justify-end gap-4 sm:gap-6 mt-2 sm:mt-0 border-t sm:border-none border-stone-200/50 pt-4 sm:pt-0">
+                    <div className="flex items-center bg-white/50 border border-white/80 rounded-xl overflow-hidden shadow-sm h-10">
                       <button
                         onClick={() =>
                           updateQuantity(item.id, item.weight, item.quantity - 1)
                         }
-                        className="w-10 h-10 flex items-center justify-center text-stone-600 hover:bg-white transition-colors hover:text-black font-bold"
+                        className="w-10 h-full flex items-center justify-center text-stone-600 hover:bg-white transition-colors hover:text-black font-bold"
                       >
                         -
                       </button>
-                      <span className="w-10 h-10 flex items-center justify-center font-bold text-stone-900 text-sm">
+                      <span className="w-10 h-full flex items-center justify-center font-bold text-stone-900 text-sm">
                         {item.quantity}
                       </span>
                       <button
                         onClick={() =>
                           updateQuantity(item.id, item.weight, item.quantity + 1)
                         }
-                        className="w-10 h-10 flex items-center justify-center text-stone-600 hover:bg-white transition-colors hover:text-black font-bold"
+                        className="w-10 h-full flex items-center justify-center text-stone-600 hover:bg-white transition-colors hover:text-black font-bold"
                       >
                         +
                       </button>
@@ -97,7 +103,7 @@ export default function CartPage() {
 
                     <button
                       onClick={() => removeFromCart(item.id, item.weight)}
-                      className="w-10 h-10 flex items-center justify-center rounded-xl bg-red-50 text-red-500 hover:bg-red-500 hover:text-white transition-all shadow-sm"
+                      className="w-10 h-10 shrink-0 flex items-center justify-center rounded-xl bg-red-50 text-red-500 hover:bg-red-500 hover:text-white transition-all shadow-sm"
                       aria-label="Remove item"
                     >
                       <Trash2 className="w-4 h-4" />
@@ -156,7 +162,7 @@ export default function CartPage() {
             </div>
           </div>
         )}
-      </div>
+      </main>
     </div>
   );
 }
