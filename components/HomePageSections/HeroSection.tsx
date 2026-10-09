@@ -45,7 +45,7 @@ export default function HeroSection() {
                 SHOP CARDAMOM <ArrowRight className="w-4 h-4" />
               </ShinyButton>
             </Link>
-            <Link href="/about">
+            <Link href="/our-story">
               <button className="border-2 border-white/30 text-white px-8 py-4 rounded-full font-bold text-sm tracking-wide hover:bg-white hover:text-black transition-colors w-full sm:w-auto">
                 DISCOVER OUR STORY
               </button>

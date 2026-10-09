@@ -8,7 +8,7 @@ export default function RecipesSection({ recipeData }: { recipeData: any }) {
   const [selectedRecipe, setSelectedRecipe] = useState<any>(null);
 
   return (
-    <section className="bg-white py-16 md:py-24 px-6 border-t border-stone-200">
+    <section className="bg-white py-12 sm:py-16 md:py-24 px-4 sm:px-6 border-t border-stone-200">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
           <div>
@@ -26,14 +26,14 @@ export default function RecipesSection({ recipeData }: { recipeData: any }) {
           </Link>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
           {recipeData.items.slice(0, 4).map((recipe: any, idx: number) => (
             <div 
               key={idx} 
-              className="group cursor-pointer flex flex-col"
+              className="p-3 sm:p-0 bg-[#ebd8bc]/60 sm:bg-transparent rounded-2xl sm:rounded-none border border-stone-100 sm:border-0 shadow-sm sm:shadow-none group cursor-pointer flex flex-col"
               onClick={() => setSelectedRecipe(recipe)}
             >
-              <div className="aspect-[4/3] rounded-2xl bg-stone-100 mb-4 overflow-hidden relative">
+              <div className="aspect-square sm:aspect-[4/3] rounded-xl sm:rounded-2xl bg-stone-100 mb-2 sm:mb-4 overflow-hidden relative">
                 {recipe.image ? (
                   <Image 
                     src={recipe.image}
@@ -47,11 +47,11 @@ export default function RecipesSection({ recipeData }: { recipeData: any }) {
                   </div>
                 )}
                 <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors"></div>
-                <button className="absolute bottom-4 right-4 w-10 h-10 bg-white rounded-full flex items-center justify-center text-[#d4af37] shadow-lg translate-y-10 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all">
-                  <ArrowRight className="w-5 h-5" />
+                <button className="absolute bottom-2 right-2 sm:bottom-4 sm:right-4 w-8 h-8 sm:w-10 sm:h-10 bg-white rounded-full flex items-center justify-center text-[#d4af37] shadow-lg translate-y-10 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all">
+                  <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
                 </button>
               </div>
-              <h3 className="font-bold text-stone-900 mb-1 group-hover:text-[#d4af37] transition-colors">
+              <h3 className="font-bold text-[11px] sm:text-base leading-tight sm:leading-normal text-stone-900 mb-1 group-hover:text-[#d4af37] transition-colors">
                 {recipe.title.split(" by ")[0]}
               </h3>
             </div>

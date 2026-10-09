@@ -20,9 +20,9 @@ export default function HealthBenefitsSlider() {
 
   return (
     <section className="px-6 max-w-7xl mx-auto my-12 md:my-20"> 
-    <div className="bg-white rounded-[3rem] overflow-hidden flex flex-col lg:flex-row items-stretch border border-stone-200/50 shadow-[0_20px_60px_rgba(0,0,0,0.15)] hover:shadow-[0_30px_70px_rgba(0,0,0,0.2)] w-full transform hover:-translate-y-2 transition-all duration-500 ease-out">
+    <div className="bg-white rounded-[2rem] sm:rounded-[3rem] overflow-hidden flex flex-col lg:flex-row items-stretch border border-stone-200/50 shadow-[0_20px_60px_rgba(0,0,0,0.15)] hover:shadow-[0_30px_70px_rgba(0,0,0,0.2)] w-full transform hover:-translate-y-2 transition-all duration-500 ease-out">
       {/* Left side: Image Slider */}
-      <div className="w-full lg:w-1/2 relative h-64 sm:h-80 lg:h-auto min-h-[350px] lg:min-h-[450px]">
+      <div className="w-full lg:w-1/2 relative h-56 sm:h-80 lg:h-auto min-h-[250px] sm:min-h-[350px] lg:min-h-[450px]">
         {images.map((img, idx) => (
           <div
             key={img.id}
@@ -57,18 +57,18 @@ export default function HealthBenefitsSlider() {
       </div>
 
       {/* Right side: Content */}
-      <div className="w-full lg:w-1/2 p-8 md:p-12 lg:p-20 flex flex-col justify-center items-center text-center bg-white">
-        <h2 className="text-3xl md:text-4xl font-serif text-[#5c7444] mb-6">
+      <div className="w-full lg:w-1/2 p-6 sm:p-8 md:p-12 lg:p-20 flex flex-col justify-center items-center text-center bg-white">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif text-[#5c7444] mb-4 sm:mb-6">
           Doctor of Spices
         </h2>
-        <p className="text-stone-600 leading-relaxed mb-8 max-w-md">
+        <p className="text-sm sm:text-base text-stone-600 leading-relaxed mb-6 sm:mb-8 max-w-md">
           Cardamom has amazing medicinal properties that make it Mother
           Nature&apos;s own doctor. It is known to alleviate a host of symptoms
           and diseases. A fact that has been known since ancient times. Find out
           how cardamom can keep you and your family in the best of health...
         </p>
         <Link href="/health-benefits">
-          <ShinyButton className="bg-black/6 ">HEALTH BENEFITS</ShinyButton>
+          <ShinyButton className="bg-[#ebd8bc] ">HEALTH BENEFITS</ShinyButton>
         </Link>
       </div>
     </div>

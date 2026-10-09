@@ -48,9 +48,9 @@ export default function ProductCard({ product }: { product: Product }) {
   return (
     <Link 
       href={`/product/${product.id}`}
-      className="bg-black/4 rounded-2xl p-6 border border-stone-200 hover:shadow-xl transition-shadow flex flex-col group cursor-pointer"
+      className="bg-black/4 rounded-2xl p-3 sm:p-6 border border-stone-200 hover:shadow-xl transition-shadow flex flex-row sm:flex-col group cursor-pointer gap-4 sm:gap-0"
     >
-      <div className="aspect-[3/3] bg-stone-50 rounded-xl mb-6 flex items-center justify-center relative overflow-hidden group-hover:scale-105 transition-transform duration-500">
+      <div className="w-2/5 sm:w-full aspect-square sm:aspect-[3/3] bg-stone-50 rounded-xl mb-0 sm:mb-6 flex items-center justify-center relative overflow-hidden group-hover:scale-105 transition-transform duration-500 shrink-0">
         <div
           className="absolute inset-x-0 top-0 h-2 z-20"
           style={{
@@ -58,6 +58,17 @@ export default function ProductCard({ product }: { product: Product }) {
           }}
         ></div>
         
+        {product.status === "sold-out" && (
+          <div className="absolute top-2 left-2 sm:top-4 sm:left-4 bg-red-500 text-white text-[8px] sm:text-[10px] font-bold uppercase tracking-widest px-2 sm:px-3 py-1 rounded-full z-30">
+            Sold Out
+          </div>
+        )}
+        {product.status === "sale" && (
+          <div className="absolute top-2 left-2 sm:top-4 sm:left-4 bg-[#d4af37] text-white text-[8px] sm:text-[10px] font-bold uppercase tracking-widest px-2 sm:px-3 py-1 rounded-full z-30">
+            Sale
+          </div>
+        )}
+
         {images.length > 0 ? (
           <>
             <Image 
@@ -100,22 +111,30 @@ export default function ProductCard({ product }: { product: Product }) {
           </span>
         )}
       </div>
-      <h3
-        className="font-bold text-sm uppercase tracking-wide mb-1"
-        style={{ color: gradeColors[product.grade] || "#000" }}
-      >
-        {product.grade} Grade
-      </h3>
-      <p className="text-xs text-stone-400 tracking-wider mb-6">
-        {product.size}
-      </p>
-      <div className="mt-auto flex items-center justify-between">
-        <div>
-          <span className="font-serif font-bold text-xl text-stone-900">
-            ₹{product.price}
-          </span>
-          <p className="text-[10px] text-stone-400">(100g)</p>
-        </div>
+      <div className="flex flex-col flex-1 justify-center sm:justify-start">
+        <h3
+          className="font-bold text-sm sm:text-base uppercase tracking-wide mb-1"
+          style={{ color: gradeColors[product.grade] || "#000" }}
+        >
+          {product.grade} Grade
+        </h3>
+        <p className="text-xs text-stone-400 tracking-wider mb-2 sm:mb-6">
+          {product.size}
+        </p>
+        <div className="mt-auto flex items-center justify-between">
+          <div>
+            <div className="flex items-baseline gap-2">
+              <span className="font-serif font-bold text-lg sm:text-xl text-stone-900">
+                ₹{product.price}
+              </span>
+              {product.originalPrice > product.price && (
+                <span className="text-xs sm:text-sm text-stone-400 line-through">
+                  ₹{product.originalPrice}
+                </span>
+              )}
+            </div>
+            <p className="text-[10px] text-stone-400">(100g)</p>
+          </div>
         <button 
           onClick={(e) => {
             e.preventDefault();
@@ -140,12 +159,13 @@ export default function ProductCard({ product }: { product: Product }) {
             setIsAdded(true);
             setTimeout(() => setIsAdded(false), 2000);
           }}
-          className={`w-10 h-10 rounded-full flex items-center justify-center transition-colors shadow-md z-10 ${
+          className={`w-8 h-8 sm:w-10 sm:h-10 rounded-full flex items-center justify-center transition-colors shadow-md z-10 shrink-0 ${
             isAdded ? "bg-[#172d1f] text-white" : "bg-[#d4af37] text-white hover:bg-[#b5952f]"
           }`}
         >
-          {isAdded ? <Check className="w-5 h-5" /> : "+"}
+          {isAdded ? <Check className="w-4 h-4 sm:w-5 sm:h-5" /> : "+"}
         </button>
+      </div>
       </div>
     </Link>
   );
