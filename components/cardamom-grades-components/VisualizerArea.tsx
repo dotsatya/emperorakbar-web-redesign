@@ -32,9 +32,9 @@ const getTickClasses = (isExactMatch: boolean, isCovered: boolean) => {
 
 const getLabelClasses = (isExactMatch: boolean, isCovered: boolean) => {
   const base =
-    "absolute left-full ml-2 font-mono font-bold text-lg transition-all duration-300";
+    "absolute left-full ml-1 md:ml-2 font-mono font-bold text-sm md:text-lg transition-all duration-300";
   if (isExactMatch)
-    return `${base} scale-125 shadow-sm bg-white/95 px-1.5 py-0.5 rounded z-30`;
+    return `${base} scale-110 md:scale-125 shadow-sm bg-white/95 px-1 md:px-1.5 py-0 md:py-0.5 rounded z-30`;
   if (isCovered) return `${base} text-stone-800 z-10`;
   return `${base} text-stone-300 z-10`;
 };
@@ -49,7 +49,7 @@ const VisualizerArea = memo(function VisualizerArea({
   const isFractional = currentSize % 1 !== 0;
 
   return (
-    <div className="bg-white rounded-[2rem] p-6 md:p-12 border border-stone-200/50 shadow-inner max-w-3xl w-full flex flex-row items-center justify-center gap-4 md:gap-8 relative overflow-hidden flex-1">
+    <div className="bg-white rounded-[1.5rem] md:rounded-[2rem] p-4 sm:p-6 md:p-12 border border-stone-200/50 shadow-inner max-w-3xl w-full flex flex-row items-center justify-center gap-2 sm:gap-4 md:gap-8 relative overflow-hidden flex-1">
       {/* 4. Added aria-hidden to decorative elements for better screen reader accessibility */}
       <div
         className="absolute inset-0 bg-stone-50/50 mix-blend-multiply pointer-events-none"
@@ -57,14 +57,14 @@ const VisualizerArea = memo(function VisualizerArea({
       ></div>
 
       {/* Visualizer Stage */}
-      <div className="relative flex-1 flex justify-end items-end h-[120px] w-full max-w-[400px] pr-2">
+      <div className="relative flex-1 flex justify-end items-end h-[90px] md:h-[120px] w-full max-w-[400px] pr-2">
         {/* Cardamom Image Container */}
         <div
           className="absolute bottom-0 w-full transition-all duration-700 ease-out flex justify-center items-end z-10"
           style={{ height: `${sizePercentage}%` }}
         >
           <div
-            className="relative w-full min-w-[300px] h-full"
+            className="relative w-full min-w-[200px] sm:min-w-[250px] md:min-w-[300px] h-full"
             style={{
               transform: `scale(1.02)`,
               transformOrigin: "bottom center",
@@ -104,7 +104,7 @@ const VisualizerArea = memo(function VisualizerArea({
 
       {/* Scale / Ruler */}
       <div
-        className="relative h-[120px] w-16 shrink-0 border-l-2 border-stone-200 pl-4 my-auto mr-4 md:mr-12"
+        className="relative h-[90px] md:h-[120px] w-12 md:w-16 shrink-0 border-l-2 border-stone-200 pl-2 md:pl-4 my-auto mr-2 md:mr-12"
         aria-hidden="true"
       >
         {/* Ruler Base Numbers */}
@@ -145,7 +145,7 @@ const VisualizerArea = memo(function VisualizerArea({
               style={{ backgroundColor: activeColor }}
             ></div>
             <span
-              className="absolute left-full ml-2 font-mono font-bold text-lg scale-125 shadow-sm bg-white/95 px-1.5 py-0.5 rounded"
+              className="absolute left-full ml-1 md:ml-2 font-mono font-bold text-sm md:text-lg scale-110 md:scale-125 shadow-sm bg-white/95 px-1 md:px-1.5 py-0 md:py-0.5 rounded"
               style={{ color: activeColor }}
             >
               {currentSize}
