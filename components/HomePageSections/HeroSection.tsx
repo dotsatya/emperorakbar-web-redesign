@@ -39,7 +39,7 @@ export default function HeroSection() {
 
           <div className="flex flex-col sm:flex-row gap-4 mb-16">
             <Link href="/shop">
-              <ShinyButton className="bg-btn-primary/60 hover:bg-btn-primary/80  text-white px-8 py-4 rounded-full font-bold text-sm 
+              <ShinyButton className="bg-gradient-to-r from-[#d4af37]/60 to-[#d4af37] hover:bg-btn-primary  text-white px-8 py-4 rounded-full font-bold text-sm 
               flex items-center gap-2 justify-center
               ">
                 SHOP CARDAMOM <ArrowRight className="w-4 h-4" />

@@ -48,11 +48,11 @@ function HeaderContent() {
   return (
     <>
       {/* Spacer to prevent layout shift below fixed header */}
-      <div 
-        aria-hidden="true" 
+      <div
+        aria-hidden="true"
         className={`w-full shrink-0 transition-[height] duration-300 ${
           isScrolled ? "h-16" : "h-[88px]"
-        }`} 
+        }`}
       />
 
       <header
@@ -64,7 +64,11 @@ function HeaderContent() {
           }`}
       >
         {/* Logo: replaced router.push with semantic Link */}
-        <Link href="/" aria-label="Go to Homepage" className="flex items-center shrink-0">
+        <Link
+          href="/"
+          aria-label="Go to Homepage"
+          className="flex items-center shrink-0"
+        >
           <Image
             src={Photos.logo}
             alt="Emperor Akbar Logo"
@@ -78,8 +82,8 @@ function HeaderContent() {
         </Link>
 
         {/* Desktop Nav */}
-        <nav 
-          aria-label="Main Navigation" 
+        <nav
+          aria-label="Main Navigation"
           className="hidden lg:flex items-center gap-7 text-[15px] font-medium text-stone-700"
         >
           {NAV_LINKS.map((link) => {
@@ -90,7 +94,9 @@ function HeaderContent() {
                 href={link.href}
                 aria-current={isActive ? "page" : undefined}
                 className={`relative py-1 transition-colors duration-200 group ${
-                  isActive ? "text-stone-950 font-semibold" : "hover:text-stone-950"
+                  isActive
+                    ? "text-stone-950 font-semibold"
+                    : "hover:text-stone-950"
                 }`}
               >
                 {link.name}
@@ -106,17 +112,17 @@ function HeaderContent() {
 
         {/* Action Icons & Mobile Toggle */}
         <div className="flex items-center gap-5 text-stone-700">
-          <button 
-            type="button" 
-            aria-label="Search site" 
+          <button
+            type="button"
+            aria-label="Search site"
             className="hover:text-black transition-transform duration-200 hover:scale-105 p-1"
           >
             <Search className="w-5 h-5" />
           </button>
 
-          <Link 
+          <Link
             href="/account"
-            aria-label="User Account" 
+            aria-label="User Account"
             className="hover:text-black transition-transform duration-200 hover:scale-105 hidden sm:block p-1"
           >
             <User className="w-5 h-5" />
@@ -144,7 +150,11 @@ function HeaderContent() {
             className="lg:hidden hover:text-black transition-transform duration-200 hover:scale-105 p-1"
             onClick={() => setMobileMenuOpen((prev) => !prev)}
           >
-            {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {mobileMenuOpen ? (
+              <X className="w-6 h-6" />
+            ) : (
+              <Menu className="w-6 h-6" />
+            )}
           </button>
         </div>
 
@@ -154,8 +164,8 @@ function HeaderContent() {
           aria-hidden={!mobileMenuOpen}
           className={`absolute top-full inset-x-0 bg-white/95 backdrop-blur-lg border-b border-stone-200 
             transition-all duration-300 ease-in-out lg:hidden overflow-hidden  rounded-b-xl ${
-              mobileMenuOpen 
-                ? "max-h-[80vh] py-4 shadow-xl opacity-100" 
+              mobileMenuOpen
+                ? "max-h-[80vh] py-4 shadow-xl opacity-100"
                 : "max-h-0 py-0 opacity-0 pointer-events-none"
             }`}
         >
@@ -171,7 +181,9 @@ function HeaderContent() {
                     transitionDelay: mobileMenuOpen ? `${index * 35}ms` : "0ms",
                   }}
                   className={`px-4 py-2.5 rounded-lg transition-all duration-200 ${
-                    mobileMenuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2"
+                    mobileMenuOpen
+                      ? "opacity-100 translate-y-0"
+                      : "opacity-0 translate-y-2"
                   } ${
                     isActive
                       ? "bg-[#172d1f] text-white font-semibold"

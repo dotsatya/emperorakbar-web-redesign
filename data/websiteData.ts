@@ -5,6 +5,8 @@ import greenSeedDemo from "../public/images/Green_Cardamom.png";
 
 import akbarBg from "../public/images/akbarBg.png";
 
+import healthBG from "../public/images/Cardamom_Wellness_in_Nature.png"
+
 // Purple grade
 import purple1 from "../public/purple/1.jpg";
 import purple2 from "../public/purple/2.jpg";
@@ -2095,6 +2097,174 @@ export const websiteData = {
           "The cardamom industry uses sieves to sort pods based on their diameter, not their length. So when you look at the pods, don't go by how long they are, look at their roundness or thickness. That's what decides the grade. And like all natural products, a little variation is normal. Up to 10% size difference is an industry accepted norm. Having said that, the real hero is aroma and flavour. And that's always consistent with Emperor Akbar Cardamom.",
       },
     ],
+  },
+
+  healthData: {
+    hero: {
+      image: healthBG,
+      eyebrow: "ALLEPPEY GREEN CARDAMOM",
+      title: "The Natural Side of Cardamom",
+      description:
+        "Explore cardamom's traditional uses, aromatic qualities, and the ongoing research into its potential health effects.",
+      cta: "Explore the Benefits",
+    },
+
+    introduction: {
+      eyebrow: "A TIMELESS SPICE",
+      title: "A Little Pod. A Long Tradition.",
+      description:
+        "Cardamom has been valued for centuries in Indian cuisine and traditional wellness practices. Known for its distinctive flavour and refreshing aroma, it remains a favourite in kitchens around the world.",
+    },
+
+    section: {
+      title: "Explore Cardamom's Many Uses",
+      description:
+        "Discover traditional uses of cardamom alongside areas where scientists are investigating its potential effects. Traditional use does not necessarily establish medical effectiveness.",
+    },
+
+    topics: [
+      {
+        id: "high-blood-pressure",
+        title: "High Blood Pressure",
+        slug: "high-blood-pressure",
+        image:
+          "https://cdn.shopify.com/s/files/1/0581/5926/8038/files/bloody-good.jpg?v=1653477546",
+        category: "health-research",
+        description:
+          "Cardamom contains antioxidant compounds and may have diuretic effects. Some research has explored its potential relationship with blood pressure, but the evidence is limited and it should not replace prescribed treatment.",
+      },
+      {
+        id: "bad-breath",
+        title: "Bad Breath",
+        slug: "bad-breath",
+        image:
+          "https://cdn.shopify.com/s/files/1/0581/5926/8038/files/breath-of-fresh-air.jpg?v=1653477546",
+        category: "traditional-uses",
+        description:
+          "Cardamom has traditionally been chewed as a natural mouth freshener after meals. Its aromatic compounds contribute to its refreshing flavour, and researchers have also investigated its activity against certain oral bacteria.",
+      },
+      {
+        id: "sore-throat-cough-cold",
+        title: "Sore Throat, Cough and Cold",
+        slug: "sore-throat-cough-cold",
+        image:
+          "https://cdn.shopify.com/s/files/1/0581/5926/8038/files/full-throated.jpg?v=1653477546",
+        category: "evidence-limited",
+        description:
+          "Cardamom is used in traditional drinks and preparations for throat comfort. However, there is insufficient clinical evidence to establish cardamom as a treatment for coughs, colds, or sore throats.",
+      },
+      {
+        id: "skin-problems",
+        title: "Skin Problems",
+        slug: "skin-problems",
+        image:
+          "https://cdn.shopify.com/s/files/1/0581/5926/8038/files/not-just-skin-deep.jpg?v=1653477546",
+        category: "health-research",
+        description:
+          "Some laboratory research has investigated the antimicrobial and antioxidant properties of cardamom compounds. More evidence is needed to determine whether cardamom is effective or safe for treating acne, blemishes, or other skin conditions.",
+      },
+      {
+        id: "asthma",
+        title: "Asthma",
+        slug: "asthma",
+        image:
+          "https://cdn.shopify.com/s/files/1/0581/5926/8038/files/breathtaking.jpg?v=1653477546",
+        category: "evidence-limited",
+        description:
+          "Certain compounds in cardamom have been investigated for biological activity, but there is insufficient clinical evidence that cardamom improves asthma or relaxes the airways in people. It must not replace prescribed asthma medication.",
+      },
+      {
+        id: "cancer",
+        title: "Cancer",
+        slug: "cancer",
+        image:
+          "https://cdn.shopify.com/s/files/1/0581/5926/8038/files/1.jpg?v=1654169109",
+        category: "evidence-limited",
+        description:
+          "Some laboratory studies have investigated cardamom compounds in relation to cancer cells. These early findings do not establish that cardamom prevents or treats cancer in humans, and cardamom must never be presented as a cancer treatment.",
+      },
+      {
+        id: "digestive-problems",
+        title: "Digestive Problems",
+        slug: "digestive-problems",
+        image:
+          "https://cdn.shopify.com/s/files/1/0581/5926/8038/files/2.jpg?v=1654169109",
+        category: "traditional-uses",
+        description:
+          "Cardamom has a long history of use in traditional digestive preparations. It is commonly included in spice blends and beverages, although stronger clinical evidence is needed to establish its effectiveness for indigestion, gas, nausea, acid reflux, or constipation.",
+      },
+      {
+        id: "cavities",
+        title: "Cavities",
+        slug: "cavities",
+        image:
+          "https://cdn.shopify.com/s/files/1/0581/5926/8038/files/3.jpg?v=1654169109",
+        category: "health-research",
+        description:
+          "Cineole and other compounds found in cardamom have been studied for antimicrobial activity. This does not establish that chewing cardamom prevents or treats dental cavities. Regular brushing, fluoride toothpaste, and professional dental care remain important.",
+      },
+      {
+        id: "infection",
+        title: "Infection",
+        slug: "infection",
+        image:
+          "https://cdn.shopify.com/s/files/1/0581/5926/8038/files/4.jpg?v=1654169109",
+        category: "evidence-limited",
+        description:
+          "Laboratory studies have explored the antimicrobial properties of cardamom extracts and essential oils. These findings do not establish that cardamom can treat infections in humans or replace prescribed antimicrobial medicines.",
+      },
+      {
+        id: "anxiety",
+        title: "Anxiety",
+        slug: "anxiety",
+        image:
+          "https://cdn.shopify.com/s/files/1/0581/5926/8038/files/5.jpg?v=1654169109",
+        category: "evidence-limited",
+        description:
+          "Cardamom contains antioxidant compounds, but it is not established that consuming cardamom reduces anxiety or treats mood disorders. More human research is needed to understand any potential relationship.",
+      },
+      {
+        id: "sleep-disorders",
+        title: "Sleep Disorders",
+        slug: "sleep-disorders",
+        image:
+          "https://cdn.shopify.com/s/files/1/0581/5926/8038/files/6.jpg?v=1654169109",
+        category: "evidence-limited",
+        description:
+          "Cardamom has a distinctive, soothing aroma that can be enjoyed in evening beverages and traditional preparations. There is insufficient clinical evidence to establish that cardamom or its essential oils treat insomnia or other sleep disorders.",
+      },
+    ],
+
+    research: {
+      eyebrow: "ROOTED IN HERITAGE",
+      title: "Tradition Meets Evidence",
+      description:
+        "Cardamom has a long history of culinary and traditional use. Modern research continues to investigate its compounds, but laboratory findings and traditional practices do not necessarily demonstrate health benefits in people.",
+      cta: "Explore the Research",
+    },
+
+    recipes: {
+      eyebrow: "ENJOY IT EVERY DAY",
+      title: "A Simple Ingredient. Many Ways to Enjoy It.",
+      description:
+        "From aromatic chai to flavourful biryani and indulgent desserts, cardamom brings a distinctive flavour to everyday recipes.",
+      cta: "Discover Recipes",
+    },
+
+    disclaimer: {
+      title: "An important note about health",
+      description:
+        "Cardamom is a food ingredient, not a substitute for medical care. Evidence for treating or preventing health conditions is limited. Consult a qualified healthcare professional about persistent symptoms or medical concerns.",
+    },
+
+    product: {
+      eyebrow: "PREMIUM ALLEPPEY GREEN CARDAMOM",
+      title: "Bring Authentic Cardamom into Your Kitchen",
+      description:
+        "Discover Emperor Akbar cardamom, carefully graded and packed to preserve its natural aroma and flavour.",
+      cta: "Explore Cardamom",
+      href: "/shop",
+    },
   },
 };
 
