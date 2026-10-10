@@ -38,6 +38,7 @@ export default function RootLayout({
       <body
         className={`${montserrat.variable} ${playfair.variable} ${greatVibes.variable} font-sans antialiased bg-bg-primary text-stone-900 min-h-screen flex flex-col`}
         style={{ paddingBottom: 'var(--footer-height, 0px)' }}
+        suppressHydrationWarning
       >
         <CartProvider>
           <div className="relative z-10 bg-bg-primary min-h-screen rounded-b-[2.5rem] md:rounded-b-4xl overflow-hidden shadow-[0_30px_60px_-15px_rgba(0,0,0,0.5)] flex flex-col mb-0 transition-transform duration-500">
